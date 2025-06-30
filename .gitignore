@@ -1,5 +1,1 @@
-# Ignore everything in the target directory
-ToscaDesigner/target/*
-# But don't ignore these specific files
-!ToscaDesigner/target/ToscaDesigner_0.0.00.jmdac
-!ToscaDesigner/target/toscadesigner-0.0.00.jar
+/target/
