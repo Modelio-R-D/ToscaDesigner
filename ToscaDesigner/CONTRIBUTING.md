@@ -32,4 +32,11 @@ Contributing
 
 CI
 --
-A GitHub Actions workflow (maven-java8.yml) is included to build with Java 8 on push and pull requests.
+A GitHub Actions workflow (`.github/workflows/maven-java8.yml`) is included. Note:
+
+- The workflow runs Maven under Java 11 so Modelio-related Maven plugins (which require
+	a newer JDK) can execute. The project is still compiled to Java 8 bytecode via the
+	`maven-compiler-plugin` configuration (`<release>8`).
+
+This preserves runtime compatibility with Modelio 5.4.1 while allowing plugin execution
+that needs a newer JDK.
