@@ -1,0 +1,27 @@
+{{name}}:
+  type: {{getProperty this "nodeType"}}
+{{#unless (noStereotypeApplications this "Metadata")}}
+  metadata:
+{{#each ../ownedAttribute}}{{#extension}}{{#eq name "Metadata"}}
+    {{../name}}: "{{../value}}"
+{{/eq}}{{/extension}}{{/each}}{{/unless}}{{#unless (noStereotypeApplications this "TPropertyDef")}}
+  properties:
+{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
+    {{../name}}: "{{../value}}"
+{{/eq}}{{/extension}}{{/each}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "RequirementsType")}}
+  requirements:
+    {{#each ../ownedElement}}{{#extension}}{{#eq name "RequirementsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirement"}}
+    {{> (lookup this.name) ../this}}
+    {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "TDeploymentArtifacts")}}
+  artifacts:
+{{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifacts"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TDeploymentArtifact"}}
+    {{../name}}:
+      type: {{getProperty ../this "type"}}
+      deploy_path: {{getProperty ../this "deploy_path"}}
+      file: {{getProperty ../this "file"}}
+{{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+{{/unless}}

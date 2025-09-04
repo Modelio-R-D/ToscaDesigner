@@ -1,0 +1,4 @@
+{{name}}:	
+  {{#unless (noStereotypeApplications this "TNodeTemplate")}}node_templates:{{/unless}}  
+    {{#ownedElement}}{{#extension}}{{#eq name "TNodeTemplate"}}{{> (lookup this.name) ../this}}
+    {{/eq}}{{/extension}}{{/ownedElement}}

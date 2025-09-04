@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <move file="c:\Users\jcadavid\OneDrive - LA POSTE GROUPE\MYRTUS\MYRTUSDesigner\ToscaDesigner/target/ToscaDesigner_0.5.3.zip" tofile="c:\Users\jcadavid\OneDrive - LA POSTE GROUPE\MYRTUS\MYRTUSDesigner\ToscaDesigner/target/ToscaDesigner_0.5.3.jmdac" />
+  </target>
+</project>

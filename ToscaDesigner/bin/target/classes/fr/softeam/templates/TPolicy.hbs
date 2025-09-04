@@ -1,0 +1,21 @@
+{{name}}:
+  type: tosca.policies.{{getProperty this "type"}}
+{{#if (getProperty this "description")}}
+  description: {{getProperty this "description"}}
+{{/if}}
+{{#unless (noStereotypeApplications this "Metadata")}}
+  metadata:
+{{#each ../ownedAttribute}}{{#extension}}{{#eq name "Metadata"}}
+    {{../name}}: "{{../value}}"
+{{/eq}}{{/extension}}{{/each}}{{/unless}}
+{{#unless (noStereotypeApplications this "TPropertyDef")}}
+  properties:
+{{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
+    {{../name}}: "{{../value}}"
+{{/eq}}{{/extension}}{{/each}}{{/unless}}
+  targets: [{{ getProperty this "policyTargets" }}]
+{{#unless (noStereotypeApplications this "Trigger")}}
+  triggers:
+{{#each ../ownedElement}}{{#extension}}{{#eq name "Trigger"}}
+    {{> (lookup this.name) ../this}}
+{{/eq}}{{/extension}}{{/each}}{{/unless}}

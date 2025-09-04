@@ -1,0 +1,46 @@
+{{imports this}}
+node_types:
+  {{owner.name}}.{{name}}:
+{{#if (getProperty this "description")}}
+    description: {{getProperty this "description"}}
+{{/if}}
+{{#if (getProperty this "derivedFrom")}}
+    derived_from: {{getProperty this "derivedFrom"}}
+{{/if}}
+    metadata:
+      targetNamespace: "{{getProperty this "targetNamespace"}}"
+      abstract: "{{getProperty this "abstract"}}"
+      final: "{{getProperty this "final"}}"
+{{#unless (noStereotypeApplications this "PropertyDefinitionType")}}
+    properties:
+    {{#each ../ownedAttribute}}{{#extension}}{{#eq name "PropertyDefinitionType"}}
+      {{../name}}:
+      	type: {{../type.name}}
+        {{#if (getProperty ../this "description")}}
+        description: {{getProperty ../this "description"}}
+        {{/if}}
+      	{{#eq ../multiplicityMin "0"}}
+        required: false
+        {{/eq}}
+        {{#if ../value}}
+        default: {{../value}}
+        {{/if}}
+    {{/eq}}{{/extension}}{{/each}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "TRequirementDefinitionType")}}
+    requirements:
+	{{#each ownedElement}}{{#extension}}{{#eq name "TRequirementDefinitionType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirementDefinition"}}
+      - {{../name}}:
+          capability: tosca.capabilities.{{getProperty ../this "capability"}}
+          relationship: tosca.relationships.{{getProperty ../this "relationshipType"}}
+          occurrences: [ {{getProperty ../this "lowerBound"}}, {{getProperty ../this "upperBound"}} ]
+    {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "TCapabilityDefinitionsType")}}
+    capabilities:
+    {{#each ownedElement}}{{#extension}}{{#eq name "TCapabilityDefinitionsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TCapabilityDefinition"}}
+      {{../name}}:
+        occurrences: [ {{getProperty ../this "lowerBound"}}, {{getProperty ../this "upperBound"}} ]
+        type: tosca.capabilities.{{getProperty ../this "capabilityType"}}
+    {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
+{{/unless}}
