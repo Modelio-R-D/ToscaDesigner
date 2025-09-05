@@ -1,19 +1,16 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.RelationshipConstraintsType;
+import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
+import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.RelationshipConstraintsType;
-import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
-import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 
 @objid ("0712b188-0d7d-4435-812d-e7fd1660e66d")
 public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> extends ToscaElementPropertyPage<T> {
@@ -30,7 +27,7 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+
         case 2:
             for (ModelElement elt : TRelationshipType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(elt.getUuid())) {
@@ -40,10 +37,10 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
         } else {
         this._element.setRelationshipType(null);
         }
-        
+
             }
             break;
-        
+
         case 3:
             for (ModelElement elt : RelationshipConstraintsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(elt.getUuid())) {
@@ -53,10 +50,10 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
         } else {
         this._element.setRelationshipConstraints(null);
         }
-        
+
             }
             break;
-        
+
         }
     }
 
@@ -64,9 +61,9 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
     @Override
     public void update(IModulePropertyTable table) {
         super.update(table);
-        
+
         table.addProperty("Name", _element.getElement().getName());
-        
+
         // Type
         table.addProperty("Type",
                 this._element.getRelationshipType() != null ? this._element.getRelationshipType().getElement() : null,
@@ -76,7 +73,7 @@ public class TRelationshipTemplatePropertyPage<T extends TRelationshipTemplate> 
                         return TRelationshipType.canInstantiate(element);
                     }
                 });
-        
+
         // Constraints
         table.addProperty("Constraints",
                 this._element.getRelationshipConstraints() != null

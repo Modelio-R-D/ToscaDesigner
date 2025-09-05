@@ -1,11 +1,9 @@
 package fr.softeam.toscadesigner.handlers.propertypages.types;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TArtifactType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("b7b1075e-0895-401d-bd4e-745225a8ec49")
 public class TArtifactTypePropertyPage<T extends TArtifactType> extends ToscaElementPropertyPage<T> {
@@ -21,7 +19,7 @@ public class TArtifactTypePropertyPage<T extends TArtifactType> extends ToscaEle
         switch (row) {
         case 1:
             break;
-        
+
         }
     }
 

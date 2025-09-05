@@ -3,14 +3,11 @@ package fr.softeam.toscadesigner.handlers.propertypages.core;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.handlers.propertypages.IPropertyContent;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Attribute;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.handlers.propertypages.IPropertyContent;
 
 @objid ("ef6dc775-f55a-43cc-a411-dd5145d9546b")
 public abstract class ToscaElementPropertyPage<T extends Object> implements IPropertyContent {
@@ -83,7 +80,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
     @objid ("f687be00-1013-4a75-90ba-53a326547aa8")
     protected ModelElement getModelElt(List<? extends ModelElement> elts, String toscaName) {
         String name = toscaName.replaceFirst(this._add, "").replaceFirst(this._remove, "");
-        
+
         for (ModelElement elt : elts) {
             if (getToscaName(elt).equals(name)) {
                 return elt;
@@ -107,13 +104,13 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         List<String> result = new ArrayList<>();
         result.add("");
         // result.add(this._removeAll);
-        
+
         // List of already added Elt
         List<ModelElement> addElt = new ArrayList<>();
         for (ModelElement elt : added) {
             addElt.add(elt);
         }
-        
+
         // Compute the list of Added and Removed Elements
         for (ModelElement elt : allElt) {
             if (addElt.contains(elt)) {
@@ -130,11 +127,11 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         String result = "";
         if (elts!=null) {
         Iterator<? extends ModelElement> it = elts.iterator();
-        
+
         if (it.hasNext()) {
             result += getToscaName(it.next());
         }
-        
+
         while (it.hasNext()) {
             result += this._eltSeparator + getToscaName(it.next());
         }
@@ -145,7 +142,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
     @objid ("18768d2d-a3f7-4f9c-8ce4-758b26c49d07")
     protected ModelElement getToscalElt(List<? extends ModelElement> elts, String toscaName) {
         String name = toscaName.replaceFirst(this._add, "").replaceFirst(this._remove, "");
-        
+
         for (ModelElement elt : elts) {
             if (getToscaName(elt).equals(name)) {
                 return elt;
@@ -170,7 +167,7 @@ public abstract class ToscaElementPropertyPage<T extends Object> implements IPro
         return members_elt;
     }
 
-    @objid ("7abe5676-a085-4685-be19-0288c928a683")
+    @objid ("eebfff9a-bcf8-4708-9c20-5e058443c5e4")
     public static <T> List<Attribute> extractAttributes(List<T> members) {
         List<Attribute> members_elt = new ArrayList<>();
         for (int i = 0; i < members.size(); i++) {

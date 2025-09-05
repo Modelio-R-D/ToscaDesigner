@@ -1,10 +1,8 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("a3b5d0b2-7de4-4957-810a-595d7066797d")
 public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType> extends ToscaElementPropertyPage<T> {
@@ -21,7 +19,7 @@ public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+
         case 2:
             //this._element.getElement().setType(TypeFactory.);
             break;
@@ -39,7 +37,7 @@ public class PropertyDefinitionTypePropertyPage<T extends PropertyDefinitionType
     public void update(IModulePropertyTable table) {
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
-        
+
         table.addProperty("Type", _element.getElement().getValue());
         table.addProperty("Description", _element.getDescription());
         table.addProperty("Required", _element.getRequired());

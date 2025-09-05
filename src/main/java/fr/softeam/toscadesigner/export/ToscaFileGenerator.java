@@ -2,14 +2,12 @@ package fr.softeam.toscadesigner.export;
 
 import java.io.FileWriter;
 import java.io.IOException;
-
+import com.github.jknack.handlebars.HandlebarsException;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Display;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.github.jknack.handlebars.HandlebarsException;
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("25521c06-6c79-4148-89ee-f4e056e7d0da")
 class ToscaFileGenerator extends AbstractToscaFileGenerator {

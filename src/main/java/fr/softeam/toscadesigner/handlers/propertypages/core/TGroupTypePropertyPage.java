@@ -1,16 +1,13 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
 import java.util.Arrays;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType;
 
 @objid ("56dc8f1e-2070-4f63-8a98-2cd7b67a6f01")
 public class TGroupTypePropertyPage<T extends TGroupType> extends ToscaElementPropertyPage<T> {

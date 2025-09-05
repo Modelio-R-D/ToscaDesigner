@@ -2,10 +2,8 @@ package fr.softeam.toscadesigner.impl;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
-import org.modelio.vcore.smkernel.mapi.MRef;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import org.modelio.vcore.smkernel.mapi.MRef;
 
 @objid ("8043b6ed-ab86-4572-8c88-c5d12122aee9")
 public class MdaProxyException extends Exception {

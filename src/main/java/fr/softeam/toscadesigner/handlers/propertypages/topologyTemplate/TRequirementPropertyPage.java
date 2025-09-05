@@ -1,21 +1,18 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import java.util.Arrays;
-
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.Metamodel;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.vcore.session.api.model.IMObjectFilter;
-import org.modelio.vcore.smkernel.mapi.MObject;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("a9b12ce9-c580-4064-a9e1-3759bae79da7")
 public class TRequirementPropertyPage<T extends TRequirement> extends ToscaElementPropertyPage<T> {
@@ -74,7 +71,7 @@ public class TRequirementPropertyPage<T extends TRequirement> extends ToscaEleme
         }
                 }
             }
-        
+
             break;
         }
     }

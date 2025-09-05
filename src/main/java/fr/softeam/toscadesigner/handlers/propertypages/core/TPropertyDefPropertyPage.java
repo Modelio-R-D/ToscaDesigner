@@ -1,17 +1,14 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
 import java.util.Arrays;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
+import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType;
-import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
 
 @objid ("99fab3ef-82d7-47d9-8681-d6a7ad6f9726")
 public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaElementPropertyPage<T> {
@@ -25,11 +22,11 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
-        
+
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+
         case 2:
             for (ModelElement el : PropertyDefinitionType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(el.getUuid())) {
@@ -44,7 +41,7 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
         case 3:
             this._element.getElement().setValue(value);
             break;
-        
+
         }
     }
 
@@ -60,7 +57,7 @@ public class TPropertyDefPropertyPage<T extends TPropertyDef> extends ToscaEleme
                         return PropertyDefinitionType.canInstantiate(element);
                     }
                 });        
-        
+
         table.addProperty("Value", _element.getElement().getValue());
     }
 

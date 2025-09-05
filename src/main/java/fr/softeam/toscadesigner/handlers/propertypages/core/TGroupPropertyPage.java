@@ -3,21 +3,18 @@ package fr.softeam.toscadesigner.handlers.propertypages.core;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroup;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroupType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TGroup;
 
 @objid ("9ba049d3-ee8c-4422-8d36-2464c310e0f6")
 public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPage<T> {
@@ -34,7 +31,7 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+
         case 2:
             for (ModelElement dep : TGroupType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
@@ -44,7 +41,7 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
         this._element.setType(null);
         }            }
             break;
-        
+
         case 3:
             Class elt1 = (Class) getModelElt(TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if ((elt1 != null)
@@ -72,12 +69,12 @@ public class TGroupPropertyPage<T extends TGroup> extends ToscaElementPropertyPa
                         return TGroupType.canInstantiate(element);
                     }
                 });
-        
+
         List<ModelElement> members_elt = extractModelElements(this._element.getMembers());
         List<ModelElement> nodeTemplateList = (TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
                 ? TNodeTemplate.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
                 : Collections.emptyList();
-        
+
         table.addProperty("Members", getToscaValue(members_elt),
                 getAddRemove(nodeTemplateList, extractModelElements(this._element.getMembers())));
     }

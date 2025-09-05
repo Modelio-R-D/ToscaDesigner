@@ -1,11 +1,9 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TArtifactTemplate;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("a4fc1851-2232-4ef2-b1c2-f9f07cfc4cc5")
 public class TArtifactTemplatePropertyPage<T extends TArtifactTemplate> extends ToscaElementPropertyPage<T> {

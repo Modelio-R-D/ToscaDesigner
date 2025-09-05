@@ -3,13 +3,12 @@ package fr.softeam.toscadesigner.i18n;
 import java.text.MessageFormat;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("e2890b80-cdf8-4ac5-a0a4-03779d942d96")
 public class Messages {
     @objid ("5d8ff171-09c7-46f4-9efd-572968ca8619")
-    private static ResourceBundle RESOURCE_BUNDLE = ResourceBundle.getBundle ("fr.softeam.toscadesigner.i18n.messages");
+    private static ResourceBundle RESOURCE_BUNDLE = ResourceBundle.getBundle("fr.softeam.toscadesigner.i18n.messages");
 
     @objid ("a6c3a219-1f15-43d1-b9e8-fb7c55d5333e")
     private  Messages() {

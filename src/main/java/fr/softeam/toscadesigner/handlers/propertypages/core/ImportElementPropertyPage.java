@@ -1,10 +1,8 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.ImportElement;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("2b0ab9ab-3232-4c91-a37c-607fdd1dc98e")
 public class ImportElementPropertyPage<T extends ImportElement> extends ToscaElementPropertyPage<T> {
@@ -21,11 +19,11 @@ public class ImportElementPropertyPage<T extends ImportElement> extends ToscaEle
         case 1:
             this._element.setFile(value);
             break;
-        
+
         case 2:
             this._element.setNamespace_prefix(value);
             break;
-        
+
         case 3:
             this._element.setNamespace_uri(value);
             break;

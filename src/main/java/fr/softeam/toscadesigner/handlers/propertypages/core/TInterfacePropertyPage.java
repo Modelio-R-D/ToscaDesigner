@@ -2,18 +2,15 @@ package fr.softeam.toscadesigner.handlers.propertypages.core;
 
 import java.util.Collections;
 import java.util.List;
-
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.statik.Attribute;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TOperation;
 import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TInterface;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.statik.Attribute;
 
 @objid ("2e2429c8-a9ac-48ae-9435-eeb511f3c793")
 public class TInterfacePropertyPage<T extends TInterface> extends ToscaElementPropertyPage<T> {
@@ -30,11 +27,11 @@ public class TInterfacePropertyPage<T extends TInterface> extends ToscaElementPr
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+
         case 2:
             this._element.setNotifications(value);
             break;
-        
+
         case 3:
             ModelElement elt1 =  getModelElt(TOperation.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if ((elt1 != null)
@@ -47,7 +44,7 @@ public class TInterfacePropertyPage<T extends TInterface> extends ToscaElementPr
                 }
             }
             break;
-            
+
         case 4:
             Attribute elt2 = (Attribute) getModelElt(TPropertyDef.MdaTypes.STEREOTYPE_ELT.getExtendedElement(), value);
             if ((elt2 != null)
@@ -69,16 +66,16 @@ public class TInterfacePropertyPage<T extends TInterface> extends ToscaElementPr
         super.update(table);
         table.addProperty("Name", _element.getElement().getName());
         table.addProperty("Notifications", _element.getNotifications());
-        
+
         // Operations
-        
+
         List<ModelElement> members_elt = extractModelElements(this._element.getOperation());
         List<ModelElement> operationsList = (TOperation.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)
                 ? TOperation.MdaTypes.STEREOTYPE_ELT.getExtendedElement()
                 : Collections.emptyList();
         table.addProperty("Operations", getToscaValue(members_elt),
                 getAddRemove(operationsList, extractModelElements(this._element.getOperation())));
-        
+
         // Inputs
         List<Attribute> members_elt2 = extractAttributes(this._element.getInputs());
         List<ModelElement> inputsList = (TPropertyDef.MdaTypes.STEREOTYPE_ELT.getExtendedElement() != null)

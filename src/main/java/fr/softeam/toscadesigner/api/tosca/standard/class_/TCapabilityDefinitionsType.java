@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: ToscaDesigner v0.0.1
+ * Module: ToscaDesigner v0.5.1
 
- * This file was generated on 04/06/2025 19:56 by Modelio Studio.
+ * This file was generated on 29/07/2025 19:13 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.standard.class_;
 
@@ -32,9 +32,9 @@ import fr.softeam.toscadesigner.impl.MdaProxyException;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("68cf057d-8997-4387-a7f4-c0841f8b855e")
+@objid ("34df36f3-ab10-40ee-875b-fa86a650ae97")
 public class TCapabilityDefinitionsType extends TEntityType implements IMdaProxy {
-    @objid ("262a73fe-4d93-42a5-b3a9-a3dcbbd75b9c")
+    @objid ("cd428ad3-b5ef-4c41-9a05-5fda8ac4f6f6")
     public static final String STEREOTYPE_NAME = "TCapabilityDefinitionsType";
 
     /**
@@ -44,17 +44,16 @@ public class TCapabilityDefinitionsType extends TEntityType implements IMdaProxy
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("342d5b3f-9c1d-4e90-bbf8-0a891f2570c1")
+    @objid ("c44c28c6-3f94-4c9c-860c-4e51975e841e")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof Class) && (TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT!=null) && ((Class) elt).isStereotyped(TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link Class} stereotyped << TCapabilityDefinitionsType >> then instantiate a {@link TCapabilityDefinitionsType} proxy.
-     * 
      * @return a {@link TCapabilityDefinitionsType} proxy on the created {@link Class}.
      */
-    @objid ("1bc65c28-0e70-407d-bed6-849588f549ea")
+    @objid ("955fef3f-3663-4692-ac8a-b0ccc75c7078")
     public static TCapabilityDefinitionsType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Standard.Class");
         e.getExtension().add(TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT);
@@ -68,7 +67,7 @@ public class TCapabilityDefinitionsType extends TEntityType implements IMdaProxy
      * @param obj a Class
      * @return a {@link TCapabilityDefinitionsType} proxy or <i>null</i>.
      */
-    @objid ("b6806654-01c4-4c80-a85c-a84c8ddb6642")
+    @objid ("e16b9e46-ab49-442e-9936-47cbb11068ca")
     public static TCapabilityDefinitionsType instantiate(final Class obj) {
         return TCapabilityDefinitionsType.canInstantiate(obj) ? new TCapabilityDefinitionsType(obj) : null;
     }
@@ -81,7 +80,7 @@ public class TCapabilityDefinitionsType extends TEntityType implements IMdaProxy
      * @return a {@link TCapabilityDefinitionsType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("a880a4a2-27ab-4a8e-968f-b4585732a102")
+    @objid ("4a5cda50-8ae7-4ccb-ad34-eb4408f10d14")
     public static TCapabilityDefinitionsType safeInstantiate(final Class obj) throws IllegalArgumentException {
         if (TCapabilityDefinitionsType.canInstantiate(obj))
         	return new TCapabilityDefinitionsType(obj);
@@ -95,7 +94,7 @@ public class TCapabilityDefinitionsType extends TEntityType implements IMdaProxy
      * null
      * 
      */
-    @objid ("a2e9cbea-f356-4f90-91d0-fa2f3eff4512")
+    @objid ("7b0de0cc-d973-4bf2-b57f-de113e3bfbd9")
     public void addCapabilityDefinition(final TCapabilityDefinition obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -105,7 +104,7 @@ public class TCapabilityDefinitionsType extends TEntityType implements IMdaProxy
         }
     }
 
-    @objid ("8c2197fc-cab2-4603-8b3d-7aea316fc22d")
+    @objid ("faaec9cb-f742-4ca3-8b00-e732eaeab3c4")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -127,7 +126,7 @@ public class TCapabilityDefinitionsType extends TEntityType implements IMdaProxy
      * null
      * 
      */
-    @objid ("bb36e3a6-a559-4ec9-a870-a5f3b4a1c28e")
+    @objid ("3418d39b-01d5-473b-be57-625f423711be")
     public List<TCapabilityDefinition> getCapabilityDefinition() {
         List<TCapabilityDefinition> results = new ArrayList<>();
         for (Dependency d : this.elt.getDependsOnDependency()) {
@@ -140,16 +139,16 @@ public class TCapabilityDefinitionsType extends TEntityType implements IMdaProxy
     }
 
     /**
-     * Get the underlying {@link Class}. 
+     * Get the underlying {@link Class}.
      * @return the Class represented by this proxy, never null.
      */
-    @objid ("e986147c-7dff-4e18-824b-102387ab6ee3")
+    @objid ("493fe87b-dff6-4943-a1bd-68637e9836ed")
     @Override
     public Class getElement() {
         return (Class)super.getElement();
     }
 
-    @objid ("5b4c74d8-3f93-46d8-9d86-95a465276877")
+    @objid ("f1cb7894-120b-49e3-9568-b8ec44614beb")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -162,7 +161,7 @@ public class TCapabilityDefinitionsType extends TEntityType implements IMdaProxy
      * null
      * 
      */
-    @objid ("80478d08-606c-4340-90c6-06d2d77f883c")
+    @objid ("537d1322-944b-4e16-8f5d-ad7744b99c39")
     public boolean removeCapabilityDefinition(final TCapabilityDefinition obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getDependsOnDependency())) {
@@ -177,38 +176,56 @@ public class TCapabilityDefinitionsType extends TEntityType implements IMdaProxy
         
     }
 
-    @objid ("e884d51d-0ea1-4473-8ffd-0682cb5217b7")
+    @objid ("7e1efc23-2646-40d1-ac47-5cedefe63ab3")
     protected  TCapabilityDefinitionsType(final Class elt) {
         super(elt);
     }
 
-    @objid ("b7dbb006-41f2-46cc-bab9-bc292f474aa1")
+    /*
+     * WARNING: GENERATED FILE - DO NOT EDIT
+     * Module: ToscaDesigner v0.1.0
+
+     * This file was generated on 28/07/2025 20:00 by Modelio Studio.
+     */
+    /*
+     * WARNING: GENERATED FILE - DO NOT EDIT
+     * Module: ToscaDesigner v0.5.1
+
+     * This file was generated on 29/07/2025 18:14 by Modelio Studio.
+     */
+    /*
+     * WARNING: GENERATED FILE - DO NOT EDIT
+     * Module: ToscaDesigner v0.5.1
+
+     * This file was generated on 29/07/2025 18:34 by Modelio Studio.
+     */
+    @objid ("95332bfd-048c-4739-9e5f-d06396b465d2")
     public static final class MdaTypes {
-        @objid ("b5b0faca-1f01-4fa1-b068-a7951eec46f7")
+        @objid ("e3a37c93-f098-4dd6-a02e-8e4ea822ef6c")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("dba4ed9b-8aa9-46fe-9883-740386f546c5")
+        @objid ("2abddbe0-fa72-41db-bd85-c58bb7ba154d")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("845909a6-a9df-4933-b52d-3f3c73f04013")
+        @objid ("8ffea5e7-6c1b-4a75-a5ba-a5cb8f749f5d")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("a5bdebb0-7529-4962-bcbe-950675e7d7cb")
+        @objid ("9a0445fc-2be3-4e0c-b302-830339afc0e0")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
             mRef = new MRef(Stereotype.MQNAME, "ac0418b1-a726-46e6-ac59-310f0055050f", "TCapabilityDefinitionsType");
             STEREOTYPE_ELT = (Stereotype) session.findByRef(mRef);
             if (STEREOTYPE_ELT==null) missingRefs.add(mRef);
-            
+
             mRef = new MRef(Stereotype.MQNAME, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e", "MDAAssocDep");
             MDAASSOCDEP = (Stereotype) session.findByRef(mRef);
             if (MDAASSOCDEP==null) missingRefs.add(mRef);
-            
+
             mRef = new MRef(TagType.MQNAME, "7637f2fd-b750-43c1-a15c-5d0b084ca1cd", "MDAAssocDepRole");
             MDAASSOCDEP_ROLE = (TagType) session.findByRef(mRef);
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
-            
+
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
             
         }

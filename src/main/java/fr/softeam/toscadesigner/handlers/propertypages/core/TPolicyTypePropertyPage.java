@@ -1,10 +1,8 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicyType;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("18f85fd8-7dac-4fff-8a80-58ad4d5d4883")
 public class TPolicyTypePropertyPage<T extends TPolicyType> extends ToscaElementPropertyPage<T> {
@@ -18,16 +16,16 @@ public class TPolicyTypePropertyPage<T extends TPolicyType> extends ToscaElement
     @Override
     public void changeProperty(int row, String value) {
         switch (row) {
-        
+
         case 1:
             this._element.getElement().setName(value);
             ;
             break;
-        
+
         case 2:
             this._element.setPolicyLanguage(value);
             break;
-        
+
         }
     }
 

@@ -1,18 +1,15 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
 import java.util.Arrays;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TArtifactType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact;
+import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TArtifactType;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifact;
-import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
 
 @objid ("c33850f8-9651-4f11-b39e-345401a503d1")
 public class TDeploymentArtifactPropertyPage<T extends TDeploymentArtifact> extends ToscaElementPropertyPage<T> {
@@ -64,7 +61,7 @@ public class TDeploymentArtifactPropertyPage<T extends TDeploymentArtifact> exte
         case 10:
             this._element.setMetadata(value);
             break;
-            
+
         }
     }
 

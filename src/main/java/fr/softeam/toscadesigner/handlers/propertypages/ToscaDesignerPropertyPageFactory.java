@@ -1,36 +1,6 @@
-/*
- * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: CamelDesigner v0.1.06
-
- * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
- */
 package fr.softeam.toscadesigner.handlers.propertypages;
 
-import org.modelio.metamodel.diagrams.ClassDiagram;
-import org.modelio.metamodel.mda.ModuleComponent;
-import org.modelio.metamodel.uml.infrastructure.Dependency;
-import org.modelio.metamodel.uml.infrastructure.Element;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.metamodel.uml.infrastructure.Stereotype;
-import org.modelio.metamodel.uml.statik.Artifact;
-import org.modelio.metamodel.uml.statik.AssociationEnd;
-import org.modelio.metamodel.uml.statik.Attribute;
-import org.modelio.metamodel.uml.statik.AttributeLink;
-import org.modelio.metamodel.uml.statik.Class;
-import org.modelio.metamodel.uml.statik.Component;
-import org.modelio.metamodel.uml.statik.Connector;
-import org.modelio.metamodel.uml.statik.DataType;
-import org.modelio.metamodel.uml.statik.Enumeration;
-import org.modelio.metamodel.uml.statik.GeneralClass;
-import org.modelio.metamodel.uml.statik.Instance;
-import org.modelio.metamodel.uml.statik.Package;
-import org.modelio.metamodel.uml.statik.Port;
-import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
-import org.modelio.metamodel.visitors.IDefaultModelVisitor;
-import org.modelio.metamodel.visitors.IInfrastructureVisitor;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.handlers.propertypages.core.CapabilitiesTypePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.core.MetadataPropertyPage;
@@ -60,6 +30,28 @@ import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TDeploym
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TNodeTemplatePropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRequirementPropertyPage;
 import fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TTopologyTemplatePropertyPage;
+import org.modelio.metamodel.diagrams.ClassDiagram;
+import org.modelio.metamodel.mda.ModuleComponent;
+import org.modelio.metamodel.uml.infrastructure.Dependency;
+import org.modelio.metamodel.uml.infrastructure.Element;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.metamodel.uml.infrastructure.Stereotype;
+import org.modelio.metamodel.uml.statik.Artifact;
+import org.modelio.metamodel.uml.statik.AssociationEnd;
+import org.modelio.metamodel.uml.statik.Attribute;
+import org.modelio.metamodel.uml.statik.AttributeLink;
+import org.modelio.metamodel.uml.statik.Class;
+import org.modelio.metamodel.uml.statik.Component;
+import org.modelio.metamodel.uml.statik.Connector;
+import org.modelio.metamodel.uml.statik.DataType;
+import org.modelio.metamodel.uml.statik.Enumeration;
+import org.modelio.metamodel.uml.statik.GeneralClass;
+import org.modelio.metamodel.uml.statik.Instance;
+import org.modelio.metamodel.uml.statik.Package;
+import org.modelio.metamodel.uml.statik.Port;
+import org.modelio.metamodel.visitors.IDefaultInfrastructureVisitor;
+import org.modelio.metamodel.visitors.IDefaultModelVisitor;
+import org.modelio.metamodel.visitors.IInfrastructureVisitor;
 
 @objid ("ea73d233-1e53-40f0-bdca-70d3b6668b02")
 public class ToscaDesignerPropertyPageFactory {
@@ -99,6 +91,12 @@ public class ToscaDesignerPropertyPageFactory {
         return e.accept(propertyVisitor);
     }
 
+    /*
+     * WARNING: GENERATED FILE - DO NOT EDIT
+     * Module: CamelDesigner v0.1.06
+
+     * This file was generated on 11/30/20 8:06 PM by Modelio Studio.
+     */
     @objid ("ed8ccd4c-3561-483a-a4bf-b120aeff9d4f")
     private static class PropertyPageVisitor implements IDefaultModelVisitor, IDefaultInfrastructureVisitor {
         @objid ("86d26d25-e6f3-4894-80fa-dee36d18ecb0")
@@ -219,7 +217,7 @@ public class ToscaDesignerPropertyPageFactory {
                 return new fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate.TRelationshipTemplatePropertyPage<>(
                         fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemplate
                                 .instantiate(obj.getAssociation()));
-            
+
             default:
                 break;
             }
@@ -257,7 +255,7 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TConstraint.STEREOTYPE_NAME:
                 return new TConstraintPropertyPage<>(
                         fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.TConstraint.instantiate(obj));
-            
+
             default:
                 break;
             }
@@ -287,7 +285,7 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType.STEREOTYPE_NAME:
                 return new PropertyDefinitionTypePropertyPage<>(
                         fr.softeam.toscadesigner.api.tosca.standard.attribute.PropertyDefinitionType.instantiate(obj));
-            
+
             default:
                 break;
             }
@@ -309,7 +307,7 @@ public class ToscaDesignerPropertyPageFactory {
         public final Object visitClassDiagram(ClassDiagram obj) {
             switch (this.stName) {
             default:
-            
+
                 break;
             }
             return IDefaultModelVisitor.super.visitClassDiagram(obj);
@@ -322,7 +320,7 @@ public class ToscaDesignerPropertyPageFactory {
             case fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate.STEREOTYPE_NAME:
                 return new TServiceTemplatePropertyPage<>(
                         fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate.instantiate(obj));
-            
+
             default:
                 break;
             }

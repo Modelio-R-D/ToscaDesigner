@@ -3,17 +3,14 @@ package fr.softeam.toscadesigner.impl;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.Map;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.modelio.api.modelio.mc.IModelComponentDescriptor;
 import org.modelio.api.modelio.mc.IModelComponentService;
 import org.modelio.api.module.lifecycle.DefaultModuleLifeCycleHandler;
 import org.modelio.api.module.lifecycle.ModuleException;
 import org.modelio.vbasic.version.Version;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.ToscaDesignerProxyFactory;
 
 @objid ("365c000d-ee50-4570-a858-4916436eefa8")
 public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler {
@@ -38,7 +35,7 @@ public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
         // TODO Auto-generated catch block
         e.printStackTrace();
         }
-        
+
         installRamc();
         return super.start();
     }
@@ -78,7 +75,7 @@ public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
     @objid ("579b391d-2d31-4ba5-b5f4-ed5984e7df7d")
     private void installRamc() {
         Path mdaplugsPath = this.module.getModuleContext().getConfiguration().getModuleResourcesPath();
-        
+
         final IModelComponentService modelComponentService = ToscaDesignerModule.getInstance().getModuleContext()
                 .getModelioServices().getModelComponentService();
         for (IModelComponentDescriptor mc : modelComponentService.getModelComponents()) {
@@ -93,7 +90,7 @@ public class ToscaDesignerLifeCycleHandler extends DefaultModuleLifeCycleHandler
                 }
             }
         }
-        
+
         // No ramc found, deploy it
         modelComponentService.deployModelComponent(new File(mdaplugsPath
                 .resolve("res" + File.separator + "ramc" + File.separator + _toscaLibrary + ".ramc").toString()),

@@ -1,16 +1,13 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
 import java.util.Arrays;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
 import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 import org.modelio.metamodel.Metamodel;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.session.api.model.IMObjectFilter;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TEntityType;
 
 @objid ("e39a656e-a40d-4be9-bbdd-cbb81c28ec10")
 public abstract class TEntityTypePropertyPage<T extends TEntityType> extends ToscaElementPropertyPage<T> {
@@ -28,11 +25,11 @@ public abstract class TEntityTypePropertyPage<T extends TEntityType> extends Tos
            case 1:
                this._element.getElement().setName(value);
                break;
-           
+
            case 2:
                this._element.setDescription(value);
                break;
-           
+
            case 3:
                for (ModelElement el : TEntityType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                    if (value.contains(el.getUuid())) {

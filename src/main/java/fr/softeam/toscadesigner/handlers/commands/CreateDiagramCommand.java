@@ -1,14 +1,12 @@
 package fr.softeam.toscadesigner.handlers.commands;
 
 import java.util.List;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import org.modelio.api.module.IModule;
 import org.modelio.api.module.command.standard.DiagramCreationStandardHandler;
 import org.modelio.api.module.context.IModuleContext;
 import org.modelio.metamodel.diagrams.AbstractDiagram;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("d090e250-dce0-4a9d-972a-5cb87dd0fc00")
 public class CreateDiagramCommand extends DiagramCreationStandardHandler {
@@ -34,13 +32,13 @@ public class CreateDiagramCommand extends DiagramCreationStandardHandler {
         // The super method applies the diagram style and open the diagram is needed and
         // should be first called in most cases.
         // Sub classes may redefine this method to make additional modifications.
-        
+
         // Call the super method to apply the diagram style and open the diagram if
         // asked for.
         super.postConfigureElement(newDiagram, module);
         if (newDiagram instanceof AbstractDiagram) {
             AbstractDiagram diagram = (AbstractDiagram) newDiagram;
-        
+
             IModuleContext moduleContext = module.getModuleContext();
             // moduleContext.getModelingSession().getModel().getDefaultNameService().setDefaultName(diagram,
             // diagram.getOrigin().getName() + " diagram");

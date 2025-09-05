@@ -1,13 +1,11 @@
 package fr.softeam.toscadesigner.export;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 
 @objid ("e0ed7350-ca3f-44e6-8dfe-d293953559ef")
 public class NodeTypeChecker implements ToscaObjectTypeChecker {

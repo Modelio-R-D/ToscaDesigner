@@ -3,11 +3,14 @@ package fr.softeam.toscadesigner.impl;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.ToscaDesignerStereotypes;
 import org.modelio.api.modelio.mc.AbstractModelComponentContributor;
 import org.modelio.api.modelio.model.IMetamodelExtensions;
 import org.modelio.api.modelio.model.IModelingSession;
 import org.modelio.api.module.IModule;
+import org.modelio.gproject.ramc.core.packaging.IModelComponentContributor.ExportedFileEntry;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.NoteType;
 import org.modelio.metamodel.uml.infrastructure.Stereotype;
@@ -15,11 +18,6 @@ import org.modelio.metamodel.uml.infrastructure.TagType;
 import org.modelio.metamodel.uml.statik.Class;
 import org.modelio.metamodel.uml.statik.Package;
 import org.modelio.vcore.smkernel.mapi.MObject;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.ToscaDesignerStereotypes;
 
 @objid ("07f2d991-e0ea-40fa-bc40-885b76eb1dac")
 public class ToscaDesignerComponentContributor extends AbstractModelComponentContributor {
@@ -69,7 +67,7 @@ public class ToscaDesignerComponentContributor extends AbstractModelComponentCon
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.TCAPABILITY_DEFINITION));
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.TCAPABILITY_TYPE));
         stereotypes.add(getStereotype(Class.class, ToscaDesignerStereotypes.CAPABILITY_DEFINITIONS_TYPE));
-        
+
         return stereotypes;
     }
 

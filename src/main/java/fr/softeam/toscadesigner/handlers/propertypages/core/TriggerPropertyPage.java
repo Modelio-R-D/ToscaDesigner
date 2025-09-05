@@ -1,10 +1,8 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.class_.Trigger;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("df912efc-78f8-4b7b-aeb6-92c70e790d8c")
 public class TriggerPropertyPage<T extends Trigger> extends ToscaElementPropertyPage<T> {
@@ -21,30 +19,30 @@ public class TriggerPropertyPage<T extends Trigger> extends ToscaElementProperty
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+
         case 2:
             this._element.setDescription(value);
             break;
-        
+
         case 3:
             this._element.setEvent(value);
             break;
-        
+
         case 4:
             this._element.setSchedule(value);
             break;
-        
+
         case 5:
             this._element.setTarget_filter(value);
             break;
-        
+
         case 6:
             this._element.setCondition(value);
             break;
         case 7:
             this._element.setAction(value);
             break;
-        
+
         }
     }
 

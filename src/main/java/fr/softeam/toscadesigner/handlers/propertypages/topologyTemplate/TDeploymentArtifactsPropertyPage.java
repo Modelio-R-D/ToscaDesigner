@@ -1,11 +1,9 @@
 package fr.softeam.toscadesigner.handlers.propertypages.topologyTemplate;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TDeploymentArtifacts;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("8d4b2254-4976-4ee7-87c2-affa70d6fb06")
 public class TDeploymentArtifactsPropertyPage<T extends TDeploymentArtifacts> extends ToscaElementPropertyPage<T> {
@@ -22,7 +20,7 @@ public class TDeploymentArtifactsPropertyPage<T extends TDeploymentArtifacts> ex
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+
         }
     }
 

@@ -1,8 +1,8 @@
 /*
  * WARNING: GENERATED FILE - DO NOT EDIT
- * Module: ToscaDesigner v0.0.1
+ * Module: ToscaDesigner v0.5.1
 
- * This file was generated on 04/06/2025 19:56 by Modelio Studio.
+ * This file was generated on 29/07/2025 19:13 by Modelio Studio.
  */
 package fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement;
 
@@ -31,15 +31,15 @@ import fr.softeam.toscadesigner.impl.MdaProxyException;
  * <p>Stereotype description:
  * <br/><i>null</i></p>
  */
-@objid ("c1ce5508-f1fc-48c0-920d-fa222f9895c6")
+@objid ("79f07560-e28b-46b6-a7e7-24d942dda24e")
 public class ArtifactReferencesType implements IMdaProxy {
-    @objid ("0f8fc5be-4b35-497f-bb03-17121d011439")
+    @objid ("76a3551a-9128-4f82-a35f-347a838e5a34")
     public static final String STEREOTYPE_NAME = "ArtifactReferencesType";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
      */
-    @objid ("dca5bd12-0a4f-49ae-a7b1-bed35831aa9c")
+    @objid ("b1dc796f-1e07-4784-a6fb-a74dcde64e3e")
     protected final ModelElement elt;
 
     /**
@@ -49,17 +49,16 @@ public class ArtifactReferencesType implements IMdaProxy {
      * @param elt a model object
      * @return <code>true</code> if the instantiation can be carried out else <code>false</code>.
      */
-    @objid ("5f227fd1-ef4b-4595-9ced-fc68a517d1f8")
+    @objid ("b6f697dd-544a-40d6-9759-01fa50c6eb4a")
     public static boolean canInstantiate(final MObject elt) {
         return ((elt instanceof ModelElement) && (ArtifactReferencesType.MdaTypes.STEREOTYPE_ELT!=null) && ((ModelElement) elt).isStereotyped(ArtifactReferencesType.MdaTypes.STEREOTYPE_ELT));
     }
 
     /**
      * Create a new {@link ModelElement} stereotyped << ArtifactReferencesType >> then instantiate a {@link ArtifactReferencesType} proxy.
-     * 
      * @return a {@link ArtifactReferencesType} proxy on the created {@link ModelElement}.
      */
-    @objid ("7dce4f85-0b54-49cd-9341-a2a3a14a49f5")
+    @objid ("25776e17-9ac8-471e-a8ca-9436b3e36096")
     public static ArtifactReferencesType create(final IModelingSession session) {
         ModelElement e = (ModelElement)session.getModel().createElement("Infrastructure.ModelElement");
         e.getExtension().add(ArtifactReferencesType.MdaTypes.STEREOTYPE_ELT);
@@ -73,7 +72,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * @param obj a ModelElement
      * @return a {@link ArtifactReferencesType} proxy or <i>null</i>.
      */
-    @objid ("bc22060e-4135-46fd-a6fe-71bbb7bd699f")
+    @objid ("8755bfee-3313-4792-9903-ff0558dd2b54")
     public static ArtifactReferencesType instantiate(final ModelElement obj) {
         return ArtifactReferencesType.canInstantiate(obj) ? new ArtifactReferencesType(obj) : null;
     }
@@ -86,7 +85,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * @return a {@link ArtifactReferencesType} proxy.
      * @throws IllegalArgumentException if the instantiation cannot be carried out.
      */
-    @objid ("8af5a57f-4076-4966-b2cf-7604013db9dd")
+    @objid ("7891e501-407a-44c7-83dd-3a9747839245")
     public static ArtifactReferencesType safeInstantiate(final ModelElement obj) throws IllegalArgumentException {
         if (ArtifactReferencesType.canInstantiate(obj))
         	return new ArtifactReferencesType(obj);
@@ -100,7 +99,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("9c80690e-dfbc-4986-9541-7bd0181bb369")
+    @objid ("34da21dd-a2aa-4274-b791-1ab01b51855e")
     public void addArtifactReference(final TArtifactReference obj) {
         if (obj != null) {
             IModelingSession session = ModelingSessionRegistry.getSession(this.elt);
@@ -110,7 +109,7 @@ public class ArtifactReferencesType implements IMdaProxy {
         }
     }
 
-    @objid ("2743f9a7-f8c3-403e-97e9-b03c8ac58321")
+    @objid ("bcd6e618-bcf0-47db-9be2-9b02bb25f0a0")
     @Override
     public boolean equals(final Object obj) {
         if (this == obj) {
@@ -132,7 +131,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("0e7dfd17-9dad-406a-a808-e9488a02dc7e")
+    @objid ("cc1a4521-55aa-43c4-9537-7429479b0a0c")
     public List<TArtifactReference> getArtifactReference() {
         List<TArtifactReference> results = new ArrayList<>();
         for (Dependency d : this.elt.getImpactedDependency()) {
@@ -146,15 +145,15 @@ public class ArtifactReferencesType implements IMdaProxy {
     }
 
     /**
-     * Get the underlying {@link ModelElement}. 
+     * Get the underlying {@link ModelElement}.
      * @return the ModelElement represented by this proxy, never null.
      */
-    @objid ("fdc76040-7d88-45b3-b700-fca13a2cf2c2")
+    @objid ("66bb9496-6ddf-440a-8c5b-59afc62150f1")
     public ModelElement getElement() {
         return this.elt;
     }
 
-    @objid ("e540fec3-8e40-41cc-8b23-3169d07f5803")
+    @objid ("3789f032-8136-4a4b-9bd6-a6a0640b7a76")
     @Override
     public int hashCode() {
         return 23 + ((this.elt == null) ? 0 : this.elt.hashCode());
@@ -167,7 +166,7 @@ public class ArtifactReferencesType implements IMdaProxy {
      * null
      * 
      */
-    @objid ("50201f13-755a-4de4-81c2-a53479d651f1")
+    @objid ("57f32566-3626-4f13-a2ff-984c62442ae3")
     public boolean removeArtifactReference(final TArtifactReference obj) {
         if (obj != null) {
           for (Dependency d : new ArrayList<>(this.elt.getImpactedDependency())) {
@@ -182,38 +181,56 @@ public class ArtifactReferencesType implements IMdaProxy {
         
     }
 
-    @objid ("420f8452-c91e-4da3-8d16-12aed80feb66")
+    @objid ("edc86747-ae24-475b-87c6-bf0c46dfd942")
     protected  ArtifactReferencesType(final ModelElement elt) {
         this.elt = elt;
     }
 
-    @objid ("4b8efb74-09ef-4f58-acb6-58f711f60109")
+    /*
+     * WARNING: GENERATED FILE - DO NOT EDIT
+     * Module: ToscaDesigner v0.1.0
+
+     * This file was generated on 28/07/2025 20:00 by Modelio Studio.
+     */
+    /*
+     * WARNING: GENERATED FILE - DO NOT EDIT
+     * Module: ToscaDesigner v0.5.1
+
+     * This file was generated on 29/07/2025 18:14 by Modelio Studio.
+     */
+    /*
+     * WARNING: GENERATED FILE - DO NOT EDIT
+     * Module: ToscaDesigner v0.5.1
+
+     * This file was generated on 29/07/2025 18:34 by Modelio Studio.
+     */
+    @objid ("41fb7332-74e2-4dfb-8224-05f1fdeab9af")
     public static final class MdaTypes {
-        @objid ("b427fdff-dac0-4249-b87b-dbad640f467d")
+        @objid ("381fd0ee-3d04-4c94-a624-f6a63af049fe")
         public static Stereotype STEREOTYPE_ELT;
 
-        @objid ("4dbe1855-bc9d-4a68-98a4-df5111302a28")
+        @objid ("c373a0f7-5e48-4832-ac86-1fe9d85a4cfb")
         private static Stereotype MDAASSOCDEP;
 
-        @objid ("4dc08ba1-e65c-4665-aaf8-1dea136c7fdf")
+        @objid ("9fe6ab65-8c42-4ef5-9248-8a8757a614a8")
         private static TagType MDAASSOCDEP_ROLE;
 
-        @objid ("9f9b0fc3-d87a-4332-87e0-ddef812d9169")
+        @objid ("aef2808a-94e0-4ece-ba3e-0d2b6a58d5d8")
         public static void init(final IModelingSession session) throws MdaProxyException {
             List <MRef> missingRefs = new ArrayList<>();
             MRef mRef;
             mRef = new MRef(Stereotype.MQNAME, "9ddd44be-52b6-478b-ba14-5b268ec69415", "ArtifactReferencesType");
             STEREOTYPE_ELT = (Stereotype) session.findByRef(mRef);
             if (STEREOTYPE_ELT==null) missingRefs.add(mRef);
-            
+
             mRef = new MRef(Stereotype.MQNAME, "94b7efa5-f94c-4d1d-896f-f103e56a8e2e", "MDAAssocDep");
             MDAASSOCDEP = (Stereotype) session.findByRef(mRef);
             if (MDAASSOCDEP==null) missingRefs.add(mRef);
-            
+
             mRef = new MRef(TagType.MQNAME, "7637f2fd-b750-43c1-a15c-5d0b084ca1cd", "MDAAssocDepRole");
             MDAASSOCDEP_ROLE = (TagType) session.findByRef(mRef);
             if (MDAASSOCDEP_ROLE==null) missingRefs.add(mRef);
-            
+
             if (! missingRefs.isEmpty()) throw new MdaProxyException(MdaProxyException.MdaProxyExceptionReason.MISSING_MDA_ELEMENT, missingRefs);
             
         }

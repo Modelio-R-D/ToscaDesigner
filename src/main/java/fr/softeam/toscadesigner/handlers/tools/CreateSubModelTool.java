@@ -1,5 +1,10 @@
 package fr.softeam.toscadesigner.handlers.tools;
 
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
+import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram;
+import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.TopologyTemplateDiagram;
+import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 import org.modelio.api.modelio.IModelioServices;
 import org.modelio.api.modelio.diagram.IDiagramGraphic;
 import org.modelio.api.modelio.diagram.IDiagramHandle;
@@ -8,13 +13,6 @@ import org.modelio.api.modelio.diagram.dg.IDiagramDG;
 import org.modelio.api.modelio.diagram.style.IStyleHandle;
 import org.modelio.api.modelio.diagram.tools.DefaultBoxTool;
 import org.modelio.metamodel.diagrams.StaticDiagram;
-
-import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
-import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
-import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.ServiceTemplateDiagram;
-import fr.softeam.toscadesigner.api.automatic.standard.staticdiagram.TopologyTemplateDiagram;
-import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 @objid ("a21c4bc4-6a0a-43e5-9eb0-fd739505e023")
 public abstract class CreateSubModelTool extends DefaultBoxTool {
@@ -28,20 +26,20 @@ public abstract class CreateSubModelTool extends DefaultBoxTool {
         IModelioServices modelioServices = ToscaDesignerModule.getInstance().getModuleContext().getModelioServices();
         StaticDiagram diagram = diagram2.getElement();
         IDiagramService ds = modelioServices.getDiagramService();
-        
+
         try (IDiagramHandle handler = ds.getDiagramHandle(diagram);) {
             IDiagramDG dg = handler.getDiagramNode();
-        
+
             for (IStyleHandle style : ds.listStyles()) {
                 if (style.getName().equals(IToscaDesignerPeerModule.TOSCA_STYLE)) {
                     dg.setStyle(style);
                     break;
                 }
             }
-        
+
             handler.save();
             handler.close();
-        
+
             modelioServices.getEditionService().openEditor(diagram);
         }
     }
@@ -51,20 +49,20 @@ public abstract class CreateSubModelTool extends DefaultBoxTool {
         IModelioServices modelioServices = ToscaDesignerModule.getInstance().getModuleContext().getModelioServices();
         StaticDiagram diagram = diagram2.getElement();
         IDiagramService ds = modelioServices.getDiagramService();
-        
+
         try (IDiagramHandle handler = ds.getDiagramHandle(diagram);) {
             IDiagramDG dg = handler.getDiagramNode();
-        
+
             for (IStyleHandle style : ds.listStyles()) {
                 if (style.getName().equals(IToscaDesignerPeerModule.TOSCA_STYLE)) {
                     dg.setStyle(style);
                     break;
                 }
             }
-        
+
             handler.save();
             handler.close();
-        
+
             modelioServices.getEditionService().openEditor(diagram);
         }
     }

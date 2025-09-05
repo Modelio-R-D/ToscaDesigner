@@ -1,21 +1,18 @@
 package fr.softeam.toscadesigner.handlers.propertypages.serviceTemplate;
 
 import java.util.Arrays;
-
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-import org.modelio.metamodel.Metamodel;
-import org.modelio.metamodel.uml.infrastructure.ModelElement;
-import org.modelio.vcore.session.api.model.IMObjectFilter;
-import org.modelio.vcore.smkernel.mapi.MObject;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.CapabilitiesType;
 import fr.softeam.toscadesigner.api.tosca.infrastructure.modelelement.InterfacesType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinitionsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyElementInstanceStates;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
+import org.modelio.metamodel.Metamodel;
+import org.modelio.metamodel.uml.infrastructure.ModelElement;
+import org.modelio.vcore.session.api.model.IMObjectFilter;
+import org.modelio.vcore.smkernel.mapi.MObject;
 
 @objid ("1b7c8e78-2f52-4575-9b25-ab31be3a9dca")
 public class TNodeTypePropertyPage<T extends TNodeType> extends ToscaElementPropertyPage<T> {
@@ -32,11 +29,11 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends ToscaElementProp
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+
         case 2:
             this._element.setDescription(value);
             break;
-        
+
         case 3:
             for (ModelElement el : TNodeType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(el.getUuid())) {
@@ -59,7 +56,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends ToscaElementProp
                 }
             }
             break;
-        
+
         case 5:
             for (ModelElement dep : TTopologyElementInstanceStates.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
@@ -71,7 +68,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends ToscaElementProp
                 }
             }
             break;
-        
+
         case 6:
             for (ModelElement dep : TCapabilityDefinitionsType.MdaTypes.STEREOTYPE_ELT.getExtendedElement()) {
                 if (value.contains(dep.getUuid())) {
@@ -83,7 +80,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends ToscaElementProp
                 }
             }
             break;
-        
+
         }
     }
 
@@ -110,7 +107,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends ToscaElementProp
                         return InterfacesType.canInstantiate(element);
                     }
                 });
-        
+
         // Instance States
         table.addProperty("Instance States",
                 this._element.getInstanceStates() != null ? this._element.getInstanceStates().getElement() : null,
@@ -120,7 +117,7 @@ public class TNodeTypePropertyPage<T extends TNodeType> extends ToscaElementProp
                         return TTopologyElementInstanceStates.canInstantiate(element);
                     }
                 });
-        
+
         // Capability Definition
         table.addProperty("Capability Definition",
                 this._element.getCapabilityDefinitions() != null ? this._element.getCapabilityDefinitions().getElement()

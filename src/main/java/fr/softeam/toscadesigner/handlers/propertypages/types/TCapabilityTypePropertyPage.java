@@ -1,11 +1,9 @@
 package fr.softeam.toscadesigner.handlers.propertypages.types;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityType;
 import fr.softeam.toscadesigner.handlers.propertypages.core.ToscaElementPropertyPage;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("fc40a086-4b51-4fac-b383-3dc322b43f67")
 public class TCapabilityTypePropertyPage<T extends TCapabilityType> extends ToscaElementPropertyPage<T> {
@@ -21,7 +19,7 @@ public class TCapabilityTypePropertyPage<T extends TCapabilityType> extends Tosc
         switch (row) {
         case 1:
             break;
-        
+
         }
     }
 

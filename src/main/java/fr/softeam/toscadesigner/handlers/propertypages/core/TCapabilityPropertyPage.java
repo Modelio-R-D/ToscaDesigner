@@ -1,10 +1,8 @@
 package fr.softeam.toscadesigner.handlers.propertypages.core;
 
-import org.modelio.api.module.propertiesPage.IModulePropertyTable;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapability;
+import org.modelio.api.module.propertiesPage.IModulePropertyTable;
 
 @objid ("3f614cc7-3f21-42f9-bef6-1deb16e9737d")
 public class TCapabilityPropertyPage<T extends TCapability> extends ToscaElementPropertyPage<T> {
@@ -21,7 +19,7 @@ public class TCapabilityPropertyPage<T extends TCapability> extends ToscaElement
         case 1:
             this._element.getElement().setName(value);
             break;
-        
+
         }
     }
 
