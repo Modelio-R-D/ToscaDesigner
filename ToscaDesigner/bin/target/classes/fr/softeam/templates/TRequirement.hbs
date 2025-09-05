@@ -1,0 +1,10 @@
+- {{name}}:
+   node: {{getProperty this "node"}}
+   relationship: {{getProperty this "relationship"}}
+   capability: {{getProperty this "capability"}}
+   {{#unless (noStereotypeApplications this "TPropertyDef")}}
+     properties:
+     {{#each ../ownedAttribute}}{{#extension}}{{#eq name "TPropertyDef"}}
+     {{../name}}: "{{../value}}"
+     {{/eq}}{{/extension}}{{/each}}
+   {{/unless}}

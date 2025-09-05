@@ -1,0 +1,37 @@
+{{#unless (noStereotypeApplications this "Metadata")}}metadata:{{/unless}}
+{{#each ownedAttribute}}{{#extension}}{{#eq name "Metadata"}}
+  {{../name}}: "{{../value}}"
+{{/eq}}{{/extension}}{{/each}}
+{{imports this}}
+topology_template:
+{{#unless (noStereotypeApplications this "InputParametersType")}}
+  inputs:
+{{#ownedElement}}{{#extension}}{{#eq name "InputParametersType"}}{{#ownedAttribute}}{{#extension}}{{#eq name "TParameter"}}
+    {{> (lookup this.name) ../this}}
+{{/eq}}{{/extension}}{{/ownedAttribute}}{{/eq}}{{/extension}}{{/ownedElement}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "TNodeTemplate")}}
+  node_templates:
+{{#ownedElement}}{{#extension}}{{#eq name "TNodeTemplate"}}
+    {{> (lookup this.name) ../this}}
+{{/eq}}{{/extension}}{{/ownedElement}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "TGroup")}}
+  groups:  
+{{#ownedElement}}{{#extension}}{{#eq name "TGroup"}}
+    {{> (lookup this.name) ../this}}
+{{/eq}}{{/extension}}{{/ownedElement}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "TRelationshipTemplateEnd")}}
+  relationship_templates:
+{{#ownedElement}}{{#targetingEnd}}{{#association}}{{#extension}}{{#eq name "TRelationshipTemplate"}}
+    {{../name}}:
+      type: {{getProperty ../this "type"}}
+{{/eq}}{{/extension}}{{/association}}{{/targetingEnd}}{{/ownedElement}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "PoliciesType")}}
+  policies:
+{{#ownedElement}}{{#extension}}{{#eq name "PoliciesType"}}{{#ownedElement}}{{#extension}}{{#eq name "TPolicy"}}
+    {{> (lookup this.name) ../this}}
+{{/eq}}{{/extension}}{{/ownedElement}}{{/eq}}{{/extension}}{{/ownedElement}}
+{{/unless}}

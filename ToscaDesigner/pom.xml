@@ -7,8 +7,7 @@
     <!-- definition -->
     <groupId>fr.softeam</groupId>
     <artifactId>toscadesigner</artifactId>
-
-    <version>0.5.12</version>
+  <version>0.5.12</version>
     <name>ToscaDesigner</name>
 
     <description>
@@ -41,7 +40,7 @@ This module typically provides a graphical user interface (GUI) or integrated de
         <dependency>
           <groupId>org.modelio</groupId>
           <artifactId>MDAKit</artifactId>
-          <version>[6.1,6.2)</version>
+          <version>[5.4.1,5.4.2)</version>
           <type>pom</type>
           <scope>provided</scope>
         </dependency>
@@ -65,7 +64,7 @@ This module typically provides a graphical user interface (GUI) or integrated de
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.14.0</version>
         <configuration>
-          <release>11</release>
+          <release>8</release>
           <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
       </plugin>
