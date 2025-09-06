@@ -8,6 +8,7 @@
     <groupId>fr.softeam</groupId>
     <artifactId>toscadesigner</artifactId>
     <version>0.5.12</version>
+
     <name>ToscaDesigner</name>
 
     <description>
