@@ -7,7 +7,6 @@
     <!-- definition -->
     <groupId>fr.softeam</groupId>
     <artifactId>toscadesigner</artifactId>
-
     <version>0.5.12</version>
     <name>ToscaDesigner</name>
 
@@ -65,7 +64,7 @@ This module typically provides a graphical user interface (GUI) or integrated de
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.14.0</version>
         <configuration>
-          <release>11</release>
+          <release>8</release>
           <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
       </plugin>

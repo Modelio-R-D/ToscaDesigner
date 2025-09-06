@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: ['8']
+        # Use JDK 11 to run the Modelio Maven plugin (which requires Java 11),
+        # while the maven-compiler-plugin produces Java 8 bytecode (<release>8).
+        java: ['11']
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK

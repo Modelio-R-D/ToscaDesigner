@@ -1,0 +1,19 @@
+{{name}}:
+{{#if (getProperty this "description")}}
+  description: {{getProperty this "description"}}
+{{/if}}
+{{#if (getProperty this "event")}}
+  event: {{getProperty this "event"}}
+{{/if}}
+{{#if (getProperty this "schedule")}}
+  schedule: {{getProperty this "schedule"}}
+{{/if}}
+{{#if (getProperty this "target_filter")}}
+  target_filter: '{{getProperty this "target_filter"}}'
+{{/if}}
+{{#if (getProperty this "condition")}}
+  condition: '{{{getProperty this "condition"}}}'
+{{/if}}
+{{#if (getProperty this "action")}}
+  action: '{{{getProperty this "action"}}}'
+{{/if}}
