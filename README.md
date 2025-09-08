@@ -1,4 +1,4 @@
-#  MYRTUSDesigner
+#  TOSCA Designer
 
 **TOSCA Designer** is an open-source module for **Modelio 5.4.1**, enabling graphical modeling of cloud-based applications using the [OASIS TOSCA Standard](https://www.oasis-open.org/committees/tosca/).  It allows users to specify the components comprising the topology of cloud-based applications along with the processes for their orchestration.  TOSCA supports the specification of types and templates. It also allows exporting these models as `.tosca` and `.csar` files.
 
