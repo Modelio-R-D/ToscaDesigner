@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="Copy tocs files - default (en)"  >
+<target name="Copy tocs files - default (en)">
+  <copy todir="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\ToscaDesigner\src\main\doc\target/tocs">
+    <fileset dir="en/tocs" erroronmissingdir="false">
+      <include name="**/*"/>
+    </fileset>
+  </copy>
+</target>
+</project>

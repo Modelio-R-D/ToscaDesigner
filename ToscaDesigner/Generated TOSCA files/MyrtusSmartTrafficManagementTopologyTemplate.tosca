@@ -1,0 +1,186 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+
+
+topology_template:
+  inputs:
+    edge_high_cpu_threshold
+      type: float
+      default: '0.7'
+    fog_high_cpu_threshold
+      type: integer
+      default: '0.6'
+    high_traffic_threshold_15min
+      type: integer
+      default: '125'
+    low_traffic_threshold_15min
+      type: integer
+      default: '25'
+  groups:  
+    compute_nodes:	
+      node_templates:  
+        cloud_instance_1:
+          type: .CloudInstance
+          properties:
+            memory: "128 GB DDR4"
+            storageCapacity: "4000 GB SSD"
+            processingCapabilities: "Intel Xeon Platinum 8358, 32 cores @ 2.60 GHz"
+            maxNetworkBandwidth: "10 Gbps"
+            highCpuThreshold: "0.7"
+        fog_node_1:
+          type: .FogNode
+          properties:
+            processingCapabilities: "Intel Xeon E-2224, 4 cores @ 3.40 GHz"
+            memory: "16 GB DDR4"
+            maxNetworkBandwidth: "1 Gbps"
+            storageCapacity: "500 GB SSD"
+            highCpuThreshold: "0.8"
+        basic_edge_camera_1:
+          type: .EdgeCamera
+          properties:
+            processingCapability: "ARM Cortex-A73, Quad-core 1.4 GHz"
+            memory: "2 GB LPDDR4"
+            maxNetworkBandwidth: "100 Mbps"
+            cameraSensorSpec: "1/2.8-inch CMOS, 12 MP, 4K@30fps"
+            location: "Intersection of Main St. and 1st Ave."
+            maxPowerConsumptionThreshold: "11.5W"
+            minPowerConsumptionThreshold: "3.5W"
+            baselineAveragePowerConsumption: "4.5W"
+            highCpuThreshold: "0.7"
+        basic_edge_camera_2:
+          type: .EdgeCamera
+          properties:
+            processingCapability: "ARM Cortex-A73, Quad-core 1.4 GHz"
+            memory: "2 GB LPDDR4"
+            maxNetworkBandwidth: "100 Mbps"
+            cameraSensorSpec: "1/2.8-inch CMOS, 12 MP, 4K@30fps"
+            location: "Intersection of Main St. and 1st Ave."
+            baselineAveragePowerConsumption: "4.5W"
+            minPowerConsumptionThreshold: "3.5W"
+            maxPowerConsumptionThreshold: "11.5W"
+            highCpuThreshold: "0.7"
+        advanced_edge_camera_1:
+          type: .EdgeCamera
+          properties:
+            processingCapability: "NVIDIA Jetson TX2"
+            memory: "4 GB LPDDR4"
+            maxNetworkBandwidth: "1 Gbps"
+            cameraSensorSpec: "1/1.8-inch CMOS, 20 MP, 4K@60fps"
+            location: "Intersection of Main St. and 1st Ave."
+            maxPowerConsumptionThreshold: "20W"
+            minPowerConsumptionThreshold: "5W"
+            baselineAveragePowerConsumption: "8W"
+            highCpuThreshold: "0.8"
+        advanced_edge_camera_2:
+          type: .EdgeCamera
+          properties:
+            processingCapability: "NVIDIA Jetson TX2"
+            minPowerConsumptionThreshold: "5W"
+            maxNetworkBandwidth: "1 Gbps"
+            location: "Intersection of Main St. and 1st Ave."
+            memory: "4 GB LPDDR4"
+            cameraSensorSpec: "1/1.8-inch CMOS, 20 MP, 4K@60fps"
+            maxPowerConsumptionThreshold: "20W"
+            baselineAveragePowerConsumption: "8W"
+            highCpuThreshold: "0.8"
+    software_component_nodes:	
+      node_templates:  
+        object_detection_1:
+          type: .object_detection
+          properties:
+            dockerImage: "dockerHub/objectDetection"
+          requirements:
+            - host:
+               node: basic_edge_camera_1
+               relationship: 
+               capability: 
+               properties:
+                 processingRequirement: "0.4"
+                 memoryRequirement: "250MB"
+        object_tracking_1:
+          type: .object_tracking
+          properties:
+            dockerImage: "dockerHub/objectTracking"
+          requirements:
+            - host:
+               node: basic_edge_camera_1
+               relationship: 
+               capability: 
+               properties:
+                 processingRequirement: "0.5"
+                 memoryRequirement: "300MB"
+        image_processing_1:
+          type: .image_processing
+          properties:
+            dockerImage: "dockerHub/imageProcessing"
+          requirements:
+            - host:
+               node: fog_node_1
+               relationship: 
+               capability: 
+               properties:
+                 processingRequirement: "0.4"
+                 memoryRequirement: "250MB"
+        traffic_data_analysis_1:
+          type: .traffic_data_analysis
+          properties:
+            dockerImage: "dockerHub/trafficDataAnalysis"
+          requirements:
+            - host:
+               node: cloud_instance_1
+               relationship: 
+               capability: 
+               properties:
+                 memoryRequirement: "0.7"
+                 processingRequirement: "700MB"
+        digital_signature_verification_1:
+          type: .security_countermeasure
+        encryption_decryption_1:
+          type: .security_countermeasure
+        key_exchange_mechanism_1:
+          type: .security_countermeasure
+        ai_malware_mechanism_1:
+          type: .security_countermeasure
+        side_channel_secure_library_1:
+          type: .security_countermeasure
+  relationship_templates:
+  policies:
+    high_cpu_utilization_on_camera:
+      type: tosca.policies.Placement
+      description: Edge devices SHOULD maintain computational resource (CPU, GPU) utilization below 70% to ensure adequate headroom for handling unexpected traffic spikes or system events.
+      targets: [basic_edge_camera_1,basic_edge_camera_2,advanced_edge_camera_1,advanced_edge_camera_2]
+      triggers:
+        high_cpu_utilization_on_camera_trigger:
+          description: Edge devices SHOULD maintain computational resource (CPU, GPU) utilization below 70% to ensure adequate headroom for handling unexpected traffic spikes or system events.
+          condition: 'for camera in targets: camera.cpu_utilization > edge_high_cpu_threshold'
+          action: 'migrate: object_detection_service target: fog_node_1'
+    high_cpu_utilization_on_fog:
+      type: tosca.policies.Placement
+      description: Fog nodes SHOULD maintain computational resource (CPU, GPU) utilization below 60% to accommodate dynamic workload fluctuations and support real-time traffic data processing.
+      targets: [fog_node_1]
+      triggers:
+        high_cpu_utilization_on_fog_trigger:
+          description: Edge devices SHOULD maintain computational resource (CPU, GPU) utilization below 60% to ensure adequate headroom for handling unexpected traffic spikes or system events.
+          condition: 'for fog_node in targets: fog_node.cpu_utilization > fog_high_cpu_threshold'
+          action: 'migrate: object_detection_service target: cloud_instance_1'
+    edge_low_power_mode:
+      type: tosca.policies.Placement
+      targets: [basic_edge_camera_1,basic_edge_camera_2,advanced_edge_camera_1,advanced_edge_camera_2]
+      triggers:
+        edge_low_power_mode_trigger:
+          condition: 'datetime.datetime.now().time() >= datetime.time(1, 0) and datetime.datetime.now().time() <= datetime.time(5, 0) and average_traffic_density_15min < low_traffic_threshold_15min'
+          action: 'frame_rate: 10 else frame_rate: 30'
+    high_traffic_scaling:
+      type: tosca.policies.Scaling
+      targets: [cloud_instance_1]
+      triggers:
+        high_traffic_scaling_trigger:
+          condition: 'average_traffic_density_15min > high_traffic_threshold_15min'
+          action: 'scale_up: 1 target: cloud_server_1'
+    low_traffic_scaling:
+      type: tosca.policies.Scaling
+      targets: [cloud_instance_1]
+      triggers:
+        low_traffic_scaling_trigger:
+          condition: 'average_traffic_density_15min < low_traffic_threshold_15min'
+          action: 'scale_down: 1 target: cloud_server_1'

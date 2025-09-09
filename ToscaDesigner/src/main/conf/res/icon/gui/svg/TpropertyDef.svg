@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="TpropertyDef.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="396.55076"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="877"
+     inkscape:window-y="1431"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:#9bb1ff;fill-opacity:1"
+       id="g833"
+       transform="matrix(0.10342873,0,0,0.10372381,54.44878,200.47444)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TPropertyDef48.png"
+       inkscape:export-xdpi="18.2864"
+       inkscape:export-ydpi="18.2864">
+      <path
+         d="m 320,-365.76909 h 320 v -64.27886 H 320 Z m 0,-128.55773 h 320 v -64.27886 H 320 Z m -80,257.11546 q -33,0 -56.5,-18.88192 Q 160,-274.9752 160,-301.49023 v -514.23091 q 0,-26.51503 23.5,-45.39694 Q 207,-880 240,-880 h 320 l 240,192.83659 v 385.67318 q 0,26.51503 -23.5,45.39695 -23.5,18.88192 -56.5,18.88192 z M 520,-655.02398 V -815.72114 H 240 v 514.23091 H 720 V -655.02398 Z M 240,-815.72114 v 160.69716 -160.69716 514.23091 z"
+         id="path1770"
+         style="fill:#9bb1ff;fill-opacity:1;stroke-width:0.896374"
+         inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\metadata48.png"
+         inkscape:export-xdpi="288"
+         inkscape:export-ydpi="288" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:48.413px;line-height:1.25;font-family:sans-serif;fill:#5465ff;fill-opacity:1;stroke:none;stroke-width:0.907743"
+       x="66.126068"
+       y="157.60016"
+       id="text3961"
+       transform="scale(1.0808595,0.92518963)"><tspan
+         sodipodi:role="line"
+         id="tspan3959"
+         style="font-size:48.413px;fill:#5465ff;fill-opacity:1;stroke-width:0.907743"
+         x="66.126068"
+         y="157.60016">P</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="service_template_diag.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.72337262"
+     inkscape:cx="313.80784"
+     inkscape:cy="584.06966"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient4607"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5465ff;stop-opacity:1;"
+         offset="0"
+         id="stop4605" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4599"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#788bff;stop-opacity:1;"
+         offset="0"
+         id="stop4597" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4460"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#fabc3c;stop-opacity:0.66666675;"
+         offset="0"
+         id="stop4458" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4388"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#9bb1ff;stop-opacity:1;"
+         offset="0"
+         id="stop4386" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4318"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#9bb1ff;stop-opacity:1;"
+         offset="0"
+         id="stop4316" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="EmptyTriangleInL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleInL"
+       inkscape:isstock="true">
+      <path
+         transform="scale(-0.8) translate(-6,0)"
+         style="fill-rule:evenodd;fill:context-fill;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path3103" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DotL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotL"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(7.4, 1)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path3013" />
+    </marker>
+    <linearGradient
+       id="linearGradient2902"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2900" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4460"
+       id="linearGradient4462"
+       x1="37.55149"
+       y1="165.87377"
+       x2="186.29579"
+       y2="165.87377"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0471184,0,0,1.1679481,-11.144453,-330.01581)" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;mix-blend-mode:normal;fill:url(#linearGradient4462);fill-opacity:1;stroke:#f55536;stroke-width:6.08236;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect846"
+       width="150.13499"
+       height="141.40083"
+       x="30.985294"
+       y="-206.98428"
+       transform="matrix(0.99998033,-0.00627168,-0.00504111,-0.99998729,0,0)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\diagram\service_template_diag48.png"
+       inkscape:export-xdpi="7.1384907"
+       inkscape:export-ydpi="7.1384907" />
+    <path
+       style="opacity:1;fill:#788bff;fill-opacity:1;stroke:#788bff;stroke-width:0.538162;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d=""
+       id="path5302"
+       transform="scale(0.26458333)" />
+    <path
+       style="opacity:1;fill:#788bff;fill-opacity:1;stroke:#788bff;stroke-width:0.538162;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d=""
+       id="path5497"
+       transform="scale(0.26458333)" />
+    <path
+       d="m 138.9552,130.37403 -1.87849,16.26325 q -1.5263,0.63523 -2.87642,1.52458 -1.3502,0.88935 -2.64159,1.90588 l -13.97126,-6.35285 -12.91452,24.14081 12.09268,9.91039 q -0.1171,0.88938 -0.1171,1.71534 v 3.43053 q 0,0.82598 0.1171,1.71533 l -12.09268,9.91041 12.91452,24.14079 13.97126,-6.35284 q 1.29143,1.01653 2.70028,1.90587 1.40877,0.88938 2.81773,1.52459 l 1.87849,16.26329 h 25.82907 l 1.87848,-16.26329 q 1.52626,-0.63521 2.87641,-1.52459 1.35021,-0.88934 2.64162,-1.90587 l 13.97123,6.35284 12.91454,-24.14079 -12.09271,-9.91041 q 0.1171,-0.88935 0.1171,-1.71533 v -3.43053 q 0,-0.82596 -0.23481,-1.71534 l 12.09276,-9.91039 -12.91455,-24.14081 -13.85378,6.35285 q -1.29147,-1.01653 -2.70035,-1.90588 -1.40876,-0.88935 -2.81772,-1.52458 l -1.87845,-16.26325 z m 8.21831,10.16452 h 9.27502 l 1.64357,13.46802 q 3.63957,1.01652 6.75078,2.98584 3.11125,1.96936 5.69414,4.76462 l 11.62313,-5.20933 4.5788,8.63986 -10.09683,8.2587 q 0.58696,1.77872 0.82179,3.74815 0.23485,1.9694 0.23485,4.0023 0,2.03289 -0.23485,4.00229 -0.23483,1.96938 -0.82179,3.74817 l 10.09683,8.2587 -4.5788,8.63985 -11.62313,-5.33636 q -2.58281,2.92228 -5.69405,4.89167 -3.11121,1.96939 -6.75076,2.98583 l -1.52627,13.46802 h -9.27499 l -1.6436,-13.46802 q -3.63955,-1.0165 -6.75081,-2.98583 -3.11119,-1.96939 -5.69412,-4.76464 l -11.62311,5.20933 -4.57883,-8.63985 10.09687,-8.13167 q -0.58696,-1.90584 -0.8218,-3.81167 -0.23481,-1.90587 -0.23481,-4.06582 0,-2.0329 0.23481,-3.93876 0.23484,-1.90587 0.8218,-3.81169 l -10.09687,-8.2587 4.57883,-8.63986 11.62311,5.33637 q 2.58293,-2.9223 5.69412,-4.89166 3.11126,-1.96939 6.75081,-2.98584 z m 4.93102,22.87021 q 6.8095,0 11.62311,5.20932 4.81358,5.20934 4.81358,12.57863 0,7.36928 -4.81358,12.57862 -4.81361,5.20934 -11.62311,5.20934 -6.92687,0 -11.68179,-5.20934 -4.75489,-5.20934 -4.75489,-12.57862 0,-7.36929 4.75489,-12.57863 4.75492,-5.20932 11.68179,-5.20932 z m -0.23482,17.78795 z"
+       id="path7350"
+       style="fill:#ff9a38;fill-opacity:1;stroke-width:0.122516;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\diagram\service_template_diag48.png"
+       inkscape:export-xdpi="7.1384907"
+       inkscape:export-ydpi="7.1384907" />
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+fr\softeam\toscadesigner\impl\ToscaDesignerModule.class
+fr\softeam\toscadesigner\impl\ToscaDesignerPeerModule.class
+fr\softeam\toscadesigner\i18n\Messages.class
+fr\softeam\toscadesigner\impl\ToscaDesignerLifeCycleHandler.class
+fr\softeam\toscadesigner\api\IToscaDesignerPeerModule.class
+fr\softeam\toscadesigner\api\ToscaDesignerParameters.class

@@ -1,0 +1,64 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+imports:
+  - file: .tosca
+    namespace_uri: 
+    namespace_prefix: MYRTUS-
+
+node_types:
+  compute_nodes.EdgeCamera:
+
+    metadata:
+      targetNamespace: ""
+      abstract: ""
+      final: ""
+    properties:
+      processingCapability:
+      	type: string
+      	description: 
+      	
+      memory:
+      	type: string
+      	description: 
+      	
+      networkBandwidth:
+      	type: string
+      	description: 
+      	
+      cameraSensorSpec:
+      	type: string
+      	description: 
+      	
+      location:
+      	type: string
+      	description: 
+      	
+      cpuUtilization:
+      	type: float
+      	description: 
+      	
+      frame_rate:
+      	type: integer
+      	description: 
+      	
+      baselineAveragePowerConsumption:
+      	type: float
+      	description: 
+      	
+      minPowerConsumptionThreshold:
+      	type: float
+      	description: 
+      	
+      maxPowerConsumptionThreshold:
+      	type: float
+      	description: 
+      	
+      lowPowerMode:
+      	type: boolean
+      	description: 
+      	
+    
+	capabilities:
+      host:
+        occurrences: [ , 0 ]
+        type: tosca.capabilities.Compute

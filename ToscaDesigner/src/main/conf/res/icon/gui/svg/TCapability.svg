@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TCapability48.png"
+   inkscape:export-xdpi="13.845417"
+   inkscape:export-ydpi="13.845417"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="TCapability.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="396.55076"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g841" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:#f19143;fill-opacity:1"
+       id="g841"
+       transform="matrix(0.10438729,0,0,0.11091569,47.745632,198.64148)">
+      <path
+         d="M 253.11288,-87.448427 V -257.84702 Q 189.88426,-309.36287 154.94213,-378.21579 120,-447.0687 120,-523.35179 120,-671.95521 236.47377,-775.97761 352.94754,-880 519.33864,-880 q 138.65925,0 245.70419,72.81568 107.04494,72.81567 139.21388,189.71703 l 57.68225,203.09134 q 5.54637,18.8231 -7.76492,34.17879 -13.31129,15.35568 -35.49677,15.35568 h -88.74192 v 118.88274 q 0,32.69275 -26.06793,55.97395 -26.06794,23.28121 -62.67398,23.28121 h -88.74192 v 79.255153 H 563.7096 V -245.95874 H 741.19344 V -444.09663 H 860.99503 L 818.84261,-597.6535 q -25.5133,-90.15274 -108.70885,-146.62204 -83.19555,-56.4693 -190.79512,-56.4693 -128.67579,0 -219.63625,80.24584 -90.96047,80.24585 -90.96047,195.16583 0,59.44137 27.17721,112.9386 27.17721,53.49723 77.09454,95.10619 l 28.84113,23.77654 V -87.448427 Z M 534.86847,-444.09663 Z m -59.90079,79.25515 h 88.74192 l 6.65564,-49.53447 q 8.87419,-2.97207 16.08447,-6.93483 7.21028,-3.96276 12.75665,-8.9162 l 51.02661,19.81379 44.37096,-67.36689 -44.37096,-29.72068 q 2.21855,-7.92552 2.21855,-15.85103 0,-7.92552 -2.21855,-15.85103 l 44.37096,-29.72069 -44.37096,-67.36688 -51.02661,19.81379 q -5.54637,-4.95345 -12.75665,-8.91621 -7.21028,-3.96276 -16.08447,-6.93482 l -6.65564,-49.53448 h -88.74192 l -6.65565,49.53448 q -8.87419,2.97206 -16.08447,6.93482 -7.21028,3.96276 -12.75665,8.91621 l -51.0266,-19.81379 -44.37096,67.36688 44.37096,29.72069 q -2.21855,7.92551 -2.21855,15.85103 0,7.92551 2.21855,15.85103 l -44.37096,29.72068 44.37096,67.36689 51.0266,-19.81379 q 5.54637,4.95344 12.75665,8.9162 7.21028,3.96276 16.08447,6.93483 z m 44.37096,-99.06894 q -27.73185,0 -47.14415,-17.33707 -19.41229,-17.33707 -19.41229,-42.1043 0,-24.76724 19.41229,-42.1043 19.4123,-17.33707 47.14415,-17.33707 27.73185,0 47.14414,17.33707 19.4123,17.33706 19.4123,42.1043 0,24.76723 -19.4123,42.1043 -19.41229,17.33707 -47.14414,17.33707 z"
+         id="path832"
+         style="fill:#5465ff;fill-opacity:1;stroke-width:1.04831"
+         inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\capabilityDefinition48.png"
+         inkscape:export-xdpi="13.869296"
+         inkscape:export-ydpi="13.869296" />
+    </g>
+  </g>
+</svg>

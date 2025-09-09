@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="24px"
+   viewBox="0 -960 960 960"
+   width="24px"
+   fill="#5f6368"
+   version="1.1"
+   id="svg1772"
+   sodipodi:docname="metadata.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\metadata48.png"
+   inkscape:export-xdpi="286.75058"
+   inkscape:export-ydpi="286.75058"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1776" />
+  <sodipodi:namedview
+     id="namedview1774"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="29.958333"
+     inkscape:cx="14.486787"
+     inkscape:cy="10.264256"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1772" />
+  <path
+     d="m 320,-365.76909 h 320 v -64.27886 H 320 Z m 0,-128.55773 h 320 v -64.27886 H 320 Z m -80,257.11546 q -33,0 -56.5,-18.88192 Q 160,-274.9752 160,-301.49023 v -514.23091 q 0,-26.51503 23.5,-45.39694 Q 207,-880 240,-880 h 320 l 240,192.83659 v 385.67318 q 0,26.51503 -23.5,45.39695 -23.5,18.88192 -56.5,18.88192 z M 520,-655.02398 V -815.72114 H 240 v 514.23091 H 720 V -655.02398 Z M 240,-815.72114 v 160.69716 -160.69716 514.23091 z"
+     id="path1770"
+     style="fill:#9bb1ff;fill-opacity:1;stroke-width:0.896374"
+     inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\metadata48.png"
+     inkscape:export-xdpi="288"
+     inkscape:export-ydpi="288" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:347.37px;line-height:1.25;font-family:sans-serif;fill:#ff773d;fill-opacity:1;stroke:none;stroke-width:8.68425"
+     x="193.76733"
+     y="-592.62872"
+     id="text2627"
+     transform="scale(1.0322191,0.96878655)"><tspan
+       sodipodi:role="line"
+       id="tspan2625"
+       style="fill:#ff773d;fill-opacity:1;stroke-width:8.68425"
+       x="193.76733"
+       y="-592.62872">M</tspan></text>
+</svg>

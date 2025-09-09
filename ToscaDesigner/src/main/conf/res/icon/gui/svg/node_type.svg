@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="node_type.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="396.55076"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="710.35669"
+       y="366.88752"
+       width="295.96641"
+       height="260.11286"
+       id="rect189089" />
+    <style
+       id="style96550">
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+    <style
+       id="style106908">
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:213.055px;line-height:1.25;font-family:'Book Antiqua';-inkscape-font-specification:'Book Antiqua';fill:#fabc3c;fill-opacity:1;stroke:none;stroke-width:0.399477"
+       x="32.028049"
+       y="219.64551"
+       id="text179707"
+       transform="scale(1.0498452,0.95252139)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\node_type24.png"
+       inkscape:export-xdpi="4.3086605"
+       inkscape:export-ydpi="4.3086605"><tspan
+         sodipodi:role="line"
+         id="tspan179705"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:213.055px;font-family:'Book Antiqua';-inkscape-font-specification:'Book Antiqua';fill:#fabc3c;fill-opacity:1;stroke-width:0.399477"
+         x="32.028049"
+         y="219.64551">T</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text189087"
+       style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect189089)" />
+    <path
+       d="m 101.58167,211.36476 q -6.787519,0 -11.585713,-4.50227 -4.798185,-4.50242 -4.798185,-10.87174 0,-6.36912 4.798185,-10.87157 4.798194,-4.50242 11.585713,-4.50242 2.10645,0 4.09596,0.49473 1.98952,0.49473 3.74495,1.37298 l 17.90528,-16.80161 v -12.07968 q -5.1492,-1.42776 -8.42603,-5.43578 -3.2768,-4.0082 -3.2768,-9.27931 0,-6.36929 4.79819,-10.87173 4.79818,-4.50226 11.58569,-4.50226 6.7878,0 11.58598,4.50226 4.79803,4.50244 4.79803,10.87173 0,5.27111 -3.27667,9.27931 -3.27682,4.00818 -8.42602,5.43578 v 12.07968 l 18.02226,16.80161 q 1.75508,-0.87825 3.68637,-1.37298 1.93097,-0.49473 4.03742,-0.49473 6.7877,0 11.58588,4.50242 4.79818,4.50245 4.79818,10.87157 0,6.36932 -4.79818,10.87174 -4.79818,4.50227 -11.58588,4.50227 -6.78753,0 -11.58571,-4.50227 -4.79822,-4.50242 -4.79822,-10.87174 0,-1.97662 0.52726,-3.84348 0.52725,-1.8669 1.46318,-3.51414 l -16.03299,-15.04445 -16.0327,15.04445 q 0.93594,1.64692 1.46317,3.51414 0.52723,1.86686 0.52723,3.84348 0,6.36932 -4.79801,10.87174 -4.79819,4.50227 -11.58588,4.50227 z m 60.85461,-8.78504 q 2.9258,0 4.97369,-1.92184 2.04809,-1.92167 2.04809,-4.66713 0,-2.74529 -2.04809,-4.66711 -2.04789,-1.92168 -4.97369,-1.92168 -2.92564,0 -4.97352,1.92168 -2.04806,1.92182 -2.04806,4.66711 0,2.74546 2.04806,4.66713 2.04788,1.92184 4.97352,1.92184 z m -30.42737,-57.10366 q 2.9259,0 4.97379,-1.92167 2.04807,-1.92184 2.04807,-4.66712 0,-2.74544 -2.04807,-4.66711 -2.04789,-1.92184 -4.97379,-1.92184 -2.92561,0 -4.97368,1.92184 -2.04789,1.92167 -2.04789,4.66711 0,2.74528 2.04789,4.66712 2.04807,1.92167 4.97368,1.92167 z m -30.42724,57.10366 q 2.92577,0 4.97369,-1.92184 2.04807,-1.92167 2.04807,-4.66713 0,-2.74529 -2.04807,-4.66711 -2.04792,-1.92168 -4.97369,-1.92168 -2.92562,0 -4.973694,1.92168 -2.047914,1.92182 -2.047914,4.66711 0,2.74546 2.047914,4.66713 2.048074,1.92184 4.973694,1.92184 z"
+       id="path153420"
+       style="fill:#f55536;fill-opacity:1;stroke-width:0.113363"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\node_type24.png"
+       inkscape:export-xdpi="4.3086605"
+       inkscape:export-ydpi="4.3086605" />
+  </g>
+</svg>

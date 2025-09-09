@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="policiestype.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="396.55076"
+     inkscape:cy="611.21899"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient25405"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5495e1;stop-opacity:1;"
+         offset="0"
+         id="stop25403" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient11869"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#fff6d5;stop-opacity:1;"
+         offset="0"
+         id="stop11867" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient25405"
+       id="linearGradient25407"
+       x1="9.4486952"
+       y1="153.86995"
+       x2="199.97967"
+       y2="153.86995"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#e5f9e0;stroke:url(#linearGradient25407);stroke-width:2.131;stroke-linecap:round;stroke-linejoin:round;fill-opacity:0.46134022;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect929"
+       width="190.39984"
+       height="225.09804"
+       x="9.5142612"
+       y="41.32093"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\policiesType48png"
+       inkscape:export-xdpi="6.3324924"
+       inkscape:export-ydpi="6.3324924" />
+    <g
+       style="fill:#e5f9e0;fill-opacity:1"
+       id="g870-9"
+       transform="matrix(0.11716844,0,0,0.09914696,198.27139,170.96925)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\policiesType48png"
+       inkscape:export-xdpi="6.3324924"
+       inkscape:export-ydpi="6.3324924">
+      <path
+         style="fill:#e5f9e0;fill-opacity:1;stroke:#5465ff;stroke-width:1.62119;stroke-linecap:round;stroke-linejoin:round"
+         d="m -373.82314,-597.40514 c -90.528,-41.26624 -159.42634,-125.18438 -199.90271,-243.4818 l -11.8573,-34.65447 1.04983,-147.40799 1.04984,-147.4079 121.80268,-48.5493 c 88.03733,-35.0909 125.12387,-47.995 133.78326,-46.5496 6.58933,1.0998 64.09618,22.7939 127.79297,48.2089 l 115.81241,46.2093 1.18422,127.7881 c 1.34199,144.81006 -1.83274,180.49459 -20.27455,227.889 -41.67872,107.11197 -108.21947,182.28023 -194.43758,219.64786 -30.50912,13.22312 -43.93861,12.92412 -76.00307,-1.6921 z"
+         id="path3373-6" />
+      <path
+         style="fill:#2f9c95;fill-opacity:1;stroke:#5465ff;stroke-width:1.96618;stroke-linecap:round;stroke-linejoin:round"
+         d="m -424.14797,-858.61285 -67.76395,-67.16454 26.31454,-26.0282 26.31451,-26.0281 42.64754,41.9642 42.64757,41.9644 82.64045,-84.3347 82.64043,-84.33481 25.62369,24.687 c 14.09303,13.5779 25.62363,26.2119 25.62363,28.0756 0,4.4148 -211.24112,218.36395 -215.59998,218.36395 -1.82845,0 -33.81824,-30.2242 -71.08843,-67.1648 z"
+         id="path2671-2" />
+    </g>
+    <g
+       style="fill:#e5f9e0;fill-opacity:1"
+       id="g870-9-6"
+       transform="matrix(0.11716844,0,0,0.09914696,139.78192,171.03674)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\policiesType48png"
+       inkscape:export-xdpi="6.3324924"
+       inkscape:export-ydpi="6.3324924">
+      <path
+         style="fill:#e5f9e0;fill-opacity:1;stroke:#5465ff;stroke-width:1.62119;stroke-linecap:round;stroke-linejoin:round"
+         d="m -373.82314,-597.40514 c -90.528,-41.26624 -159.42634,-125.18438 -199.90271,-243.4818 l -11.8573,-34.65447 1.04983,-147.40799 1.04984,-147.4079 121.80268,-48.5493 c 88.03733,-35.0909 125.12387,-47.995 133.78326,-46.5496 6.58933,1.0998 64.09618,22.7939 127.79297,48.2089 l 115.81241,46.2093 1.18422,127.7881 c 1.34199,144.81006 -1.83274,180.49459 -20.27455,227.889 -41.67872,107.11197 -108.21947,182.28023 -194.43758,219.64786 -30.50912,13.22312 -43.93861,12.92412 -76.00307,-1.6921 z"
+         id="path3373-6-4" />
+      <path
+         style="fill:#2f9c95;fill-opacity:1;stroke:#5465ff;stroke-width:1.96618;stroke-linecap:round;stroke-linejoin:round"
+         d="m -424.14797,-858.61285 -67.76395,-67.16454 26.31454,-26.0282 26.31451,-26.0281 42.64754,41.9642 42.64757,41.9644 82.64045,-84.3347 82.64043,-84.33481 25.62369,24.687 c 14.09303,13.5779 25.62363,26.2119 25.62363,28.0756 0,4.4148 -211.24112,218.36395 -215.59998,218.36395 -1.82845,0 -33.81824,-30.2242 -71.08843,-67.1648 z"
+         id="path2671-2-6" />
+    </g>
+    <g
+       style="fill:#e5f9e0;fill-opacity:1"
+       id="g870-9-3"
+       transform="matrix(0.11716844,0,0,0.09914696,81.292451,171.10423)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\policiesType48png"
+       inkscape:export-xdpi="6.3324924"
+       inkscape:export-ydpi="6.3324924">
+      <path
+         style="fill:#e5f9e0;fill-opacity:1;stroke:#5465ff;stroke-width:1.62119;stroke-linecap:round;stroke-linejoin:round"
+         d="m -373.82314,-597.40514 c -90.528,-41.26624 -159.42634,-125.18438 -199.90271,-243.4818 l -11.8573,-34.65447 1.04983,-147.40799 1.04984,-147.4079 121.80268,-48.5493 c 88.03733,-35.0909 125.12387,-47.995 133.78326,-46.5496 6.58933,1.0998 64.09618,22.7939 127.79297,48.2089 l 115.81241,46.2093 1.18422,127.7881 c 1.34199,144.81006 -1.83274,180.49459 -20.27455,227.889 -41.67872,107.11197 -108.21947,182.28023 -194.43758,219.64786 -30.50912,13.22312 -43.93861,12.92412 -76.00307,-1.6921 z"
+         id="path3373-6-1" />
+      <path
+         style="fill:#2f9c95;fill-opacity:1;stroke:#5465ff;stroke-width:1.96618;stroke-linecap:round;stroke-linejoin:round"
+         d="m -424.14797,-858.61285 -67.76395,-67.16454 26.31454,-26.0282 26.31451,-26.0281 42.64754,41.9642 42.64757,41.9644 82.64045,-84.3347 82.64043,-84.33481 25.62369,24.687 c 14.09303,13.5779 25.62363,26.2119 25.62363,28.0756 0,4.4148 -211.24112,218.36395 -215.59998,218.36395 -1.82845,0 -33.81824,-30.2242 -71.08843,-67.1648 z"
+         id="path2671-2-61" />
+    </g>
+    <g
+       style="fill:#e5f9e0;fill-opacity:1"
+       id="g870-9-1"
+       transform="matrix(0.11716844,0,0,0.09914696,141.84728,248.69461)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\policiesType48png"
+       inkscape:export-xdpi="6.3324924"
+       inkscape:export-ydpi="6.3324924">
+      <path
+         style="fill:#e5f9e0;fill-opacity:1;stroke:#5465ff;stroke-width:1.62119;stroke-linecap:round;stroke-linejoin:round"
+         d="m -373.82314,-597.40514 c -90.528,-41.26624 -159.42634,-125.18438 -199.90271,-243.4818 l -11.8573,-34.65447 1.04983,-147.40799 1.04984,-147.4079 121.80268,-48.5493 c 88.03733,-35.0909 125.12387,-47.995 133.78326,-46.5496 6.58933,1.0998 64.09618,22.7939 127.79297,48.2089 l 115.81241,46.2093 1.18422,127.7881 c 1.34199,144.81006 -1.83274,180.49459 -20.27455,227.889 -41.67872,107.11197 -108.21947,182.28023 -194.43758,219.64786 -30.50912,13.22312 -43.93861,12.92412 -76.00307,-1.6921 z"
+         id="path3373-6-2" />
+      <path
+         style="fill:#2f9c95;fill-opacity:1;stroke:#5465ff;stroke-width:1.96618;stroke-linecap:round;stroke-linejoin:round"
+         d="m -424.14797,-858.61285 -67.76395,-67.16454 26.31454,-26.0282 26.31451,-26.0281 42.64754,41.9642 42.64757,41.9644 82.64045,-84.3347 82.64043,-84.33481 25.62369,24.687 c 14.09303,13.5779 25.62363,26.2119 25.62363,28.0756 0,4.4148 -211.24112,218.36395 -215.59998,218.36395 -1.82845,0 -33.81824,-30.2242 -71.08843,-67.1648 z"
+         id="path2671-2-4" />
+    </g>
+    <g
+       style="fill:#e5f9e0;fill-opacity:1"
+       id="g870-9-33"
+       transform="matrix(0.11716844,0,0,0.09914696,83.357817,320.22385)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\policiesType48png"
+       inkscape:export-xdpi="6.3324924"
+       inkscape:export-ydpi="6.3324924">
+      <path
+         style="fill:#e5f9e0;fill-opacity:1;stroke:#5465ff;stroke-width:1.62119;stroke-linecap:round;stroke-linejoin:round"
+         d="m -373.82314,-597.40514 c -90.528,-41.26624 -159.42634,-125.18438 -199.90271,-243.4818 l -11.8573,-34.65447 1.04983,-147.40799 1.04984,-147.4079 121.80268,-48.5493 c 88.03733,-35.0909 125.12387,-47.995 133.78326,-46.5496 6.58933,1.0998 64.09618,22.7939 127.79297,48.2089 l 115.81241,46.2093 1.18422,127.7881 c 1.34199,144.81006 -1.83274,180.49459 -20.27455,227.889 -41.67872,107.11197 -108.21947,182.28023 -194.43758,219.64786 -30.50912,13.22312 -43.93861,12.92412 -76.00307,-1.6921 z"
+         id="path3373-6-35" />
+      <path
+         style="fill:#2f9c95;fill-opacity:1;stroke:#5465ff;stroke-width:1.96618;stroke-linecap:round;stroke-linejoin:round"
+         d="m -424.14797,-858.61285 -67.76395,-67.16454 26.31454,-26.0282 26.31451,-26.0281 42.64754,41.9642 42.64757,41.9644 82.64045,-84.3347 82.64043,-84.33481 25.62369,24.687 c 14.09303,13.5779 25.62363,26.2119 25.62363,28.0756 0,4.4148 -211.24112,218.36395 -215.59998,218.36395 -1.82845,0 -33.81824,-30.2242 -71.08843,-67.1648 z"
+         id="path2671-2-7" />
+    </g>
+    <g
+       style="fill:#e5f9e0;fill-opacity:1"
+       id="g870-9-37"
+       transform="matrix(0.11716844,0,0,0.09914696,83.357815,248.7621)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\policiesType48png"
+       inkscape:export-xdpi="6.3324924"
+       inkscape:export-ydpi="6.3324924">
+      <path
+         style="fill:#e5f9e0;fill-opacity:1;stroke:#5465ff;stroke-width:1.62119;stroke-linecap:round;stroke-linejoin:round"
+         d="m -373.82314,-597.40514 c -90.528,-41.26624 -159.42634,-125.18438 -199.90271,-243.4818 l -11.8573,-34.65447 1.04983,-147.40799 1.04984,-147.4079 121.80268,-48.5493 c 88.03733,-35.0909 125.12387,-47.995 133.78326,-46.5496 6.58933,1.0998 64.09618,22.7939 127.79297,48.2089 l 115.81241,46.2093 1.18422,127.7881 c 1.34199,144.81006 -1.83274,180.49459 -20.27455,227.889 -41.67872,107.11197 -108.21947,182.28023 -194.43758,219.64786 -30.50912,13.22312 -43.93861,12.92412 -76.00307,-1.6921 z"
+         id="path3373-6-3" />
+      <path
+         style="fill:#2f9c95;fill-opacity:1;stroke:#5465ff;stroke-width:1.96618;stroke-linecap:round;stroke-linejoin:round"
+         d="m -424.14797,-858.61285 -67.76395,-67.16454 26.31454,-26.0282 26.31451,-26.0281 42.64754,41.9642 42.64757,41.9644 82.64045,-84.3347 82.64043,-84.33481 25.62369,24.687 c 14.09303,13.5779 25.62363,26.2119 25.62363,28.0756 0,4.4148 -211.24112,218.36395 -215.59998,218.36395 -1.82845,0 -33.81824,-30.2242 -71.08843,-67.1648 z"
+         id="path2671-2-2" />
+    </g>
+  </g>
+</svg>

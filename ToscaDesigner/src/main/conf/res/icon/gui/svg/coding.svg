@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:#788bff;fill-opacity:1"
+       id="g856"
+       transform="matrix(0.09554017,0,0,0.08808189,38.201215,182.10476)">
+      <path
+         d="m 344,-336 -144,-144 144,-144 56,57 -87,87 87,87 z m 272,0 -56,-57 87,-87 -87,-87 56,-57 144,144 z m -416,216 q -33,0 -56.5,-23.5 Q 120,-167 120,-200 v -160 h 80 v 160 h 160 v 80 z m 400,0 v -80 h 160 v -160 h 80 v 160 q 0,33 -23.5,56.5 Q 793,-120 760,-120 Z M 120,-600 v -160 q 0,-33 23.5,-56.5 Q 167,-840 200,-840 h 160 v 80 H 200 v 160 z m 640,0 V -760 H 600 v -80 h 160 q 33,0 56.5,23.5 23.5,23.5 23.5,56.5 v 160 z"
+         id="path847"
+         style="fill:#788bff;fill-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:96.9213px;line-height:2.35;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.42302"
+       x="14.934797"
+       y="150.95555"
+       id="text2472"
+       transform="scale(0.86045577,1.1621748)"><tspan
+         sodipodi:role="line"
+         id="tspan2470"
+         style="stroke-width:2.42302"
+         x="14.934797"
+         y="150.95555">{ </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:96.9213px;line-height:2.35;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.42302"
+       x="126.92677"
+       y="150.16699"
+       id="text2472-0"
+       transform="scale(0.86045576,1.1621748)"><tspan
+         sodipodi:role="line"
+         id="tspan2470-4"
+         style="stroke-width:2.42302"
+         x="126.92677"
+         y="150.16699">} </tspan></text>
+  </g>
+</svg>

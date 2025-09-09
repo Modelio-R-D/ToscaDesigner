@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="ConstraintsType.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="396.55076"
+     inkscape:cy="611.21899"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient3432"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ff773d;stop-opacity:1;"
+         offset="0"
+         id="stop3430" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:#fabc3c;fill-opacity:1;stroke:#05002a;stroke-opacity:0.371134"
+       id="g895"
+       transform="matrix(0.06399331,0,0,0.07225048,8.7246923,106.64881)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\ConstraintsType48.png"
+       inkscape:export-xdpi="7.5349021"
+       inkscape:export-ydpi="7.5349021">
+      <path
+         d="m 576,-160 -56,-56 104,-104 -104,-104 56,-56 104,104 104,-104 56,56 -104,104 104,104 -56,56 -104,-104 z m 79,-360 -142,-142 56,-56 85,85 170,-170 56,57 z M 80,-280 v -80 h 360 v 80 z m 0,-320 v -80 h 360 v 80 z"
+         id="path886"
+         style="fill:#fabc3c;fill-opacity:1;stroke:#05002a;stroke-opacity:0.371134" />
+    </g>
+    <g
+       style="fill:#ffb238;fill-opacity:1;stroke:#05002a;stroke-opacity:0.371134"
+       id="g895-8"
+       transform="matrix(0.06399331,0,0,0.07225048,69.240545,167.79846)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\ConstraintsType48.png"
+       inkscape:export-xdpi="7.5349021"
+       inkscape:export-ydpi="7.5349021">
+      <path
+         d="m 576,-160 -56,-56 104,-104 -104,-104 56,-56 104,104 104,-104 56,56 -104,104 104,104 -56,56 -104,-104 z m 79,-360 -142,-142 56,-56 85,85 170,-170 56,57 z M 80,-280 v -80 h 360 v 80 z m 0,-320 v -80 h 360 v 80 z"
+         id="path886-1"
+         style="fill:#ffb238;fill-opacity:1;stroke:#05002a;stroke-opacity:0.371134" />
+    </g>
+    <g
+       style="fill:#f55536;fill-opacity:1;stroke:#05002a;stroke-opacity:0.371134"
+       id="g895-3"
+       transform="matrix(0.06399331,0,0,0.07225048,70.892842,105.42432)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\ConstraintsType48.png"
+       inkscape:export-xdpi="7.5349021"
+       inkscape:export-ydpi="7.5349021">
+      <path
+         d="m 576,-160 -56,-56 104,-104 -104,-104 56,-56 104,104 104,-104 56,56 -104,104 104,104 -56,56 -104,-104 z m 79,-360 -142,-142 56,-56 85,85 170,-170 56,57 z M 80,-280 v -80 h 360 v 80 z m 0,-320 v -80 h 360 v 80 z"
+         id="path886-7"
+         style="fill:#f55536;fill-opacity:1;stroke:#05002a;stroke-opacity:0.371134" />
+    </g>
+    <g
+       style="fill:#ff773d;fill-opacity:1;stroke:#05002a;stroke-opacity:0.371134"
+       id="g895-88"
+       transform="matrix(0.06399331,0,0,0.07225048,6.0402691,165.73308)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\ConstraintsType48.png"
+       inkscape:export-xdpi="7.5349021"
+       inkscape:export-ydpi="7.5349021">
+      <path
+         d="m 576,-160 -56,-56 104,-104 -104,-104 56,-56 104,104 104,-104 56,56 -104,104 104,104 -56,56 -104,-104 z m 79,-360 -142,-142 56,-56 85,85 170,-170 56,57 z M 80,-280 v -80 h 360 v 80 z m 0,-320 v -80 h 360 v 80 z"
+         id="path886-4"
+         style="fill:#ff773d;fill-opacity:1;stroke:#05002a;stroke-opacity:0.371134" />
+    </g>
+    <g
+       style="fill:#ff773d;fill-opacity:1;stroke:#05002a;stroke-opacity:0.371134"
+       id="g895-2"
+       transform="matrix(0.06399331,0,0,0.07225048,132.02775,106.66355)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\ConstraintsType48.png"
+       inkscape:export-xdpi="7.5349021"
+       inkscape:export-ydpi="7.5349021">
+      <path
+         d="m 576,-160 -56,-56 104,-104 -104,-104 56,-56 104,104 104,-104 56,56 -104,104 104,104 -56,56 -104,-104 z m 79,-360 -142,-142 56,-56 85,85 170,-170 56,57 z M 80,-280 v -80 h 360 v 80 z m 0,-320 v -80 h 360 v 80 z"
+         id="path886-3"
+         style="fill:#ff773d;fill-opacity:1;stroke:#05002a;stroke-opacity:0.371134" />
+    </g>
+    <g
+       style="fill:#f55536;fill-opacity:1;stroke:#fabc3c;stroke-opacity:0.37254903"
+       id="g895-84"
+       transform="matrix(0.06399331,0,0,0.07225048,6.0402691,220.67189)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\ConstraintsType48.png"
+       inkscape:export-xdpi="7.5349021"
+       inkscape:export-ydpi="7.5349021">
+      <path
+         d="m 576,-160 -56,-56 104,-104 -104,-104 56,-56 104,104 104,-104 56,56 -104,104 104,104 -56,56 -104,-104 z m 79,-360 -142,-142 56,-56 85,85 170,-170 56,57 z M 80,-280 v -80 h 360 v 80 z m 0,-320 v -80 h 360 v 80 z"
+         id="path886-79"
+         style="fill:#f55536;fill-opacity:1;stroke:#fabc3c;stroke-opacity:0.37254903" />
+    </g>
+  </g>
+</svg>

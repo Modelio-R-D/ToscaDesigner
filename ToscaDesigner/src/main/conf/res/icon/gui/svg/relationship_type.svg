@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="relationship_type.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="396.55076"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="710.35669"
+       y="366.88752"
+       width="295.96641"
+       height="260.11286"
+       id="rect189089" />
+    <style
+       id="style96550">
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+    <style
+       id="style106908">
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:213.055px;line-height:1.25;font-family:'Book Antiqua';-inkscape-font-specification:'Book Antiqua';fill:#fabc3c;fill-opacity:1;stroke:none;stroke-width:0.399477"
+       x="32.028049"
+       y="219.64551"
+       id="text179707"
+       transform="scale(1.0498452,0.95252139)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\relationship_type48.png"
+       inkscape:export-xdpi="8.5466957"
+       inkscape:export-ydpi="8.5466957"><tspan
+         sodipodi:role="line"
+         id="tspan179705"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:213.055px;font-family:'Book Antiqua';-inkscape-font-specification:'Book Antiqua';fill:#fabc3c;fill-opacity:1;stroke-width:0.399477"
+         x="32.028049"
+         y="219.64551">T</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text189087"
+       style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect189089)" />
+    <path
+       d="m 149.78788,140.76281 27.71473,27.78125 c 1.65791,1.53458 2.48687,3.62479 2.48687,5.92666 0,2.30188 -0.82896,4.36563 -2.48687,5.92667 l -27.71473,27.88709 c -3.28819,3.30729 -8.64877,3.30729 -11.93696,0 -3.28818,-3.3073 -3.28818,-8.65188 0,-11.95917 l 13.31855,-13.335 H 91.20838 c -4.697413,0 -8.482974,-3.78355 -8.482974,-8.46667 0,-4.68313 3.785561,-8.46667 8.455342,-8.46667 h 59.961092 l -13.31855,-13.335 c -3.28819,-3.30729 -3.28819,-8.65187 0,-11.95916 3.31582,-3.3073 8.64877,-3.3073 11.96459,0 z"
+       id="path196648"
+       style="fill:#f55536;fill-opacity:1;stroke-width:0.270387"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\relationship_type48.png"
+       inkscape:export-xdpi="8.5466957"
+       inkscape:export-ydpi="8.5466957" />
+  </g>
+</svg>

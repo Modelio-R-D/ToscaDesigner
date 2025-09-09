@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="relationship_template.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="396.55076"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="clip-rule:evenodd;fill:#bfd7ff;fill-opacity:1;fill-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"
+       id="g30067"
+       transform="matrix(0.27284664,0,0,0.2693118,41.807059,77.875203)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\relationship_template24.png"
+       inkscape:export-xdpi="4.1961117"
+       inkscape:export-ydpi="4.1961117">
+      <g
+         id="_42-Template"
+         style="display:inline;fill:#bfd7ff;fill-opacity:1"
+         transform="translate(-2048,-8192)">
+        <g
+           id="g1900"
+           transform="translate(2118.61,8222)"
+           style="fill:#bfd7ff;fill-opacity:1">
+          <path
+             d="M 0,452.002 V 0 h 259.03 v 20.581 h -42.84 c -8.284,0 -15,6.716 -15,15 v 221.845 c 0,8.284 6.716,15 15,15 h 115.67 c 8.284,0 15,-6.716 15,-15 V 123.995 h 23.93 V 452.002 Z M 289.03,93.995 V 24.047 l 63.046,69.948 z m -15,30 h 42.83 V 242.426 H 231.19 V 50.581 h 27.84 v 58.414 c 0,8.284 6.716,15 15,15 M 396.931,98.952 285.171,-25.043 C 282.328,-28.198 278.278,-30 274.03,-30 H -15 c -8.284,0 -15,6.716 -15,15 v 482.002 c 0,8.284 6.716,15 15,15 h 400.79 c 8.284,0 15,-6.716 15,-15 V 108.995 c 0,-3.709 -1.374,-7.287 -3.859,-10.043"
+             id="path1898"
+             style="fill:#bfd7ff;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+        <g
+           id="g1904"
+           transform="translate(0,7327.05)"
+           style="fill:#bfd7ff;fill-opacity:1">
+          <path
+             d="m 2258.2,1296.37 h -85.67 v -191.84 h 85.67 z m 15,-221.84 h -115.67 c -8.28,0 -15,6.71 -15,15 v 221.84 c 0,8.29 6.72,15 15,15 h 115.67 c 8.28,0 15,-6.71 15,-15 v -221.84 c 0,-8.29 -6.72,-15 -15,-15"
+             id="path1902"
+             style="fill:#bfd7ff;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+        <g
+           id="g1908"
+           transform="translate(0,6884.04)"
+           style="fill:#bfd7ff;fill-opacity:1">
+          <path
+             d="m 2258.2,1455.37 h -85.67 v -66.83 h 85.67 z m 15,-96.83 h -115.67 c -8.28,0 -15,6.71 -15,15 v 96.83 c 0,8.28 6.72,15 15,15 h 115.67 c 8.28,0 15,-6.72 15,-15 v -96.83 c 0,-8.29 -6.72,-15 -15,-15"
+             id="path1906"
+             style="fill:#bfd7ff;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+        <g
+           id="g1912"
+           transform="translate(0,7452.06)"
+           style="fill:#bfd7ff;fill-opacity:1">
+          <path
+             d="m 2435.46,1171.36 h -85.66 v -66.83 h 85.66 z m 15,-96.83 H 2334.8 c -8.29,0 -15,6.71 -15,15 v 96.83 c 0,8.28 6.71,15 15,15 h 115.66 c 8.28,0 15,-6.72 15,-15 v -96.83 c 0,-8.29 -6.72,-15 -15,-15"
+             id="path1910"
+             style="fill:#bfd7ff;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+      </g>
+    </g>
+    <path
+       d="m 170.19992,153.5681 25.66212,27.78125 c 1.53512,1.53458 2.30268,3.62479 2.30268,5.92666 0,2.30188 -0.76756,4.36563 -2.30268,5.92667 l -25.66212,27.88709 c -3.04465,3.30729 -8.00822,3.30729 -11.05287,0 -3.04466,-3.3073 -3.04466,-8.65188 0,-11.95917 l 12.33214,-13.335 h -55.52023 c -4.3495,0 -7.85469,-3.78355 -7.85469,-8.46667 0,-4.68313 3.50519,-8.46667 7.82912,-8.46667 h 55.52022 l -12.33215,-13.335 c -3.04465,-3.30729 -3.04465,-8.65187 0,-11.95916 3.07024,-3.3073 8.00822,-3.3073 11.07846,0 z"
+       id="path77483"
+       style="fill:#5465ff;fill-opacity:1;stroke-width:0.260182"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\relationship_template24.png"
+       inkscape:export-xdpi="4.1961117"
+       inkscape:export-ydpi="4.1961117" />
+  </g>
+</svg>

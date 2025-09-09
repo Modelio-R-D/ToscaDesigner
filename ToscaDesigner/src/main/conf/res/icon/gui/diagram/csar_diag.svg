@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="csar_diag.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.72337262"
+     inkscape:cx="396.75264"
+     inkscape:cy="561.95105"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient4607"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5465ff;stop-opacity:1;"
+         offset="0"
+         id="stop4605" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4599"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#788bff;stop-opacity:1;"
+         offset="0"
+         id="stop4597" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4460"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#e5f9e0;stop-opacity:1;"
+         offset="0"
+         id="stop4458" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4388"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#9bb1ff;stop-opacity:1;"
+         offset="0"
+         id="stop4386" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4318"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#9bb1ff;stop-opacity:1;"
+         offset="0"
+         id="stop4316" />
+    </linearGradient>
+    <marker
+       style="overflow:visible"
+       id="EmptyTriangleInL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="EmptyTriangleInL"
+       inkscape:isstock="true">
+      <path
+         transform="scale(-0.8) translate(-6,0)"
+         style="fill-rule:evenodd;fill:context-fill;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path3103" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DotL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotL"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(7.4, 1)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path3013" />
+    </marker>
+    <linearGradient
+       id="linearGradient2902"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2900" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4460"
+       id="linearGradient4462"
+       x1="37.55149"
+       y1="165.87377"
+       x2="186.29579"
+       y2="165.87377"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.81888305,0,0,1.0073782,17.522217,-26.134461)" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;mix-blend-mode:normal;fill:url(#linearGradient4462);fill-opacity:1;stroke:#2f9c95;stroke-width:4.9954;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect846"
+       width="117.41088"
+       height="121.961"
+       x="50.469147"
+       y="79.982651"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\diagram\csar_diag48.png"
+       inkscape:export-xdpi="8.8993807"
+       inkscape:export-ydpi="8.8993807" />
+    <path
+       style="opacity:1;fill:#788bff;fill-opacity:1;stroke:#788bff;stroke-width:0.538162;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d=""
+       id="path5302"
+       transform="scale(0.26458333)" />
+    <path
+       style="opacity:1;fill:#788bff;fill-opacity:1;stroke:#788bff;stroke-width:0.538162;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d=""
+       id="path5497"
+       transform="scale(0.26458333)" />
+    <path
+       style="opacity:1;fill:#40c9a2;fill-opacity:1;stroke:#788bff;stroke-width:0.129325;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="m 125.64805,214.61759 c -2.45491,-0.808 -4.66279,-2.56773 -7.34912,-5.85739 -3.9843,-4.87915 -5.3274,-8.99435 -5.35146,-16.39657 -0.0165,-5.05885 0.37174,-7.26599 2.00424,-11.39557 1.76831,-4.47315 4.75761,-8.12485 8.57359,-10.47341 l 2.81929,-1.73515 1.87349,-4.71596 c 1.5825,-3.98347 2.23786,-5.19341 4.21938,-7.78986 2.68742,-3.52142 5.65176,-6.05861 8.8263,-7.55449 1.95149,-0.91956 2.70023,-1.05842 6.49915,-1.2054 5.13324,-0.19859 7.08727,0.19723 10.3828,2.10321 7.27544,4.20776 11.96366,12.2209 13.47316,23.02844 0.25279,1.80987 0.66736,3.57309 0.92128,3.91825 0.25391,0.34514 1.07239,0.8379 1.81883,1.095 1.63325,0.56255 4.39185,2.69871 5.93238,4.59385 4.65175,5.72252 5.96954,15.34076 3.10449,22.65881 -1.19458,3.05128 -4.73163,7.46319 -7.32102,9.13184 l -1.83902,1.1851 -23.47021,-0.0243 c -19.66915,-0.0204 -23.737,-0.11206 -25.11755,-0.56645 z"
+       id="path5809"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\diagram\csar_diag48.png"
+       inkscape:export-xdpi="8.8993807"
+       inkscape:export-ydpi="8.8993807" />
+  </g>
+</svg>

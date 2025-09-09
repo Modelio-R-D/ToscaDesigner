@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="24"
+   viewBox="0 -960 960 960"
+   width="24"
+   version="1.1"
+   id="svg1041"
+   sodipodi:docname="requirements3.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\RequirementDefinitionsType24.png"
+   inkscape:export-xdpi="171.50999"
+   inkscape:export-ydpi="171.50999"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1045" />
+  <sodipodi:namedview
+     id="namedview1043"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="29.125"
+     inkscape:cx="11.982833"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="877"
+     inkscape:window-y="1431"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1041" />
+  <path
+     d="m 386.64051,-324.30107 q -11.13841,0.0986 -19.16588,-8.67689 -8.02746,-8.77547 -8.16168,-21.19695 l -2.27758,-210.78888 q -0.13424,-12.42149 7.70208,-21.33727 7.83632,-8.91578 18.97472,-9.01432 l 216.01759,-1.91105 q 11.13842,-0.0986 19.16587,8.6769 8.02747,8.77544 8.1617,21.19694 l 2.27758,210.78888 q 0.13423,12.42147 -7.7021,21.33727 -7.83631,8.91578 -18.9747,9.01432 z m -0.32537,-30.1127 216.0176,-1.91105 -2.27762,-210.78891 -216.01758,1.91106 z m 13.17573,-30.23215 67.50548,-0.59721 -0.32537,-30.11268 -67.50546,0.59721 z m 128.61013,-31.25334 66.02514,-75.12019 -19.47089,-21.28508 -47.01383,53.87108 -19.4709,-21.28511 -18.66972,21.62253 z m -129.26085,-28.97206 67.50546,-0.59721 -0.32538,-30.11269 -67.50546,0.5972 z m -0.65074,-60.22539 67.50546,-0.5972 -0.32538,-30.1127 -67.50546,0.59721 z m -11.87427,150.68294 -2.2776,-210.7889 z"
+     id="path1039"
+     style="fill:#d5d5ff;stroke-width:0.356455"
+     inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\requirements2-48.png"
+     inkscape:export-xdpi="675.34418"
+     inkscape:export-ydpi="675.34418" />
+</svg>

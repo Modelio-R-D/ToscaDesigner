@@ -1,0 +1,4 @@
+Bundle-SymbolicName: toscadesigner-doc;singleton=true
+Bundle-Version: 0.0.00
+Bundle-Name: ToscaDesigner documentation
+Bundle-Vendor: 

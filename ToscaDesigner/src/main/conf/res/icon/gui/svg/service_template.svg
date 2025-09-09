@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="service_template.svg"
+   inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\service_template48.png"
+   inkscape:export-xdpi="8.427309"
+   inkscape:export-ydpi="8.427309"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.5824603"
+     inkscape:cx="396.85039"
+     inkscape:cy="561.46748"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="clip-rule:evenodd;fill:#e5f9f1;fill-opacity:1;fill-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"
+       id="g30067"
+       transform="matrix(0.28699442,0,0,0.27011936,17.000593,77.874887)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\service_template24.png"
+       inkscape:export-xdpi="4.4077559"
+       inkscape:export-ydpi="4.4077559">
+      <g
+         id="_42-Template"
+         style="display:inline;fill:#e5f9f1;fill-opacity:1"
+         transform="translate(-2048,-8192)">
+        <g
+           id="g1900"
+           transform="translate(2118.61,8222)"
+           style="fill:#e5f9f1;fill-opacity:1">
+          <path
+             d="M 0,452.002 V 0 h 259.03 v 20.581 h -42.84 c -8.284,0 -15,6.716 -15,15 v 221.845 c 0,8.284 6.716,15 15,15 h 115.67 c 8.284,0 15,-6.716 15,-15 V 123.995 h 23.93 V 452.002 Z M 289.03,93.995 V 24.047 l 63.046,69.948 z m -15,30 h 42.83 V 242.426 H 231.19 V 50.581 h 27.84 v 58.414 c 0,8.284 6.716,15 15,15 M 396.931,98.952 285.171,-25.043 C 282.328,-28.198 278.278,-30 274.03,-30 H -15 c -8.284,0 -15,6.716 -15,15 v 482.002 c 0,8.284 6.716,15 15,15 h 400.79 c 8.284,0 15,-6.716 15,-15 V 108.995 c 0,-3.709 -1.374,-7.287 -3.859,-10.043"
+             id="path1898"
+             style="fill:#e5f9f1;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+        <g
+           id="g1904"
+           transform="translate(0,7327.05)"
+           style="fill:#e5f9f1;fill-opacity:1">
+          <path
+             d="m 2258.2,1296.37 h -85.67 v -191.84 h 85.67 z m 15,-221.84 h -115.67 c -8.28,0 -15,6.71 -15,15 v 221.84 c 0,8.29 6.72,15 15,15 h 115.67 c 8.28,0 15,-6.71 15,-15 v -221.84 c 0,-8.29 -6.72,-15 -15,-15"
+             id="path1902"
+             style="fill:#e5f9f1;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+        <g
+           id="g1908"
+           transform="translate(0,6884.04)"
+           style="fill:#e5f9f1;fill-opacity:1">
+          <path
+             d="m 2258.2,1455.37 h -85.67 v -66.83 h 85.67 z m 15,-96.83 h -115.67 c -8.28,0 -15,6.71 -15,15 v 96.83 c 0,8.28 6.72,15 15,15 h 115.67 c 8.28,0 15,-6.72 15,-15 v -96.83 c 0,-8.29 -6.72,-15 -15,-15"
+             id="path1906"
+             style="fill:#e5f9f1;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+        <g
+           id="g1912"
+           transform="translate(0,7452.06)"
+           style="fill:#e5f9f1;fill-opacity:1">
+          <path
+             d="m 2435.46,1171.36 h -85.66 v -66.83 h 85.66 z m 15,-96.83 H 2334.8 c -8.29,0 -15,6.71 -15,15 v 96.83 c 0,8.28 6.71,15 15,15 h 115.66 c 8.28,0 15,-6.72 15,-15 v -96.83 c 0,-8.29 -6.72,-15 -15,-15"
+             id="path1910"
+             style="fill:#e5f9f1;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+      </g>
+    </g>
+    <path
+       d="m 121.16978,222.5474 -1.58483,-12.63722 q -1.28788,-0.49406 -2.42691,-1.18514 -1.13962,-0.69105 -2.22878,-1.48065 l -11.78766,4.93647 -10.896019,-18.75851 10.202669,-7.70092 q -0.1048,-0.69106 -0.1048,-1.33288 v -2.66579 q 0,-0.6418 0.1048,-1.33287 l -10.202669,-7.70093 10.896019,-18.7585 11.78766,4.93644 q 1.09021,-0.78956 2.27834,-1.48064 1.18906,-0.69108 2.37735,-1.18512 l 1.58483,-12.63724 H 142.962 l 1.58484,12.63724 q 1.28788,0.49404 2.42688,1.18512 1.13963,0.69108 2.22879,1.48064 l 11.78751,-4.93644 10.89618,18.7585 -10.20283,7.70093 q 0.10481,0.69107 0.10481,1.33287 v 2.66579 q 0,0.64182 -0.19768,1.33288 l 10.20283,7.70092 -10.89603,18.75851 -11.68852,-4.93647 q -1.09021,0.7896 -2.27834,1.48065 -1.18904,0.69108 -2.37734,1.18514 l -1.58483,12.63722 z m 6.93388,-7.89823 h 7.82533 l 1.3867,-10.46535 q 3.0707,-0.78959 5.69558,-2.32009 2.62502,-1.53036 4.80422,-3.70239 l 9.80657,4.04792 3.86304,-6.71355 -8.5187,-6.41743 q 0.49568,-1.38213 0.69336,-2.91249 0.19767,-1.53038 0.19767,-3.10998 0,-1.57962 -0.19767,-3.10998 -0.19768,-1.53036 -0.69336,-2.9125 l 8.5187,-6.41743 -3.86304,-6.71356 -9.80657,4.14659 q -2.1792,-2.2707 -4.80422,-3.80106 -2.62488,-1.5302 -5.69558,-2.32008 l -1.28787,-10.46537 h -7.8255 l -1.3867,10.46537 q -3.07068,0.78958 -5.6957,2.32008 -2.62487,1.53036 -4.80424,3.7024 l -9.80642,-4.04793 -3.86319,6.71356 8.51885,6.31877 q -0.49568,1.48065 -0.69336,2.96176 -0.19767,1.48066 -0.19767,3.15938 0,1.5796 0.19767,3.06056 0.19768,1.48066 0.69336,2.96191 l -8.51885,6.41743 3.86319,6.71355 9.80642,-4.1466 q 2.17937,2.27071 4.80424,3.80107 2.62502,1.53022 5.6957,2.32009 z m 4.16027,-17.77131 q 5.74529,0 9.80659,-4.04793 4.06114,-4.04777 4.06114,-9.77412 0,-5.72636 -4.06114,-9.77413 -4.0613,-4.04794 -9.80659,-4.04794 -5.84425,0 -9.85599,4.04794 -4.01174,4.04777 -4.01174,9.77413 0,5.72635 4.01174,9.77412 4.01174,4.04793 9.85599,4.04793 z m -0.19812,-13.82205 z"
+       id="path1008"
+       style="fill:#40c9a2;fill-opacity:1;stroke-width:0.0988926"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\service_template24.png"
+       inkscape:export-xdpi="4.1373935"
+       inkscape:export-ydpi="4.1373935" />
+  </g>
+</svg>

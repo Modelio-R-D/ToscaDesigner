@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="24px"
+   viewBox="0 -960 960 960"
+   width="24px"
+   fill="#5f6368"
+   version="1.1"
+   id="svg1171"
+   sodipodi:docname="artifact.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1175" />
+  <sodipodi:namedview
+     id="namedview1173"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="29.958333"
+     inkscape:cx="11.98331"
+     inkscape:cy="12"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="877"
+     inkscape:window-y="1431"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1171" />
+  <path
+     d="m 549.11451,-217.83588 -84.45062,-65.22393 84.45062,-65.22392 32.84191,25.81781 -51.02225,39.40611 51.02225,39.40612 z m 159.51785,0 -32.84191,-25.81781 51.02225,-39.40612 -51.02225,-39.40611 32.84191,-25.81781 84.45063,65.22392 z M 464.66389,-120 q -19.35327,0 -33.13515,-10.64418 -13.78187,-10.64418 -13.78187,-25.59133 v -72.47103 h 46.91702 v 72.47103 h 93.83402 V -120 Z m 234.58507,0 v -36.23551 h 93.83403 v -72.47103 H 840 v 72.47103 q 0,14.94715 -13.78187,25.59133 Q 812.43625,-120 793.08299,-120 Z M 417.74687,-337.41307 v -72.47103 q 0,-14.94715 13.78187,-25.59133 13.78188,-10.64418 33.13515,-10.64418 h 93.83402 v 36.23551 h -93.83402 v 72.47103 z m 375.33612,0 v -72.47103 h -93.83403 v -36.23551 h 93.83403 q 19.35326,0 33.13514,10.64418 Q 840,-424.83125 840,-409.8841 v 72.47103 z"
+     id="path1169"
+     style="fill:#2f9c95;fill-opacity:1;stroke-width:0.515398"
+     inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\tartifact48.png"
+     inkscape:export-xdpi="256"
+     inkscape:export-ydpi="256" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:1042.39px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:26.0598"
+     x="192.65179"
+     y="6.2183838"
+     id="text2588"
+     transform="scale(0.77622444,1.2882872)"><tspan
+       sodipodi:role="line"
+       id="tspan2586"
+       style="stroke-width:26.0598"
+       x="192.65179"
+       y="6.2183838">T</tspan></text>
+</svg>

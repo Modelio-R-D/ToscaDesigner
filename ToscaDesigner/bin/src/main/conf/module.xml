@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Module id="ToscaDesigner" class="fr.softeam.toscadesigner.impl.ToscaDesignerModule" binaryversion="5.4.01" version="0.0.00" schema-level="2" uid="942db9f9-6869-472c-b269-9ca7ec36a014" author="" image="" url="">
+    <ClassPath>
+        <PathEntry path="lib/${project.artifactId}-${project.version}.jar"/>
+    </ClassPath>
+    <Profiles>
+        <Profile uid="d2f852dc-5769-4202-bec1-27bb76baf566" id="Deployment"/>
+    </Profiles>
+</Module>

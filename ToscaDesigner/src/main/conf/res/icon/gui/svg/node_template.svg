@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="node_template.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="396.55076"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="clip-rule:evenodd;fill:#bfd7ff;fill-opacity:1;fill-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"
+       id="g30067"
+       transform="matrix(0.28215621,0,0,0.2693118,36.472113,77.875203)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\node_template48.png"
+       inkscape:export-xdpi="8.1950798"
+       inkscape:export-ydpi="8.1950798">
+      <g
+         id="_42-Template"
+         style="display:inline;fill:#bfd7ff;fill-opacity:1"
+         transform="translate(-2048,-8192)">
+        <g
+           id="g1900"
+           transform="translate(2118.61,8222)"
+           style="fill:#bfd7ff;fill-opacity:1">
+          <path
+             d="M 0,452.002 V 0 h 259.03 v 20.581 h -42.84 c -8.284,0 -15,6.716 -15,15 v 221.845 c 0,8.284 6.716,15 15,15 h 115.67 c 8.284,0 15,-6.716 15,-15 V 123.995 h 23.93 V 452.002 Z M 289.03,93.995 V 24.047 l 63.046,69.948 z m -15,30 h 42.83 V 242.426 H 231.19 V 50.581 h 27.84 v 58.414 c 0,8.284 6.716,15 15,15 M 396.931,98.952 285.171,-25.043 C 282.328,-28.198 278.278,-30 274.03,-30 H -15 c -8.284,0 -15,6.716 -15,15 v 482.002 c 0,8.284 6.716,15 15,15 h 400.79 c 8.284,0 15,-6.716 15,-15 V 108.995 c 0,-3.709 -1.374,-7.287 -3.859,-10.043"
+             id="path1898"
+             style="fill:#bfd7ff;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+        <g
+           id="g1904"
+           transform="translate(0,7327.05)"
+           style="fill:#bfd7ff;fill-opacity:1">
+          <path
+             d="m 2258.2,1296.37 h -85.67 v -191.84 h 85.67 z m 15,-221.84 h -115.67 c -8.28,0 -15,6.71 -15,15 v 221.84 c 0,8.29 6.72,15 15,15 h 115.67 c 8.28,0 15,-6.71 15,-15 v -221.84 c 0,-8.29 -6.72,-15 -15,-15"
+             id="path1902"
+             style="fill:#bfd7ff;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+        <g
+           id="g1908"
+           transform="translate(0,6884.04)"
+           style="fill:#bfd7ff;fill-opacity:1">
+          <path
+             d="m 2258.2,1455.37 h -85.67 v -66.83 h 85.67 z m 15,-96.83 h -115.67 c -8.28,0 -15,6.71 -15,15 v 96.83 c 0,8.28 6.72,15 15,15 h 115.67 c 8.28,0 15,-6.72 15,-15 v -96.83 c 0,-8.29 -6.72,-15 -15,-15"
+             id="path1906"
+             style="fill:#bfd7ff;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+        <g
+           id="g1912"
+           transform="translate(0,7452.06)"
+           style="fill:#bfd7ff;fill-opacity:1">
+          <path
+             d="m 2435.46,1171.36 h -85.66 v -66.83 h 85.66 z m 15,-96.83 H 2334.8 c -8.29,0 -15,6.71 -15,15 v 96.83 c 0,8.28 6.71,15 15,15 h 115.66 c 8.28,0 15,-6.72 15,-15 v -96.83 c 0,-8.29 -6.72,-15 -15,-15"
+             id="path1910"
+             style="fill:#bfd7ff;fill-opacity:1;fill-rule:nonzero" />
+        </g>
+      </g>
+    </g>
+    <path
+       d="m 131.5466,226.64738 q -5.79312,0 -9.88834,-3.56471 -4.09522,-3.56485 -4.09522,-8.60781 0,-5.04285 4.09522,-8.60771 4.09522,-3.56485 9.88834,-3.56485 1.79786,0 3.4959,0.39174 1.69804,0.39171 3.19629,1.08706 l 15.28205,-13.30285 v -9.56423 q -4.39482,-1.13046 -7.19156,-4.30385 -2.79675,-3.17353 -2.79675,-7.34697 0,-5.04298 4.09522,-8.60782 4.09523,-3.56473 9.88834,-3.56473 5.79326,0 9.88849,3.56473 4.09507,3.56484 4.09507,8.60782 0,4.17344 -2.79658,7.34697 -2.79674,3.17353 -7.19156,4.30385 v 9.56423 l 15.38185,13.30285 q 1.49797,-0.69535 3.14632,-1.08706 1.64806,-0.39174 3.44592,-0.39174 5.79326,0 9.88849,3.56485 4.09522,3.56486 4.09522,8.60771 0,5.04296 -4.09522,8.60781 -4.09523,3.56471 -9.88849,3.56471 -5.79312,0 -9.88834,-3.56471 -4.09523,-3.56485 -4.09523,-8.60781 0,-1.56501 0.45,-3.04313 0.44999,-1.47815 1.2488,-2.78235 l -13.68398,-11.91161 -13.68382,11.91161 q 0.79882,1.30396 1.24881,2.78235 0.44999,1.47812 0.44999,3.04313 0,5.04296 -4.09507,8.60781 -4.09523,3.56471 -9.88849,3.56471 z m 51.939,-6.95565 q 2.49714,0 4.24501,-1.52163 1.74803,-1.52151 1.74803,-3.69524 0,-2.17361 -1.74803,-3.69526 -1.74787,-1.52149 -4.24501,-1.52149 -2.49701,0 -4.24488,1.52149 -1.74801,1.52165 -1.74801,3.69526 0,2.17373 1.74801,3.69524 1.74787,1.52163 4.24488,1.52163 z m -25.96951,-45.21246 q 2.49716,0 4.24503,-1.5215 1.74802,-1.52162 1.74802,-3.69523 0,-2.17373 -1.74802,-3.69526 -1.74787,-1.52163 -4.24503,-1.52163 -2.49699,0 -4.24501,1.52163 -1.74788,1.52153 -1.74788,3.69526 0,2.17361 1.74788,3.69523 1.74802,1.5215 4.24501,1.5215 z m -25.96949,45.21246 q 2.49716,0 4.24502,-1.52163 1.74802,-1.52151 1.74802,-3.69524 0,-2.17361 -1.74802,-3.69526 -1.74786,-1.52149 -4.24502,-1.52149 -2.49701,0 -4.24501,1.52149 -1.74787,1.52165 -1.74787,3.69526 0,2.17373 1.74787,3.69524 1.748,1.52163 4.24501,1.52163 z"
+       id="path72440"
+       style="fill:#5465ff;fill-opacity:1;stroke-width:0.09319"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\MYRTHUS-DESIGNER\ToscaDesigner\src\main\conf\res\icon\gui\node_template48.png"
+       inkscape:export-xdpi="8.1950798"
+       inkscape:export-ydpi="8.1950798" />
+  </g>
+</svg>

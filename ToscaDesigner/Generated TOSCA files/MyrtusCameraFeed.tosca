@@ -1,0 +1,24 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+imports:
+  - file: .tosca
+    namespace_uri: example.eu.myrtus.nodetypes
+    namespace_prefix: MYRTUS-
+
+node_types:
+  example.eu.myrtus.nodetypes.MyrtusCameraFeed:
+    derived_from: example.eu.myrtus.nodetypes.MyrtusSWComponent
+    metadata:
+      targetNamespace: "example.eu.myrtus.nodetypes"
+      abstract: "false"
+      final: "false"
+    
+    requirements:
+      - faceDetectionService:
+          capability: tosca.capabilities.Endpoint
+          relationship: tosca.relationships.connectsTo
+          occurrences: [ 1, 1 ]
+	capabilities:
+      CameraFeed.WebService:
+        occurrences: [ 0, UNBOUNDED ]
+        type: tosca.capabilities.Endpoint

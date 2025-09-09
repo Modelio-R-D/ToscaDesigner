@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="interface.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="371.57119"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="877"
+     inkscape:window-y="1431"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:#788bff;fill-opacity:1"
+       id="g848"
+       transform="matrix(0.22535589,0,0,0.28257077,-2.010888,280.20978)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TInterface48.png"
+       inkscape:export-xdpi="6.1478519"
+       inkscape:export-ydpi="6.1478519">
+      <path
+         d="m 40,-120 v -80 h 880 v 80 z m 120,-120 q -33,0 -56.5,-23.5 Q 80,-287 80,-320 v -440 q 0,-33 23.5,-56.5 Q 127,-840 160,-840 h 640 q 33,0 56.5,23.5 23.5,23.5 23.5,56.5 v 440 q 0,33 -23.5,56.5 Q 833,-240 800,-240 Z m 0,-80 H 800 V -760 H 160 Z m 0,0 v -440 z"
+         id="path839"
+         style="fill:#788bff;fill-opacity:1" />
+    </g>
+  </g>
+</svg>

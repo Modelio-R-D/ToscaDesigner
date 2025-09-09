@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="TOperation.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="397.33138"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1507"
+     inkscape:window-height="1021"
+     inkscape:window-x="237"
+     inkscape:window-y="1365"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:22.5778px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="33.045898"
+       y="105.74687"
+       id="text2431"><tspan
+         sodipodi:role="line"
+         id="tspan2429"
+         style="font-size:22.5778px;stroke-width:0.264583"
+         x="33.045898"
+         y="105.74687" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="88.810852"
+       y="128.46593"
+       id="text11035"><tspan
+         sodipodi:role="line"
+         id="tspan11033"
+         style="stroke-width:0.264583"
+         x="88.810852"
+         y="128.46593" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="85.093185"
+       y="79.723228"
+       id="text17615"><tspan
+         sodipodi:role="line"
+         id="tspan17613"
+         style="stroke-width:0.264583"
+         x="85.093185"
+         y="79.723228" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:210.831px;line-height:1.25;font-family:sans-serif;fill:#40c9a2;fill-opacity:1;stroke:none;stroke-width:5.27079"
+       x="32.375996"
+       y="202.30417"
+       id="text31479"
+       transform="scale(0.97173247,1.0290898)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TOperation48.png"
+       inkscape:export-xdpi="8.7744818"
+       inkscape:export-ydpi="8.7744818"><tspan
+         sodipodi:role="line"
+         id="tspan31477"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';fill:#40c9a2;fill-opacity:1;stroke-width:5.27079"
+         x="32.375996"
+         y="202.30417">T</tspan></text>
+    <g
+       style="fill:#2f9c95;fill-opacity:1"
+       id="g38106"
+       transform="matrix(0.06878115,0,0,0.06702661,107.22358,210.41409)">
+      <path
+         d="m 370,-80 -16,-128 q -13,-5 -24.5,-12 -11.5,-7 -22.5,-15 l -119,50 -110,-190 103,-78 q -1,-7 -1,-13.5 v -27 q 0,-6.5 1,-13.5 l -103,-78 110,-190 119,50 q 11,-8 23,-15 12,-7 24,-12 l 16,-128 h 220 l 16,128 q 13,5 24.5,12 11.5,7 22.5,15 l 119,-50 110,190 -103,78 q 1,7 1,13.5 v 27 q 0,6.5 -2,13.5 l 103,78 -110,190 -118,-50 q -11,8 -23,15 -12,7 -24,12 l -16,128 z m 70,-80 h 79 l 14,-106 q 31,-8 57.5,-23.5 Q 617,-305 639,-327 l 99,41 39,-68 -86,-65 q 5,-14 7,-29.5 2,-15.5 2,-31.5 0,-16 -2,-31.5 -2,-15.5 -7,-29.5 l 86,-65 -39,-68 -99,42 Q 617,-655 590.5,-670.5 564,-686 533,-694 l -13,-106 h -79 l -14,106 q -31,8 -57.5,23.5 Q 343,-655 321,-633 l -99,-41 -39,68 86,64 q -5,15 -7,30 -2,15 -2,32 0,16 2,31 2,15 7,30 l -86,65 39,68 99,-42 q 22,23 48.5,38.5 26.5,15.5 57.5,23.5 z m 42,-180 q 58,0 99,-41 41,-41 41,-99 0,-58 -41,-99 -41,-41 -99,-41 -59,0 -99.5,41 -40.5,41 -40.5,99 0,58 40.5,99 40.5,41 99.5,41 z m -2,-140 z"
+         id="path38097"
+         style="fill:#2f9c95;fill-opacity:1" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="ArtifactType.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="396.55076"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="877"
+     inkscape:window-y="1431"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:193.211px;line-height:1.25;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#40c9a2;fill-opacity:1;stroke:none;stroke-width:4.83028"
+       x="38.947399"
+       y="196.91112"
+       id="text6980"
+       transform="scale(0.83338687,1.1999229)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TartifactType24.png"
+       inkscape:export-xdpi="4.6026068"
+       inkscape:export-ydpi="4.6026068"><tspan
+         sodipodi:role="line"
+         id="tspan6978"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:193.211px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:4.83028;fill:#40c9a2;fill-opacity:1"
+         x="38.947399"
+         y="196.91112">T</tspan></text>
+    <g
+       style="fill:#5f6368"
+       id="g9073"
+       transform="matrix(0.09381904,0,0,0.09037674,88.38967,241.86275)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TartifactType24.png"
+       inkscape:export-xdpi="4.6026068"
+       inkscape:export-ydpi="4.6026068">
+      <path
+         d="m 344,-336 -144,-144 144,-144 56,57 -87,87 87,87 z m 272,0 -56,-57 87,-87 -87,-87 56,-57 144,144 z m -416,216 q -33,0 -56.5,-23.5 Q 120,-167 120,-200 v -160 h 80 v 160 h 160 v 80 z m 400,0 v -80 h 160 v -160 h 80 v 160 q 0,33 -23.5,56.5 Q 793,-120 760,-120 Z M 120,-600 v -160 q 0,-33 23.5,-56.5 Q 167,-840 200,-840 h 160 v 80 H 200 v 160 z m 640,0 V -760 H 600 v -80 h 160 q 33,0 56.5,23.5 23.5,23.5 23.5,56.5 v 160 z"
+         id="path1169"
+         style="fill:#2f9c95;fill-opacity:1"
+         inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\tartifact48.png"
+         inkscape:export-xdpi="256"
+         inkscape:export-ydpi="256" />
+    </g>
+  </g>
+</svg>

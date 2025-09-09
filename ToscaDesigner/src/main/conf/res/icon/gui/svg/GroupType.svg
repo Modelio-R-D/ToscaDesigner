@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="GroupType.svg"
+   inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TgroupType24.png"
+   inkscape:export-xdpi="4.7420835"
+   inkscape:export-ydpi="4.7420835"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="396.55076"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="877"
+     inkscape:window-y="1431"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:176.411px;line-height:1.25;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fabc3c;fill-opacity:1;stroke:none;stroke-width:4.41028"
+       x="35.560852"
+       y="215.66344"
+       id="text6980"
+       transform="scale(0.91275234,1.0955874)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TgroupType48.png"
+       inkscape:export-xdpi="9.4841671"
+       inkscape:export-ydpi="9.4841671"><tspan
+         sodipodi:role="line"
+         id="tspan6978"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:176.411px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fabc3c;fill-opacity:1;stroke-width:4.41028"
+         x="35.560852"
+         y="215.66344">T</tspan></text>
+    <g
+       style="fill:#5f6368"
+       id="g9169"
+       transform="matrix(0.07584134,0,0,0.06692431,94.897949,236.4166)"
+       inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\TgroupType48.png"
+       inkscape:export-xdpi="9.4841671"
+       inkscape:export-ydpi="9.4841671">
+      <path
+         d="m 171.12446,-99.057229 q -32.49013,0 -55.62704,-28.208771 -23.136905,-28.20877 -23.136905,-67.82109 v -576.17919 q 0,-39.61232 23.136905,-67.82109 23.13691,-28.20877 55.62704,-28.20877 h 236.29185 l 78.76394,96.02986 h 315.0558 q 32.49012,0 55.62704,28.20878 Q 880,-714.84874 880,-675.23641 v 480.14932 q 0,39.61232 -23.13691,67.82109 -23.13692,28.208771 -55.62704,28.208771 z m 0,-96.029861 H 801.23605 V -675.23641 H 453.69012 l -78.76395,-96.02987 H 171.12446 Z m 0,0 v -576.17919 z"
+         id="path997"
+         style="fill:#ff773d;fill-opacity:1;stroke-width:1.08712"
+         inkscape:export-filename="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\ToscaDesigner\src\main\conf\res\icon\gui\Tgroup24.png"
+         inkscape:export-xdpi="114.96424"
+         inkscape:export-ydpi="114.96424" />
+    </g>
+  </g>
+</svg>

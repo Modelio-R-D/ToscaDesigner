@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="Copy html files - fr"  >
+<target name="Copy html files - fr">
+  <copy todir="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\ToscaDesigner\src\main\doc\target/nl/fr/html">
+    <fileset dir="fr/html" erroronmissingdir="false">
+      <include name="**/*"/>
+    </fileset>
+  </copy>
+</target>
+</project>

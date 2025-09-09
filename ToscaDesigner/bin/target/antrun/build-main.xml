@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <move file="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\ToscaDesigner/target/ToscaDesigner_0.0.00.zip" tofile="C:\Users\ammoussaoui\modeliosaas\5.4\ws\ToscaDesigner\modules\ToscaDesigner/target/ToscaDesigner_0.0.00.jmdac" />
+  </target>
+</project>
