@@ -55,16 +55,52 @@ public class ExportToscaModelCommand extends DefaultModuleCommandHandler {
             try {
                 generator.generateContent(object);
             } catch (IOException e) {
+                // Build richer context for the log: generator class, object identity and exception details
+                String generatorClass = generator.getClass().getName();
+                String objectDesc = describeObjectForLog(object);
+                String errMsg = String.format("Generation failed using generator=%s on object=%s : %s", generatorClass,
+                        objectDesc, e.toString());
+                logger.error(errMsg);
                 logger.error(e);
                 MessageDialog.openError(Display.getCurrent().getActiveShell(), "Error",
-                        "Generation unfortunately failed");
+                        "Generation unfortunately failed: " + e.getLocalizedMessage());
+                return;
+            } catch (RuntimeException e) {
+                // catch other runtime exceptions like Handlebars rendering errors or NPE
+                String generatorClass = generator.getClass().getName();
+                String objectDesc = describeObjectForLog(object);
+                String errMsg = String.format("Generation runtime error using generator=%s on object=%s : %s",
+                        generatorClass, objectDesc, e.toString());
+                logger.error(errMsg);
+                logger.error(e);
+                MessageDialog.openError(Display.getCurrent().getActiveShell(), "Error",
+                        "Generation unfortunately failed: " + e.getMessage());
                 return;
             }
         } else {
-            logger.error("No suitable generator found");
+            String objectDesc = describeObjectForLog(object);
+            logger.error("No suitable generator found for object: " + objectDesc);
             MessageDialog.openError(Display.getCurrent().getActiveShell(), "Error",
                     "Generation unfortunately failed, no suitable generator found ");
             return;
+        }
+    }
+
+    private String describeObjectForLog(MObject object) {
+        if (object == null)
+            return "null";
+        try {
+            String name = (object instanceof org.modelio.metamodel.uml.infrastructure.ModelElement)
+                    ? ((org.modelio.metamodel.uml.infrastructure.ModelElement) object).getName()
+                    : object.toString();
+            String id = object.getUuid() != null ? object.getUuid().toString() : "<no-uuid>";
+            String mclass = object.getMClass() != null ? object.getMClass().getName() : "<no-mclass>";
+            return String.format("name=%s, uuid=%s, mclass=%s", name, id, mclass);
+        } catch (Exception ex) {
+            // Fallback
+            logger.error("Failed to describe object for log: " + ex.toString());
+            logger.error(ex);
+            return object.toString();
         }
     }
 

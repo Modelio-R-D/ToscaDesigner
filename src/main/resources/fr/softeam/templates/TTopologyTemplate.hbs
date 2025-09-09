@@ -1,53 +1,41 @@
-{{!-- Template: TTopologyTemplate.hbs
-     Notes: cleaned stray fence markers and added null-safe partial invocation guards.
---}}
-
 {{#unless (noStereotypeApplications this "Metadata")}}metadata:{{/unless}}
-{{#each ownedAttribute}}
-  {{#extension}}{{#eq name "Metadata"}}
-    {{../name}}: "{{../value}}"
-  {{/eq}}{{/extension}}
-{{/each}}
+{{#ownedAttribute as |metadata|}}{{#extension as |extension|}}{{#eq extension.name "Metadata"}}
+    {{metadata.name}}: "{{metadata.value}}"
+{{/eq}}{{/extension}}{{/ownedAttribute}}
 {{imports this}}
-
 topology_template:
-
 {{#unless (noStereotypeApplications this "InputParametersType")}}
   inputs:
   {{#ownedElement}}{{#extension}}{{#eq name "InputParametersType"}}
-    {{#ownedAttribute}}{{#with this as |parameter|}}{{#extension}}{{#eq name "TParameter"}}
+    {{#ownedAttribute as |parameter|}}{{#extension as |extension|}}{{#eq extension.name "TParameter"}}
       {{> TParameter parameter}}
-    {{/eq}}{{/extension}}{{/with}}{{/ownedAttribute}}
+    {{/eq}}{{/extension}}{{/ownedAttribute}}
   {{/eq}}{{/extension}}{{/ownedElement}}
 {{/unless}}
-
 {{#unless (noStereotypeApplications this "TNodeTemplate")}}
   node_templates:
-  {{#ownedElement}}{{#with this as |nodeTemplate|}}{{#extension}}{{#eq name "TNodeTemplate"}}
+  {{#ownedElement as | nodeTemplate |}}{{#extension as |extension|}}{{#eq extension.name "TNodeTemplate"}}
     {{> TNodeTemplate nodeTemplate}}
-  {{/eq}}{{/extension}}{{/with}}{{/ownedElement}}
+  {{/eq}}{{/extension}}{{/ownedElement}}
 {{/unless}}
-
 {{#unless (noStereotypeApplications this "TGroup")}}
   groups:
-  {{#ownedElement}}{{#with this as |group|}}{{#extension}}{{#eq name "TGroup"}}
+  {{#ownedElement as |group|}}{{#extension as |extension|}}{{#eq extension.name "TGroup"}}
     {{> TGroup group}}
-  {{/eq}}{{/extension}}{{/with}}{{/ownedElement}}
+  {{/eq}}{{/extension}}{{/ownedElement}}
 {{/unless}}
-
 {{#unless (noStereotypeApplications this "TRelationshipTemplateEnd")}}
   relationship_templates:
-  {{#ownedElement}}{{#targetingEnd}}{{#association}}{{#extension}}{{#eq name "TRelationshipTemplate"}}
+  {{#ownedElement}}{{#targetingEnd}}{{#association as |association|}}{{#extension as |extension|}}{{#eq extension.name "TRelationshipTemplate"}}
     {{../name}}:
-      type: {{getProperty ../this "type"}}
+      type: {{getProperty association "type"}}
   {{/eq}}{{/extension}}{{/association}}{{/targetingEnd}}{{/ownedElement}}
 {{/unless}}
-
 {{#unless (noStereotypeApplications this "PoliciesType")}}
   policies:
   {{#ownedElement}}{{#extension}}{{#eq name "PoliciesType"}}
-    {{#ownedElement}}{{#with this as |policy|}}{{#extension}}{{#eq name "TPolicy"}}
+    {{#ownedElement as |policy|}}{{#extension as |extension|}}{{#eq extension.name "TPolicy"}}
       {{> TPolicy policy}}
-    {{/eq}}{{/extension}}{{/with}}{{/ownedElement}}
+    {{/eq}}{{/extension}}{{/ownedElement}}
   {{/eq}}{{/extension}}{{/ownedElement}}
 {{/unless}}

@@ -76,17 +76,17 @@ public abstract class AbstractToscaFileGenerator {
 
                 if (stereotype.getName().equals("TRequirement")) {
                     TRequirement tRequirement = TRequirement.safeInstantiate((Class) context);
-        if (searchedPropertyName.equals("node")) {
-        TNodeTemplate node = tRequirement.getNode();
-        propertyStringValue = node != null ? node.getElement().getName() : "''";
-        } else if (searchedPropertyName.equals("capability")) {
-        CapabilityStereotype capability = tRequirement.getCapability();
-        propertyStringValue = capability != null ? capability.getElement().getName() : "";
-        } else if (searchedPropertyName.equals("relationship")) {
-        TRelationshipTemplate relationship = tRequirement.getRelationship();
-        propertyStringValue = relationship != null ? relationship.getElement().getName() : "";
-        }
-        } else if (stereotype.getName().equals("TRequirementDefinition")) {
+                    if (searchedPropertyName.equals("node")) {
+                        TNodeTemplate node = tRequirement.getNode();
+                        propertyStringValue = node != null ? node.getElement().getName() : "''";
+                    } else if (searchedPropertyName.equals("capability")) {
+                        CapabilityStereotype capability = tRequirement.getCapability();
+                        propertyStringValue = capability != null ? capability.getElement().getName() : "";
+                    } else if (searchedPropertyName.equals("relationship")) {
+                        TRelationshipTemplate relationship = tRequirement.getRelationship();
+                        propertyStringValue = relationship != null ? relationship.getElement().getName() : "";
+                    }
+                } else if (stereotype.getName().equals("TRequirementDefinition")) {
 
                     TRequirementDefinition tRequirementDefinition = TRequirementDefinition
                             .safeInstantiate((Class) context);
@@ -270,6 +270,30 @@ public abstract class AbstractToscaFileGenerator {
             return Objects.hash(file, namespaceUri, namespacePrefix);
         }
 
+    }
+
+    /**
+     * Produce a concise description for logging purposes from an MObject.
+     * Format: name=<name>, uuid=<uuid>, mclass=<mclass>
+     */
+    public String describeObject(MObject object) {
+        if (object == null) {
+            return "null";
+        }
+        try {
+            String name = (object instanceof ModelElement) ? ((ModelElement) object).getName() : object.toString();
+            String id = null;
+            try {
+                id = object.getUuid() != null ? object.getUuid().toString() : "<no-uuid>";
+            } catch (Throwable t) {
+                id = "<uuid-unavailable>";
+            }
+            String mclass = object.getMClass() != null ? object.getMClass().getName() : "<no-mclass>";
+            return String.format("name=%s, uuid=%s, mclass=%s", name, id, mclass);
+        } catch (Exception ex) {
+            // Best-effort fallback
+            return object.toString();
+        }
     }
 
 }

@@ -45,17 +45,29 @@ class ToscaFileGenerator extends AbstractToscaFileGenerator {
                 MessageDialog.openInformation(Display.getCurrent().getActiveShell(), "Success",
                         getFileType() + " saved successfully");
             } catch (IOException ex) {
-                logger.error(ex);
-                MessageDialog.openError(Display.getCurrent().getActiveShell(), getFileType() + " export error",
-                        ex.getLocalizedMessage());
+        String objDesc = describeObject(object);
+        String genClass = this.getClass().getName();
+        logger.error(String.format("IOException while generating %s to path=%s using %s for object=%s : %s",
+            getFileType(), filePath, genClass, objDesc, ex.toString()));
+        logger.error(ex);
+        MessageDialog.openError(Display.getCurrent().getActiveShell(), getFileType() + " export error",
+            ex.getLocalizedMessage());
             } catch (HandlebarsException ex) {
-                logger.error(ex);
-                MessageDialog.openError(Display.getCurrent().getActiveShell(), "Handlebars Error",
-                        "An error occurred while rendering the Handlebars template: " + ex.getMessage());
+        String objDesc = describeObject(object);
+        String genClass = this.getClass().getName();
+        logger.error(String.format("HandlebarsException while rendering %s using %s for object=%s : %s",
+            getFileType(), genClass, objDesc, ex.toString()));
+        logger.error(ex);
+        MessageDialog.openError(Display.getCurrent().getActiveShell(), "Handlebars Error",
+            "An error occurred while rendering the Handlebars template: " + ex.getMessage());
             } catch (NullPointerException ex) {
-                logger.error(ex);
-                MessageDialog.openError(Display.getCurrent().getActiveShell(), "NullPointerException",
-                        "A NullPointerException occurred. See log for details.");
+        String objDesc = describeObject(object);
+        String genClass = this.getClass().getName();
+        logger.error(String.format("NullPointerException while generating %s using %s for object=%s : %s",
+            getFileType(), genClass, objDesc, ex.toString()));
+        logger.error(ex);
+        MessageDialog.openError(Display.getCurrent().getActiveShell(), "NullPointerException",
+            "A NullPointerException occurred. See log for details.");
             }
         }
     }

@@ -68,19 +68,34 @@ public class CsarFileGenerator extends AbstractToscaFileGenerator {
                     MessageDialog.openInformation(Display.getCurrent().getActiveShell(), "Success",
                             "CSAR file generated successfully");
                 }
+        } else {
+        // user cancelled save dialog
+        logger.error("CSAR generation cancelled by user (no file path selected)");
             }
         } catch (IOException e) {
-            logger.error(e);
-            MessageDialog.openError(Display.getCurrent().getActiveShell(), "CSAR export error",
-                    e.getLocalizedMessage());
+        String objDesc = describeObject(toscaModel);
+        String genClass = this.getClass().getName();
+        logger.error(String.format("IOException during CSAR generation using %s for object=%s : %s", genClass,
+            objDesc, e.toString()));
+        logger.error(e);
+        MessageDialog.openError(Display.getCurrent().getActiveShell(), "CSAR export error",
+            e.getLocalizedMessage());
         } catch (HandlebarsException ex) {
-               logger.error(ex);
-               MessageDialog.openError(Display.getCurrent().getActiveShell(), "Handlebars Error",
-                       "An error occurred while rendering the Handlebars template: " + ex.getMessage());
+           String objDesc = describeObject(toscaModel);
+           String genClass = this.getClass().getName();
+           logger.error(String.format("HandlebarsException during CSAR generation using %s for object=%s : %s",
+               genClass, objDesc, ex.toString()));
+           logger.error(ex);
+           MessageDialog.openError(Display.getCurrent().getActiveShell(), "Handlebars Error",
+               "An error occurred while rendering the Handlebars template: " + ex.getMessage());
            } catch (NullPointerException ex) {
-               logger.error(ex);
-               MessageDialog.openError(Display.getCurrent().getActiveShell(), "NullPointerException",
-                       ex.getStackTrace().toString());
+           String objDesc = describeObject(toscaModel);
+           String genClass = this.getClass().getName();
+           logger.error(String.format("NullPointerException during CSAR generation using %s for object=%s : %s",
+               genClass, objDesc, ex.toString()));
+           logger.error(ex);
+           MessageDialog.openError(Display.getCurrent().getActiveShell(), "NullPointerException",
+               ex.getMessage());
            }
     }
 

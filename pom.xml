@@ -8,7 +8,7 @@
     <groupId>fr.softeam</groupId>
     <artifactId>toscadesigner</artifactId>
 
-    <version>0.5.14</version>
+    <version>0.5.01</version>
     <name>ToscaDesigner</name>
 
     <description>
@@ -41,7 +41,7 @@ This module typically provides a graphical user interface (GUI) or integrated de
         <dependency>
           <groupId>org.modelio</groupId>
           <artifactId>MDAKit</artifactId>
-          <version>[6.1,6.2)</version>
+          <version>[5.4.1,5.5)</version>
           <type>pom</type>
           <scope>provided</scope>
         </dependency>
@@ -58,6 +58,21 @@ This module typically provides a graphical user interface (GUI) or integrated de
   <!-- Build -->
   <build>
     <sourceDirectory>src/main/java</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>false</filtering>
+      </resource>
+      <resource>
+        <!-- include module configuration and i18n files so they land on the classpath -->
+        <directory>src/main/conf</directory>
+        <filtering>false</filtering>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+    </resources>
     <plugins>
       <!-- Use JDK 11 -->
       <plugin>
