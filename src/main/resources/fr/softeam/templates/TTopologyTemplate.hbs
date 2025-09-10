@@ -27,7 +27,7 @@ topology_template:
 {{#unless (noStereotypeApplications this "TRelationshipTemplateEnd")}}
   relationship_templates:
   {{#ownedElement}}{{#targetingEnd}}{{#association as |association|}}{{#extension as |extension|}}{{#eq extension.name "TRelationshipTemplate"}}
-    {{../name}}:
+    {{association.name}}:
       type: {{getProperty association "type"}}
   {{/eq}}{{/extension}}{{/association}}{{/targetingEnd}}{{/ownedElement}}
 {{/unless}}
