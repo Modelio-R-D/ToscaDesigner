@@ -123,9 +123,9 @@
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.NodeOperationTypeTable.nodeRef.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="opertationName" label="%propertydefinition.NodeOperationTypeTable.opertationName.label" default-value="" is-editable="true" uid="89df8b10-e13e-409c-afd2-121788c6a20e">
+                    <PropertyDefinition id="operationName" label="%propertydefinition.NodeOperationTypeTable.operationName.label" default-value="" is-editable="true" uid="89df8b10-e13e-409c-afd2-121788c6a20e">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.NodeOperationTypeTable.opertationName.description</Description>
+                        <Description>%propertydefinition.NodeOperationTypeTable.operationName.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>
@@ -524,9 +524,9 @@
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
                         <Description>%propertydefinition.TDeploymentArtifactTable.checksum.description</Description>
                     </PropertyDefinition>
-                    <PropertyDefinition id="checksum_algortihm" label="%propertydefinition.TDeploymentArtifactTable.checksum_algortihm.label" default-value="" is-editable="true" uid="a0b664be-6ddd-4e45-8208-113c85c48101">
+                    <PropertyDefinition id="checksum_algorithm" label="%propertydefinition.TDeploymentArtifactTable.checksum_algorithm.label" default-value="" is-editable="true" uid="a0b664be-6ddd-4e45-8208-113c85c48101">
                         <TypeRef id="mref#'Text' {01a40888-0000-002a-0000-000000000000} Infrastructure.PropertyType"/>
-                        <Description>%propertydefinition.TDeploymentArtifactTable.checksum_algortihm.description</Description>
+                        <Description>%propertydefinition.TDeploymentArtifactTable.checksum_algorithm.description</Description>
                     </PropertyDefinition>
                 </PropertyTable>
             </Stereotype>

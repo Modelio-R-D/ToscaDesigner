@@ -46,7 +46,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
     public static final String CHECKSUM_PROPERTY = "checksum";
 
     @objid ("97bb802d-cb7b-4d50-a64b-89a85c6e9187")
-    public static final String CHECKSUM_ALGORTIHM_PROPERTY = "checksum_algortihm";
+    public static final String CHECKSUM_ALGORTIHM_PROPERTY = "checksum_algorithm";
 
     @objid ("b9fde5e4-10ff-4cde-92bb-28827fa84353")
     public static final String DEPLOY_PATH_PROPERTY = "deploy_path";
@@ -472,7 +472,7 @@ public class TDeploymentArtifact extends TExtensibleElements implements IMdaProx
             CHECKSUM_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
             if (CHECKSUM_PROPERTY_ELT==null) missingRefs.add(mRef);
 
-            mRef = new MRef(PropertyDefinition.MQNAME, "a0b664be-6ddd-4e45-8208-113c85c48101", "checksum_algortihm");
+            mRef = new MRef(PropertyDefinition.MQNAME, "a0b664be-6ddd-4e45-8208-113c85c48101", "checksum_algorithm");
             CHECKSUM_ALGORTIHM_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
             if (CHECKSUM_ALGORTIHM_PROPERTY_ELT==null) missingRefs.add(mRef);
 

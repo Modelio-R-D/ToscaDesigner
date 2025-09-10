@@ -40,7 +40,7 @@ public class NodeOperationType implements IMdaProxy {
     public static final String NODEREF_PROPERTY = "nodeRef";
 
     @objid ("52d002a6-f226-4d5a-8f4b-0fcb0fb9ef8d")
-    public static final String OPERTATIONNAME_PROPERTY = "opertationName";
+    public static final String OPERTATIONNAME_PROPERTY = "operationName";
 
     /**
      * The underlying {@link ModelElement} represented by this proxy, never null.
@@ -274,7 +274,7 @@ public class NodeOperationType implements IMdaProxy {
             NODEREF_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
             if (NODEREF_PROPERTY_ELT==null) missingRefs.add(mRef);
 
-            mRef = new MRef(PropertyDefinition.MQNAME, "89df8b10-e13e-409c-afd2-121788c6a20e", "opertationName");
+            mRef = new MRef(PropertyDefinition.MQNAME, "89df8b10-e13e-409c-afd2-121788c6a20e", "operationName");
             OPERTATIONNAME_PROPERTY_ELT = (PropertyDefinition) session.findByRef(mRef);
             if (OPERTATIONNAME_PROPERTY_ELT==null) missingRefs.add(mRef);
 
