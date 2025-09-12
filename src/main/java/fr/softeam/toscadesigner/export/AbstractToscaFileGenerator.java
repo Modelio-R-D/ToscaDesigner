@@ -20,6 +20,7 @@ import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityDefinition;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TCapabilityType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TPolicy;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRelationshipType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirementDefinition;
@@ -121,6 +122,17 @@ public abstract class AbstractToscaFileGenerator {
                             .safeInstantiate((Class) context);
                     if (searchedPropertyName.equals("capabilityType")) {
                         propertyStringValue = tCapabilityDefinition.getCapabilityType().getElement().getName();
+                    }
+                } else if (stereotype.getName().equals("TPolicy")) {
+                    TPolicy tPolicy = TPolicy.safeInstantiate((Class) context);
+                    if (searchedPropertyName.equals("type")) {
+                        propertyStringValue = tPolicy.getType().getElement().getName();
+                    } else if(searchedPropertyName.equals("policyTargets")){
+                        List<TNodeTemplate> targets = tPolicy.getTargets();
+                        propertyStringValue = targets.stream()
+                            .map(t -> t.getElement().getName())
+                            .collect(Collectors.joining(", "));
+
                     }
                 }
                 // if it didn't find the property with this stereotype, look for the parent
