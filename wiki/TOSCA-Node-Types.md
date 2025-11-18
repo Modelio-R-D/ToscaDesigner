@@ -14,6 +14,8 @@ A specialized node type representing containerized MYRTUS software components.
 
 **Purpose**: Represents software modules packaged as Docker containers that can be deployed in edge/IoT environments.
 
+**Derived From**: `tosca.nodes.SoftwareComponent`
+
 **Key Properties**:
 - `dockerImage` (string, optional): URI pointing to the Docker image to be deployed
 - `port` (integer, optional): Port to be opened in the container (default: 1234)
@@ -71,6 +73,7 @@ description: >
 node_types:
   example.eu.myrtus.MyrtusSWComponent:
     description: This is an example of a specialization made to represent Myrtus SW components. This component assumes the SW modules are containerized in Docker containers.
+    derived_from: tosca.nodes.SoftwareComponent
     metadata:
       targetNamespace: "example.eu.myrtus.nodetypes"
       abstract: "false"
