@@ -13,37 +13,140 @@ description: >
   and are contributed to the TOSCA community for standardization.
 
 node_types:
-  example.eu.myrtus.MyrtusSWComponent:
-    description: This is an example of a specialization made to represent Myrtus SW components. This component assumes the SW modules are containerized in Docker containers.
+  eu.myrtus.MyrtusSWComponent:
+    description: >
+      Represents a MYRTUS software component deployed as a containerized application.
+      This node type is designed for edge computing scenarios where software modules
+      are packaged and deployed as Docker containers in distributed IoT environments.
     derived_from: tosca.nodes.SoftwareComponent
     metadata:
-      targetNamespace: "example.eu.myrtus.nodetypes"
+      targetNamespace: "eu.myrtus.nodetypes"
       abstract: "false"
       final: "false"
     properties:
-      dockerImage:
+      docker_image:
         type: string
-        description: An URI pointing to the docker image to be deployed.
-        required: false
-      port:
+        description: URI pointing to the Docker image to be deployed (e.g., registry.example.com/myrtus/service:1.0)
+        required: true
+      container_port:
         type: integer
-        description: The port to be opened in the container
+        description: Primary port exposed by the container for service communication
         required: false
-        default: 1234
+        default: 8080
+      environment_variables:
+        type: map
+        description: Environment variables to be set in the container
+        required: false
+        entry_schema:
+          type: string
+      resource_limits:
+        type: map
+        description: Resource limits for the container (cpu, memory)
+        required: false
+        entry_schema:
+          type: string
+      auto_restart:
+        type: boolean
+        description: Whether the container should automatically restart on failure
+        required: false
+        default: true
+      health_check_endpoint:
+        type: string
+        description: HTTP endpoint path for health checks (e.g., /health)
+        required: false
+    attributes:
+      container_id:
+        type: string
+        description: Runtime identifier of the deployed container
+      service_url:
+        type: string
+        description: Full URL where the service is accessible
     requirements:
+      - host:
+          capability: tosca.capabilities.Container
+          relationship: tosca.relationships.HostedOn
+          occurrences: [ 1, 1 ]
       - connects:
           capability: tosca.capabilities.Endpoint
           relationship: tosca.relationships.ConnectsTo
           occurrences: [ 0, UNBOUNDED ]
     capabilities:
-      service:
-        occurrences: [ 0, UNBOUNDED ]
+      service_endpoint:
         type: tosca.capabilities.Endpoint
+        description: Endpoint capability provided by this software component
+        properties:
+          protocol:
+            type: string
+            default: http
+          port:
+            type: integer
+        occurrences: [ 0, UNBOUNDED ]
+    interfaces:
+      Standard:
+        type: tosca.interfaces.node.lifecycle.Standard
+        operations:
+          create:
+            description: Pull the Docker image
+          configure:
+            description: Configure container environment and networking
+          start:
+            description: Start the container
+          stop:
+            description: Stop the container
+          delete:
+            description: Remove the container and clean up resources
         
-  example.eu.myrtus.Myrtus-Compute:
-    description: Representation of a computing node in the Myrtus systems.
+  eu.myrtus.MyrtusCompute:
+    description: >
+      Represents a computing node in MYRTUS edge/IoT infrastructure.
+      This can be a workstation, edge server, or IoT gateway capable of hosting
+      containerized MYRTUS software components.
+    derived_from: tosca.nodes.Compute
     metadata:
-      targetNamespace: "example.eu.myrtus.nodetypes"
+      targetNamespace: "eu.myrtus.nodetypes"
       abstract: "false"
       final: "false"
-    derived_from: tosca.nodes.Compute
+    properties:
+      location:
+        type: string
+        description: Physical or logical location of the compute node (e.g., "Building A - Floor 2")
+        required: false
+      edge_zone:
+        type: string
+        description: Edge computing zone or region identifier
+        required: false
+      docker_runtime:
+        type: string
+        description: Docker runtime version installed on this node
+        required: false
+        default: "latest"
+      monitoring_enabled:
+        type: boolean
+        description: Whether monitoring agents are deployed on this node
+        required: false
+        default: true
+    attributes:
+      node_id:
+        type: string
+        description: Unique identifier for this compute node
+      available_resources:
+        type: map
+        description: Currently available resources (cpu, memory, storage)
+      deployment_timestamp:
+        type: timestamp
+        description: When this node was provisioned
+    capabilities:
+      host:
+        type: tosca.capabilities.Container
+        description: Ability to host containerized applications
+        valid_source_types: [ tosca.nodes.SoftwareComponent ]
+      compute:
+        type: tosca.capabilities.Compute
+        description: Computational capabilities of this node
+      endpoint:
+        type: tosca.capabilities.Endpoint.Admin
+        description: Administrative endpoint for node management
+        properties:
+          secure:
+            type: boolean
+            default: true
