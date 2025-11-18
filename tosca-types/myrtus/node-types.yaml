@@ -1,0 +1,48 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+metadata:
+  template_name: MYRTUS Node Types
+  template_author: MYRTUS Project Contributors
+  template_version: 1.0.0
+
+description: >
+  MYRTUS custom node types for containerized software components
+  and computing infrastructure in edge/IoT scenarios.
+  
+  These types have been developed as part of the MYRTUS project
+  and are contributed to the TOSCA community for standardization.
+
+node_types:
+  example.eu.myrtus.MyrtusSWComponent:
+    description: This is an example of a specialization made to represent Myrtus SW components. This component assumes the SW modules are containerized in Docker containers.
+    metadata:
+      targetNamespace: "example.eu.myrtus.nodetypes"
+      abstract: "false"
+      final: "false"
+    properties:
+      dockerImage:
+        type: string
+        description: An URI pointing to the docker image to be deployed.
+        required: false
+      port:
+        type: integer
+        description: The port to be opened in the container
+        required: false
+        default: 1234
+    requirements:
+      - connects:
+          capability: tosca.capabilities.Endpoint
+          relationship: tosca.relationships.ConnectsTo
+          occurrences: [ 0, UNBOUNDED ]
+    capabilities:
+      service:
+        occurrences: [ 0, UNBOUNDED ]
+        type: tosca.capabilities.Endpoint
+        
+  example.eu.myrtus.Myrtus-Compute:
+    description: Representation of a computing node in the Myrtus systems.
+    metadata:
+      targetNamespace: "example.eu.myrtus.nodetypes"
+      abstract: "false"
+      final: "false"
+    derived_from: tosca.nodes.Compute
