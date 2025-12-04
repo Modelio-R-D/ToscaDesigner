@@ -1,0 +1,23 @@
+    {{name}}:
+      type: {{nodeTypeLocalName this}}
+    {{#unless (noStereotypeApplications this "Metadata")}}
+      metadata:
+{{#each ownedAttribute as |property|}}
+  {{#property.extension as |extension|}}
+    {{#eq extension.name "Metadata"}}
+        {{property.name}}: {{{formatYamlValue property.value}}}
+    {{/eq}}
+  {{/property.extension}}
+{{/each}}
+{{/unless}}
+{{#unless (noStereotypeApplications this "TPropertyDef")}}
+      properties:
+{{#each ownedAttribute as |property|}}
+  {{#property.extension as |extension|}}
+    {{#eq extension.name "TPropertyDef"}}
+        {{property.name}}: {{{formatYamlValue property.value}}}
+    {{/eq}}
+  {{/property.extension}}
+{{/each}}
+{{/unless}}
+{{{lakesideRequirements this "      "}}}

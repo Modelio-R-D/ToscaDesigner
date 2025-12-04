@@ -1,0 +1,139 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+metadata:
+  name: "TrafficApplication"
+  targetNamespace: "example.eu.myrtus.servicetemplates"
+topology_template:
+  system_params:
+    num_pods: 2000
+    num_steps: 500
+    mu: 0.8
+    comm_costs:
+      edge:
+        edge: 1.0
+        fog: 5.0
+        cloud: 15.0
+      fog:
+        edge: 5.0
+        fog: 1.0
+        cloud: 5.0
+      cloud:
+        edge: 15.0
+        fog: 5.0
+        cloud: 1.0
+    step_costs:
+      edge:
+        edge: 1.0
+        fog: 5.0
+        cloud: 15.0
+      fog:
+        edge: 5.0
+        fog: 1.0
+        cloud: 5.0
+      cloud:
+        edge: 15.0
+        fog: 5.0
+        cloud: 1.0
+
+  architecture:
+    nodes:
+      - name: "SensorTracker"
+        layer: "edge"
+      - name: "MultisensorMerger"
+        layer: "edge"
+      - name: "MapMatcher"
+        layer: "edge"
+      - name: "RedLightDetection"
+        layer: "edge"
+    edges:
+      - first_node: "MultisensorMerger"
+        second_node: "SensorTracker"
+      - first_node: "MapMatcher"
+        second_node: "MultisensorMerger"
+      - first_node: "RedLightDetection"
+        second_node: "MultisensorMerger"
+
+  node_templates:
+    EdgeComputeNode:
+      type: myrtus.dpe.compute
+      properties:
+        cpu_cores: 4
+        memory_gb: 8
+        layer: "edge"
+        num_instances: 50
+
+    FogComputeNode:
+      type: myrtus.dpe.compute
+      properties:
+        cpu_cores: 16
+        memory_gb: 32
+        layer: "fog"
+        num_instances: 10
+
+    CloudComputeNode:
+      type: myrtus.dpe.compute
+      properties:
+        cpu_cores: 64
+        memory_gb: 32
+        layer: "cloud"
+        num_instances: 1
+
+    SensorTracker:
+      type: myrtus.DPE.nodes.LakesidePod
+      metadata:
+        dataSensitivity: "Medium"
+        dataIntegrity: "High"
+      properties:
+        dockerImage: "ci.hesi.energy:5000/myrtus/sensor_tracker"
+        port: 5557
+        required_cpu_cores: 4
+        required_memory_gb: 8
+        creation_probability: 0.4
+        min_exec_steps: 60
+        max_exec_steps: 120
+        layer_restriction: "none"
+
+    MultisensorMerger:
+      type: myrtus.DPE.nodes.LakesidePod
+      metadata:
+        dataSensitivity: "Medium"
+        dataIntegrity: "High"
+      properties:
+        dockerImage: "ci.hesi.energy:5000/myrtus/multi_sensor_merger"
+        port: 5557
+        required_cpu_cores: 4
+        required_memory_gb: 8
+        creation_probability: 0.4
+        min_exec_steps: 60
+        max_exec_steps: 120
+        layer_restriction: "none"
+
+    MapMatcher:
+      type: myrtus.DPE.nodes.LakesidePod
+      metadata:
+        dataSensitivity: "Medium"
+        dataIntegrity: "High"
+      properties:
+        dockerImage: "ci.hesi.energy:5000/myrtus/map-matcher"
+        port: 5557
+        required_cpu_cores: 2
+        required_memory_gb: 4
+        creation_probability: 0.3
+        min_exec_steps: 30
+        max_exec_steps: 90
+        layer_restriction: "none"
+
+    RedLightDetection:
+      type: myrtus.DPE.nodes.LakesidePod
+      metadata:
+        dataSensitivity: "Medium"
+        dataIntegrity: "High"
+      properties:
+        dockerImage: "ci.hesi.energy:5000/myrtus/sensor_tracker"
+        port: 5557
+        required_memory_gb: 4
+        required_cpu_cores: 2
+        creation_probability: 0.3
+        min_exec_steps: 10
+        max_exec_steps: 60
+        layer_restriction: "edge"

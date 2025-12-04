@@ -1088,6 +1088,10 @@
                     <HParameter name="name" value=""/>
                 </Handler>
             </Command>
+            <Command id="Export_Lakeside_Labs_DSE" label="%command.Export_Lakeside_Labs_DSE.label" tooltip="%command.Export_Lakeside_Labs_DSE.tooltip" image="res/icon/gui/export.png" modify-model="false">
+                <Scope metaclass="Standard.Class" stereotype="ToscaDesigner#TTopologyTemplate"/>
+                <Handler class="fr.softeam.toscadesigner.handlers.commands.ExportLakesideLabsDseCommand"/>
+            </Command>
             <Command id="Service_Template_Diagram" label="%command.Service_Template_Diagram.label" tooltip="%command.Service_Template_Diagram.tooltip" image="res/icon/gui/diagram/service_template_diag24.png" modify-model="true">
                 <Scope metaclass="Standard.Package" stereotype="ToscaDesigner#ToscaModel"/>
                 <Handler class="fr.softeam.toscadesigner.handlers.commands.submodel.CreateServiceTemplateDigramCommand">
@@ -1344,6 +1348,7 @@
         </Tools>
         <ContextualMenu>
             <CommandRef refid="Export" group="" group-image=""/>
+            <CommandRef refid="Export_Lakeside_Labs_DSE" group="" group-image=""/>
             <CommandRef refid="Tosca_Model_Diagram" group="" group-image=""/>
             <CommandRef refid="Service_Template_Diagram" group="%group.Service_Template.label" group-image=""/>
             <CommandRef refid="Topology_Template_Diagram" group="%group.Topology_Template.label" group-image=""/>
