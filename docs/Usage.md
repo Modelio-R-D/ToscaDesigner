@@ -15,6 +15,8 @@
 
 - `File > Import project` then select one of the example zips included in the release.
 
+Generated `.tosca` and `.csar` outputs can be found in [examples/generated-tosca](../examples/generated-tosca).
+
 ## Troubleshooting
 
 - If the module doesn't appear in the module catalog, ensure your `.jmdac` is compatible with Modelio 5.4.1 and that Java 8 is active.

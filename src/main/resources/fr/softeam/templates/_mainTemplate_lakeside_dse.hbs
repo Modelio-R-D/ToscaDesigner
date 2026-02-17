@@ -12,7 +12,11 @@ topology_template:
 {{{lakesideSystemParams this "  "}}}
 {{{lakesideArchitecture this "  "}}}
   node_templates:
-{{#lakesideNodeTemplates this}}
+{{#lakesideComputeTemplates this}}
 {{> LakesideNodeTemplate this}}
-{{/lakesideNodeTemplates}}
+{{/lakesideComputeTemplates}}
+  pod_templates:
+{{#lakesidePodTemplates this}}
+{{> LakesideNodeTemplate this}}
+{{/lakesidePodTemplates}}
 

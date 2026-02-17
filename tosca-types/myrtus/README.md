@@ -6,6 +6,8 @@ This directory contains TOSCA node type definitions developed as part of the MYR
 
 The MYRTUS node types are designed for edge computing and IoT scenarios, particularly focusing on containerized software deployments in distributed systems.
 
+For the full documentation and examples, see [docs/TOSCA-Node-Types.md](../../docs/TOSCA-Node-Types.md).
+
 ## Node Types
 
 ### `example.eu.myrtus.MyrtusSWComponent`

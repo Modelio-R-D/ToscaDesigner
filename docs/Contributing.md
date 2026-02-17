@@ -26,3 +26,5 @@ This produces `target/toscadesigner-<version>.jar` and `target/ToscaDesigner_<ve
 ## CI
 
 A GitHub Actions workflow builds the project on push and PRs.
+
+For the full contributor guide, see [CONTRIBUTING.md](../CONTRIBUTING.md).

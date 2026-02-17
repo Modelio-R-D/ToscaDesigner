@@ -45,13 +45,7 @@ topology_template:
         layer: "edge"
       - name: "RedLightDetection"
         layer: "edge"
-    edges:
-      - first_node: "MultisensorMerger"
-        second_node: "SensorTracker"
-      - first_node: "MapMatcher"
-        second_node: "MultisensorMerger"
-      - first_node: "RedLightDetection"
-        second_node: "MultisensorMerger"
+    edges: []
 
   node_templates:
     EdgeComputeNode:
@@ -137,3 +131,5 @@ topology_template:
         min_exec_steps: 10
         max_exec_steps: 60
         layer_restriction: "edge"
+
+

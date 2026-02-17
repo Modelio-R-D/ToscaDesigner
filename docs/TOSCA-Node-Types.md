@@ -2,6 +2,8 @@
 
 This page documents the TOSCA node type definitions developed as part of the MYRTUS project and contributed to the TOSCA community for standardization.
 
+The YAML definitions live in [tosca-types/myrtus](../tosca-types/myrtus).
+
 ## Overview
 
 The MYRTUS node types are designed for edge computing and IoT scenarios, particularly focusing on containerized software deployments in distributed systems. These definitions provide a standardized way to model and orchestrate edge applications.

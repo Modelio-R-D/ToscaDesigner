@@ -1,15 +1,6 @@
-# TOSCA Designer Wiki
+# Documentation
 
-Welcome to the TOSCA Designer project wiki. This wiki provides installation steps, usage examples, contributing guidelines, and developer documentation for the TOSCA Designer module for Modelio 5.4.1.
-
-See the pages in this wiki for more details:
-
-- Installation
-- Usage
-- Contributing
-- Development
-
----
+Welcome to the TOSCA Designer documentation. These pages cover installation, usage, contribution guidelines, and developer notes for the Modelio 5.4.1 module.
 
 ## About
 
@@ -27,3 +18,4 @@ TOSCA Designer is an open-source module for Modelio 5.4.1 developed by the Softe
 - [Usage](Usage.md)
 - [Contributing](Contributing.md)
 - [Development](Development.md)
+- [MYRTUS TOSCA node types](TOSCA-Node-Types.md)

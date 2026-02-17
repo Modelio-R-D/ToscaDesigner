@@ -18,3 +18,8 @@ Notes
 - The project compiles to Java 8 bytecode (`<release>8`).
 - `MDAKit` is provided by Modelio at runtime and declared as `scope=provided` in `pom.xml`.
 - To run integration checks that require Modelio APIs, install Modelio and run tests inside its environment.
+
+## Helper Scripts
+
+- Modelio Jython scripts: [tools/modelio](../tools/modelio)
+- Dev utilities: [tools/dev](../tools/dev)

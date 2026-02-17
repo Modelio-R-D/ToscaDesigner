@@ -1,0 +1,213 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+metadata:
+  name: "TrafficApplication_FullyExpanded"
+  description: "Complete unrolling of 61 compute nodes with explicit typing and connectivity."
+
+topology_template:
+
+  system_params:
+    num_pods: 2000
+    num_steps: 500
+    mu: 0.8
+    
+    pod_templates:
+      MultisensorMerger:
+        dockerImage: "ci.hesi.energy:5000/myrtus/multi_sensor_merger"
+        port: 5557
+        required_cpu_cores: 4
+        required_memory_gb: 8
+        creation_probability: 0.4
+        min_exec_steps: 60
+        max_exec_steps: 120
+        layer_restriction: "none"
+      MapMatcher:
+        dockerImage: "ci.hesi.energy:5000/myrtus/map-matcher"
+        port: 5557
+        required_cpu_cores: 2
+        required_memory_gb: 4
+        creation_probability: 0.3
+        min_exec_steps: 30
+        max_exec_steps: 90
+        layer_restriction: "none"
+      RedLightDetection:
+        dockerImage: "ci.hesi.energy:5000/myrtus/sensor_tracker"
+        port: 5557
+        required_cpu_cores: 2
+        required_memory_gb: 4
+        creation_probability: 0.15
+        min_exec_steps: 10
+        max_exec_steps: 60
+        layer_restriction: "edge"
+      IllegalTrajectoryDetection:
+        dockerImage: "ci.hesi.energy:5000/myrtus/illegal_trajectory_detection"
+        port: 5557
+        required_cpu_cores: 1
+        required_memory_gb: 2
+        creation_probability: 0.15
+        min_exec_steps: 10
+        max_exec_steps: 50
+        layer_restriction: "fog"
+
+    comm_costs:
+      edge: { edge: 1.0, fog: 5.0, cloud: 15.0 }
+      fog: { edge: 5.0, fog: 1.0, cloud: 5.0 }
+      cloud: { edge: 15.0, fog: 5.0, cloud: 1.0 }
+
+    step_costs:
+      edge: { edge: 1, fog: 5, cloud: 15 }
+      fog: { edge: 5, fog: 1, cloud: 5 }
+      cloud: { edge: 15, fog: 5, cloud: 1 }
+
+  architecture:
+    nodes:
+      # --- Edge Layer (50 Nodes) linked to EdgeCompute template ---
+      - { name: "Edge_Node_1", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_2", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_3", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_4", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_5", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_6", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_7", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_8", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_9", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_10", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_11", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_12", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_13", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_14", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_15", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_16", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_17", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_18", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_19", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_20", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_21", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_22", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_23", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_24", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_25", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_26", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_27", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_28", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_29", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_30", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_31", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_32", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_33", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_34", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_35", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_36", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_37", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_38", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_39", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_40", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_41", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_42", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_43", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_44", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_45", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_46", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_47", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_48", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_49", layer: "edge", type: "EdgeCompute" }
+      - { name: "Edge_Node_50", layer: "edge", type: "EdgeCompute" }
+
+      # --- Fog Layer (10 Nodes) linked to FogCompute template ---
+      - { name: "Fog_Node_1", layer: "fog", type: "FogCompute" }
+      - { name: "Fog_Node_2", layer: "fog", type: "FogCompute" }
+      - { name: "Fog_Node_3", layer: "fog", type: "FogCompute" }
+      - { name: "Fog_Node_4", layer: "fog", type: "FogCompute" }
+      - { name: "Fog_Node_5", layer: "fog", type: "FogCompute" }
+      - { name: "Fog_Node_6", layer: "fog", type: "FogCompute" }
+      - { name: "Fog_Node_7", layer: "fog", type: "FogCompute" }
+      - { name: "Fog_Node_8", layer: "fog", type: "FogCompute" }
+      - { name: "Fog_Node_9", layer: "fog", type: "FogCompute" }
+      - { name: "Fog_Node_10", layer: "fog", type: "FogCompute" }
+
+      # --- Cloud Layer (1 Node) linked to CloudCompute template ---
+      - { name: "Cloud_Node_1", layer: "cloud", type: "CloudCompute" }
+
+    edges:
+      # --- Edge to Fog Connectivity ---
+      - { first_node: "Edge_Node_1", second_node: "Fog_Node_3" }
+      - { first_node: "Edge_Node_2", second_node: "Fog_Node_7" }
+      - { first_node: "Edge_Node_3", second_node: "Fog_Node_1" }
+      - { first_node: "Edge_Node_4", second_node: "Fog_Node_10" }
+      - { first_node: "Edge_Node_5", second_node: "Fog_Node_2" }
+      - { first_node: "Edge_Node_6", second_node: "Fog_Node_8" }
+      - { first_node: "Edge_Node_7", second_node: "Fog_Node_4" }
+      - { first_node: "Edge_Node_8", second_node: "Fog_Node_6" }
+      - { first_node: "Edge_Node_9", second_node: "Fog_Node_5" }
+      - { first_node: "Edge_Node_10", second_node: "Fog_Node_9" }
+      - { first_node: "Edge_Node_11", second_node: "Fog_Node_1" }
+      - { first_node: "Edge_Node_12", second_node: "Fog_Node_3" }
+      - { first_node: "Edge_Node_13", second_node: "Fog_Node_2" }
+      - { first_node: "Edge_Node_14", second_node: "Fog_Node_7" }
+      - { first_node: "Edge_Node_15", second_node: "Fog_Node_10" }
+      - { first_node: "Edge_Node_16", second_node: "Fog_Node_4" }
+      - { first_node: "Edge_Node_17", second_node: "Fog_Node_6" }
+      - { first_node: "Edge_Node_18", second_node: "Fog_Node_8" }
+      - { first_node: "Edge_Node_19", second_node: "Fog_Node_5" }
+      - { first_node: "Edge_Node_20", second_node: "Fog_Node_9" }
+      - { first_node: "Edge_Node_21", second_node: "Fog_Node_1" }
+      - { first_node: "Edge_Node_22", second_node: "Fog_Node_2" }
+      - { first_node: "Edge_Node_23", second_node: "Fog_Node_4" }
+      - { first_node: "Edge_Node_24", second_node: "Fog_Node_6" }
+      - { first_node: "Edge_Node_25", second_node: "Fog_Node_8" }
+      - { first_node: "Edge_Node_26", second_node: "Fog_Node_10" }
+      - { first_node: "Edge_Node_27", second_node: "Fog_Node_3" }
+      - { first_node: "Edge_Node_28", second_node: "Fog_Node_5" }
+      - { first_node: "Edge_Node_29", second_node: "Fog_Node_7" }
+      - { first_node: "Edge_Node_30", second_node: "Fog_Node_9" }
+      - { first_node: "Edge_Node_31", second_node: "Fog_Node_1" }
+      - { first_node: "Edge_Node_32", second_node: "Fog_Node_3" }
+      - { first_node: "Edge_Node_33", second_node: "Fog_Node_2" }
+      - { first_node: "Edge_Node_34", second_node: "Fog_Node_4" }
+      - { first_node: "Edge_Node_35", second_node: "Fog_Node_6" }
+      - { first_node: "Edge_Node_36", second_node: "Fog_Node_8" }
+      - { first_node: "Edge_Node_37", second_node: "Fog_Node_10" }
+      - { first_node: "Edge_Node_38", second_node: "Fog_Node_5" }
+      - { first_node: "Edge_Node_39", second_node: "Fog_Node_7" }
+      - { first_node: "Edge_Node_40", second_node: "Fog_Node_9" }
+      - { first_node: "Edge_Node_41", second_node: "Fog_Node_2" }
+      - { first_node: "Edge_Node_42", second_node: "Fog_Node_4" }
+      - { first_node: "Edge_Node_43", second_node: "Fog_Node_6" }
+      - { first_node: "Edge_Node_44", second_node: "Fog_Node_8" }
+      - { first_node: "Edge_Node_45", second_node: "Fog_Node_10" }
+      - { first_node: "Edge_Node_46", second_node: "Fog_Node_1" }
+      - { first_node: "Edge_Node_47", second_node: "Fog_Node_3" }
+      - { first_node: "Edge_Node_48", second_node: "Fog_Node_5" }
+      - { first_node: "Edge_Node_49", second_node: "Fog_Node_7" }
+      - { first_node: "Edge_Node_50", second_node: "Fog_Node_9" }
+
+      # --- Fog to Cloud Connectivity ---
+      - { first_node: "Fog_Node_1", second_node: "Cloud_Node_1" }
+      - { first_node: "Fog_Node_2", second_node: "Cloud_Node_1" }
+      - { first_node: "Fog_Node_3", second_node: "Cloud_Node_1" }
+      - { first_node: "Fog_Node_4", second_node: "Cloud_Node_1" }
+      - { first_node: "Fog_Node_5", second_node: "Cloud_Node_1" }
+      - { first_node: "Fog_Node_6", second_node: "Cloud_Node_1" }
+      - { first_node: "Fog_Node_7", second_node: "Cloud_Node_1" }
+      - { first_node: "Fog_Node_8", second_node: "Cloud_Node_1" }
+      - { first_node: "Fog_Node_9", second_node: "Cloud_Node_1" }
+      - { first_node: "Fog_Node_10", second_node: "Cloud_Node_1" }
+
+  node_templates:
+    EdgeCompute:
+      type: myrtus.dpe.compute
+      properties:
+        cpu_cores: 4
+        memory_gb: 8
+
+    FogCompute:
+      type: myrtus.dpe.compute
+      properties:
+        cpu_cores: 16
+        memory_gb: 32
+
+    CloudCompute:
+      type: myrtus.dpe.compute
+      properties:
+        cpu_cores: 64
+        memory_gb: 128
