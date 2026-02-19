@@ -12,17 +12,18 @@ import org.modelio.api.module.context.log.ILogService;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
+import fr.softeam.toscadesigner.export.util.ExportErrorHandler;
+import fr.softeam.toscadesigner.export.checker.NodeTypeChecker;
+import fr.softeam.toscadesigner.export.checker.TopologyTemplateChecker;
+
 @objid ("a5b394f4-d77e-46cc-b636-a67931ee5fe8")
 public class CsarFileGenerator extends AbstractToscaFileGenerator {
     @objid ("1262333c-b8c6-478a-afca-ad376e525aa6")
     private static final String[] CSAR_FILE_EXTENSIONS = { "*.csar" };
 
-    @objid ("bcfa835b-8879-4f7d-b443-8e14594377d6")
-    private ILogService logger;
-
     @objid ("85b1c04d-d7bb-4a3e-870a-ad39c5803f85")
     public  CsarFileGenerator(ILogService logger) {
-        this.logger = logger;
+        setLogger(logger);
     }
 
     @objid ("01ec2a85-d9ae-4feb-8820-0041e8b9f90b")
@@ -70,32 +71,15 @@ public class CsarFileGenerator extends AbstractToscaFileGenerator {
                 }
         } else {
         // user cancelled save dialog
-        logger.error("CSAR generation cancelled by user (no file path selected)");
+        logInfo("CSAR generation cancelled by user (no file path selected)");
             }
         } catch (IOException e) {
-        String objDesc = describeObject(toscaModel);
-        String genClass = this.getClass().getName();
-        logger.error(String.format("IOException during CSAR generation using %s for object=%s : %s", genClass,
-            objDesc, e.toString()));
-        logger.error(e);
-        MessageDialog.openError(Display.getCurrent().getActiveShell(), "CSAR export error",
-            e.getLocalizedMessage());
+        ExportErrorHandler.handleIoException(getLogger(), e, getFileType(), null, toscaModel, this.getClass());
+        throw e;
         } catch (HandlebarsException ex) {
-           String objDesc = describeObject(toscaModel);
-           String genClass = this.getClass().getName();
-           logger.error(String.format("HandlebarsException during CSAR generation using %s for object=%s : %s",
-               genClass, objDesc, ex.toString()));
-           logger.error(ex);
-           MessageDialog.openError(Display.getCurrent().getActiveShell(), "Handlebars Error",
-               "An error occurred while rendering the Handlebars template: " + ex.getMessage());
+           ExportErrorHandler.handleHandlebarsException(getLogger(), ex, getFileType(), toscaModel, this.getClass());
            } catch (NullPointerException ex) {
-           String objDesc = describeObject(toscaModel);
-           String genClass = this.getClass().getName();
-           logger.error(String.format("NullPointerException during CSAR generation using %s for object=%s : %s",
-               genClass, objDesc, ex.toString()));
-           logger.error(ex);
-           MessageDialog.openError(Display.getCurrent().getActiveShell(), "NullPointerException",
-               ex.getMessage());
+           ExportErrorHandler.handleNullPointerException(getLogger(), ex, getFileType(), toscaModel, this.getClass());
            }
     }
 
@@ -112,7 +96,7 @@ public class CsarFileGenerator extends AbstractToscaFileGenerator {
     @objid ("7897a1e1-90ae-4d93-8b7b-da0fcc8e7b70")
     private void addDefinitions(ZipOutputStream zos, MObject toscaModel) throws IOException {
         if (!(toscaModel instanceof ModelTree)) {
-            logger.error("toscaModel is not an instance of ModelTree");
+            logInfo("toscaModel is not an instance of ModelTree");
             return;
         }
 

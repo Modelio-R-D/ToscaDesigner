@@ -1,6 +1,7 @@
-package fr.softeam.toscadesigner.export;
+package fr.softeam.toscadesigner.export.checker;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+import fr.softeam.toscadesigner.export.AbstractToscaFileGenerator;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.vcore.smkernel.mapi.MObject;
 

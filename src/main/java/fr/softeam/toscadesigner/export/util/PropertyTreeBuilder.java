@@ -1,4 +1,4 @@
-package fr.softeam.toscadesigner.export;
+package fr.softeam.toscadesigner.export.util;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -16,7 +16,7 @@ import fr.softeam.toscadesigner.api.tosca.standard.attribute.TPropertyDef;
  * Builds and renders YAML property trees from model elements.
  * Converts nested property structures into YAML format.
  */
-final class PropertyTreeBuilder {
+public final class PropertyTreeBuilder {
     
     private PropertyTreeBuilder() {
         // Utility class - no instances
@@ -25,7 +25,7 @@ final class PropertyTreeBuilder {
     /**
      * Build a property tree from a model element, collecting all property values.
      */
-    static Map<String, Object> buildPropertyTree(ModelTree source) {
+    public static Map<String, Object> buildPropertyTree(ModelTree source) {
         Map<String, Object> root = new LinkedHashMap<>();
         if (source == null) {
             return root;
@@ -115,7 +115,7 @@ final class PropertyTreeBuilder {
      * Render a property tree as YAML, with proper nesting and indentation.
      */
     @SuppressWarnings("unchecked")
-    static String renderYamlTree(Map<String, Object> tree, int depth, String indentUnit) {
+    static public String renderYamlTree(Map<String, Object> tree, int depth, String indentUnit) {
         StringBuilder builder = new StringBuilder();
         for (Map.Entry<String, Object> entry : tree.entrySet()) {
             String indent = repeatIndent(depth, indentUnit);
@@ -134,7 +134,7 @@ final class PropertyTreeBuilder {
     /**
      * Repeat an indent unit string depth times.
      */
-    static String repeatIndent(int depth, String indentUnit) {
+    static public String repeatIndent(int depth, String indentUnit) {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < depth; i++) {
             builder.append(indentUnit);

@@ -13,8 +13,8 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
-import fr.softeam.toscadesigner.export.LakesideLabsDseFileGenerator;
-import fr.softeam.toscadesigner.export.TopologyTemplateChecker;
+import fr.softeam.toscadesigner.export.checker.TopologyTemplateChecker;
+import fr.softeam.toscadesigner.export.lakeside.LakesideLabsDseFileGenerator;
 
 @objid("a440dcf7-85b8-489c-9246-b781368bb3a4")
 public class ExportLakesideLabsDseCommand extends DefaultModuleCommandHandler {

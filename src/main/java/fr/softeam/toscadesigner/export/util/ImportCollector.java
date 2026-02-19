@@ -1,4 +1,4 @@
-package fr.softeam.toscadesigner.export;
+package fr.softeam.toscadesigner.export.util;
 
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -18,7 +18,7 @@ import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
  * Collects and manages import statements for TOSCA files.
  * Generates proper import directives with namespace URIs and prefixes.
  */
-final class ImportCollector {
+public final class ImportCollector {
     
     private ImportCollector() {
         // Utility class - no instances
@@ -27,7 +27,7 @@ final class ImportCollector {
     /**
      * Collect all imports from a model element context.
      */
-    static Set<Import> collectImports(ModelElement context) {
+    public static Set<Import> collectImports(ModelElement context) {
         Set<Import> imports = new LinkedHashSet<>();
         if (context == null) {
             return imports;
@@ -62,7 +62,7 @@ final class ImportCollector {
     /**
      * Generate import string from a set of imports.
      */
-    static String generateImportString(Set<Import> imports, boolean includeHeader, String indent) {
+    public static String generateImportString(Set<Import> imports, boolean includeHeader, String indent) {
         if (imports.isEmpty()) {
             return "";
         }
@@ -82,7 +82,7 @@ final class ImportCollector {
     /**
      * Represents a single TOSCA import statement with file, namespace URI, and prefix.
      */
-    static final class Import {
+    public static final class Import {
         private final String file;
         private final String namespaceUri;
         private final String namespacePrefix;
@@ -93,15 +93,15 @@ final class ImportCollector {
             this.namespacePrefix = namespacePrefix;
         }
 
-        String getFile() {
+        public String getFile() {
             return file;
         }
 
-        String getNamespaceUri() {
+        public String getNamespaceUri() {
             return namespaceUri;
         }
 
-        String getNamespacePrefix() {
+        public String getNamespacePrefix() {
             return namespacePrefix;
         }
 

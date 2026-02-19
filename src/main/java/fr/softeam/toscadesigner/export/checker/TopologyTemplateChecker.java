@@ -1,8 +1,10 @@
-package fr.softeam.toscadesigner.export;
+package fr.softeam.toscadesigner.export.checker;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
+import fr.softeam.toscadesigner.export.AbstractToscaFileGenerator;
+import fr.softeam.toscadesigner.export.ToscaFileGenerator;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.vcore.smkernel.mapi.MObject;

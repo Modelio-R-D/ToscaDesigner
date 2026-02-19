@@ -1,4 +1,4 @@
-package fr.softeam.toscadesigner.export;
+package fr.softeam.toscadesigner.export.checker;
 
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
@@ -8,6 +8,8 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 import fr.softeam.toscadesigner.api.IToscaDesignerPeerModule;
 import fr.softeam.toscadesigner.api.tosca.standard.package_.TServiceTemplate;
+import fr.softeam.toscadesigner.export.AbstractToscaFileGenerator;
+import fr.softeam.toscadesigner.export.CsarFileGenerator;
 
 @objid ("324798ff-0dad-4ce6-8d34-8f0b9df154e1")
 public class TServiceTemplateChecker implements ToscaObjectTypeChecker {

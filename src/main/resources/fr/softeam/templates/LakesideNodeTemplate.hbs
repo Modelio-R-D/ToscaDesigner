@@ -1,4 +1,4 @@
-    {{name}}:
+    {{lakesideTemplateName this}}:
       type: {{nodeTypeLocalName this}}
     {{#unless (noStereotypeApplications this "Metadata")}}
       metadata:
@@ -15,7 +15,9 @@
 {{#each ownedAttribute as |property|}}
   {{#property.extension as |extension|}}
     {{#eq extension.name "TPropertyDef"}}
+      {{#if (lakesidePropertyAllowed .. property.name)}}
         {{property.name}}: {{{formatYamlValue property.value}}}
+      {{/if}}
     {{/eq}}
   {{/property.extension}}
 {{/each}}

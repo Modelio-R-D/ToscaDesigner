@@ -9,17 +9,16 @@ import org.eclipse.swt.widgets.Display;
 import org.modelio.api.module.context.log.ILogService;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
+import fr.softeam.toscadesigner.export.util.ExportErrorHandler;
+
 @objid ("25521c06-6c79-4148-89ee-f4e056e7d0da")
-class ToscaFileGenerator extends AbstractToscaFileGenerator {
+public class ToscaFileGenerator extends AbstractToscaFileGenerator {
     @objid ("52396f91-0550-447c-a930-a966c6c568a5")
     private static final String[] TOSCA_FILE_EXTENSIONS = { "*.tosca" };
 
-    @objid ("52dec718-f921-4623-885b-784ba0662f1e")
-    private ILogService logger;
-
     @objid ("169bcf1b-ca40-4c0d-952e-fc61c78c6d93")
     public  ToscaFileGenerator(ILogService logger) {
-        this.logger = logger;
+        setLogger(logger);
     }
 
     @objid ("5bc507c3-edf4-4540-9ae6-940802ed1bbe")
@@ -45,29 +44,12 @@ class ToscaFileGenerator extends AbstractToscaFileGenerator {
                 MessageDialog.openInformation(Display.getCurrent().getActiveShell(), "Success",
                         getFileType() + " saved successfully");
             } catch (IOException ex) {
-        String objDesc = describeObject(object);
-        String genClass = this.getClass().getName();
-        logger.error(String.format("IOException while generating %s to path=%s using %s for object=%s : %s",
-            getFileType(), filePath, genClass, objDesc, ex.toString()));
-        logger.error(ex);
-        MessageDialog.openError(Display.getCurrent().getActiveShell(), getFileType() + " export error",
-            ex.getLocalizedMessage());
+                ExportErrorHandler.handleIoException(getLogger(), ex, getFileType(), filePath, object, this.getClass());
+                throw ex;
             } catch (HandlebarsException ex) {
-        String objDesc = describeObject(object);
-        String genClass = this.getClass().getName();
-        logger.error(String.format("HandlebarsException while rendering %s using %s for object=%s : %s",
-            getFileType(), genClass, objDesc, ex.toString()));
-        logger.error(ex);
-        MessageDialog.openError(Display.getCurrent().getActiveShell(), "Handlebars Error",
-            "An error occurred while rendering the Handlebars template: " + ex.getMessage());
+                ExportErrorHandler.handleHandlebarsException(getLogger(), ex, getFileType(), object, this.getClass());
             } catch (NullPointerException ex) {
-        String objDesc = describeObject(object);
-        String genClass = this.getClass().getName();
-        logger.error(String.format("NullPointerException while generating %s using %s for object=%s : %s",
-            getFileType(), genClass, objDesc, ex.toString()));
-        logger.error(ex);
-        MessageDialog.openError(Display.getCurrent().getActiveShell(), "NullPointerException",
-            "A NullPointerException occurred. See log for details.");
+                ExportErrorHandler.handleNullPointerException(getLogger(), ex, getFileType(), object, this.getClass());
             }
         }
     }

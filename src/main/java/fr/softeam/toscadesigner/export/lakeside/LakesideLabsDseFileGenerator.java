@@ -1,4 +1,4 @@
-package fr.softeam.toscadesigner.export;
+package fr.softeam.toscadesigner.export.lakeside;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,17 +11,33 @@ import org.modelio.vcore.smkernel.mapi.MObject;
 import com.github.jknack.handlebars.HandlebarsException;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
+import fr.softeam.toscadesigner.export.AbstractToscaFileGenerator;
+import fr.softeam.toscadesigner.export.util.ExportErrorHandler;
+import fr.softeam.toscadesigner.export.registry.HandlebarsHelperRegistry;
+import fr.softeam.toscadesigner.export.util.TemplateConstants;
+import fr.softeam.toscadesigner.export.checker.TopologyTemplateChecker;
+import fr.softeam.toscadesigner.export.lakeside.registry.LakesideHandlebarsHelperRegistry;
+
 @objid("1e65fdd7-7b55-4d44-bec4-2dca7dd6e95e")
 public class LakesideLabsDseFileGenerator extends AbstractToscaFileGenerator {
     private static final String[] DSE_FILE_EXTENSIONS = { "*.dse.yaml", "*.yaml", "*.yml" };
-    private static final String LAKESIDE_TEMPLATE = "_mainTemplate_lakeside_dse";
 
-    private final ILogService logger;
     private final TopologyTemplateChecker topologyChecker = new TopologyTemplateChecker();
 
     public LakesideLabsDseFileGenerator(ILogService logger) {
-        this.logger = logger;
         setLogger(logger);
+    }
+
+    @Override
+    protected HandlebarsHelperRegistry createHelperRegistry(ILogService logger) {
+        // Use Lakeside-specific helper registry
+        // Note: This returns a LakesideHandlebarsHelperRegistry but the base class expects HandlebarsHelperRegistry
+        // Since we need different helper registration, we directly set handlebars instead
+        LakesideHandlebarsHelperRegistry lakesideRegistry = new LakesideHandlebarsHelperRegistry(logger);
+        // Directly configure handlebars so we bypass the base class registry
+        this.handlebars = lakesideRegistry.createConfiguredHandlebars();
+        // Return null since we've already configured handlebars
+        return null;
     }
 
     @Override
@@ -42,34 +58,22 @@ public class LakesideLabsDseFileGenerator extends AbstractToscaFileGenerator {
 
         String filePath = saveToFile(getFileExtensions(), getFileType());
         if (filePath == null) {
-            logger.info("Lakeside Labs DSE export cancelled by user");
+            logInfo("Lakeside Labs DSE export cancelled by user");
             return;
         }
 
         try (FileWriter fileWriter = new FileWriter(filePath)) {
-            String content = renderTemplate(handlebars, object, LAKESIDE_TEMPLATE);
+            String content = renderTemplate(handlebars, object, TemplateConstants.LAKESIDE_DSE_TEMPLATE);
             fileWriter.write(content);
             MessageDialog.openInformation(Display.getCurrent().getActiveShell(), "Success",
                     getFileType() + " saved successfully");
         } catch (IOException ex) {
-            logAndReportError("IOException", object, ex);
+            ExportErrorHandler.handleIoException(getLogger(), ex, getFileType(), filePath, object, this.getClass());
             throw ex;
         } catch (HandlebarsException ex) {
-            logAndReportError("HandlebarsException", object, ex);
-            MessageDialog.openError(Display.getCurrent().getActiveShell(), "Handlebars Error",
-                    "An error occurred while rendering the Lakeside Labs template: " + ex.getMessage());
+            ExportErrorHandler.handleHandlebarsException(getLogger(), ex, getFileType(), object, this.getClass());
         } catch (NullPointerException ex) {
-            logAndReportError("NullPointerException", object, ex);
-            MessageDialog.openError(Display.getCurrent().getActiveShell(), "NullPointerException",
-                    "A NullPointerException occurred. See log for details.");
+            ExportErrorHandler.handleNullPointerException(getLogger(), ex, getFileType(), object, this.getClass());
         }
-    }
-
-    private void logAndReportError(String errorType, MObject object, Exception ex) {
-        String objDesc = describeObject(object);
-        String genClass = this.getClass().getName();
-        logger.error(String.format("%s while generating %s using %s for object=%s : %s", errorType, getFileType(),
-                genClass, objDesc, ex.toString()));
-        logger.error(ex);
     }
 }

@@ -1,4 +1,4 @@
-package fr.softeam.toscadesigner.export;
+package fr.softeam.toscadesigner.export.lakeside.renderer;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -7,9 +7,9 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.modelio.api.module.context.log.ILogService;
 import org.modelio.metamodel.uml.infrastructure.ModelElement;
 import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.metamodel.uml.statik.AssociationEnd;
@@ -21,24 +21,24 @@ import fr.softeam.toscadesigner.api.tosca.standard.association.TRelationshipTemp
 import fr.softeam.toscadesigner.api.tosca.standard.class_.RequirementsType;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TRequirement;
-import org.modelio.api.module.context.log.ILogService;
+import fr.softeam.toscadesigner.export.util.YamlFormatter;
 
 /**
  * Resolves and renders requirements (host and connectivity) for node templates.
  * Handles requirement definitions, target resolution, and YAML rendering.
  */
-final class RequirementsResolver {
+public final class RequirementsResolver {
     
     private final ILogService logger;
 
-    RequirementsResolver(ILogService logger) {
+    public RequirementsResolver(ILogService logger) {
         this.logger = logger;
     }
 
     /**
      * Render requirements block for a node template as YAML.
      */
-    String renderRequirementsBlock(ModelElement context, String indentUnit) {
+    public String renderRequirementsBlock(ModelElement context, String indentUnit) {
         TNodeTemplate template = asNodeTemplate(context);
         if (template == null) {
             return "";

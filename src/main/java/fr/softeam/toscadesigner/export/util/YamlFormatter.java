@@ -1,10 +1,10 @@
-package fr.softeam.toscadesigner.export;
+package fr.softeam.toscadesigner.export.util;
 
 /**
  * Utility class for formatting values into YAML scalar syntax.
  * Handles quoting, escaping, and type detection for YAML output.
  */
-final class YamlFormatter {
+final public class YamlFormatter {
     
     private YamlFormatter() {
         // Utility class - no instances
@@ -14,7 +14,7 @@ final class YamlFormatter {
      * Format a value as a YAML scalar, applying proper quoting and escaping.
      * Leaves booleans, numbers, and null unquoted; quotes strings with escaped inner quotes.
      */
-    static String formatScalar(Object value) {
+    public static String formatScalar(Object value) {
         if (value == null) {
             return "\"\"";
         }
