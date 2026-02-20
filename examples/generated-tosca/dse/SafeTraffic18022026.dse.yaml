@@ -176,7 +176,7 @@ topology_template:
       - { first_node: "Edge_Node_11", second_node: "Fog_Node_10" }
       - { first_node: "Edge_Node_11", second_node: "Fog_Node_2" }
       - { first_node: "Edge_Node_11", second_node: "Edge_Node_43" }
-      - { first_node: "Edge_Node_39", second_node: "Edge_Node_11" }
+      - { first_node: "Edge_Node_11", second_node: "Edge_Node_39" }
       - { first_node: "Edge_Node_12", second_node: "Fog_Node_6" }
       - { first_node: "Edge_Node_12", second_node: "Edge_Node_35" }
       - { first_node: "Edge_Node_12", second_node: "Edge_Node_37" }
@@ -190,7 +190,7 @@ topology_template:
       - { first_node: "Edge_Node_14", second_node: "Edge_Node_20" }
       - { first_node: "Edge_Node_14", second_node: "Fog_Node_6" }
       - { first_node: "Edge_Node_14", second_node: "Edge_Node_36" }
-      - { first_node: "Edge_Node_39", second_node: "Edge_Node_14" }
+      - { first_node: "Edge_Node_14", second_node: "Edge_Node_39" }
       - { first_node: "Edge_Node_15", second_node: "Fog_Node_7" }
       - { first_node: "Edge_Node_15", second_node: "Fog_Node_10" }
       - { first_node: "Edge_Node_16", second_node: "Fog_Node_4" }
@@ -200,11 +200,11 @@ topology_template:
       - { first_node: "Edge_Node_17", second_node: "Fog_Node_4" }
       - { first_node: "Edge_Node_17", second_node: "Fog_Node_9" }
       - { first_node: "Edge_Node_17", second_node: "Edge_Node_22" }
-      - { first_node: "Edge_Node_40", second_node: "Edge_Node_17" }
-      - { first_node: "Edge_Node_39", second_node: "Edge_Node_17" }
+      - { first_node: "Edge_Node_17", second_node: "Edge_Node_40" }
+      - { first_node: "Edge_Node_17", second_node: "Edge_Node_39" }
       - { first_node: "Edge_Node_18", second_node: "Fog_Node_2" }
       - { first_node: "Edge_Node_18", second_node: "Fog_Node_5" }
-      - { first_node: "Edge_Node_36", second_node: "Edge_Node_18" }
+      - { first_node: "Edge_Node_18", second_node: "Edge_Node_36" }
       - { first_node: "Edge_Node_19", second_node: "Fog_Node_4" }
       - { first_node: "Edge_Node_19", second_node: "Fog_Node_9" }
       - { first_node: "Edge_Node_20", second_node: "Fog_Node_2" }
@@ -213,14 +213,14 @@ topology_template:
       - { first_node: "Edge_Node_22", second_node: "Fog_Node_9" }
       - { first_node: "Edge_Node_22", second_node: "Fog_Node_1" }
       - { first_node: "Edge_Node_22", second_node: "Edge_Node_42" }
-      - { first_node: "Edge_Node_47", second_node: "Edge_Node_22" }
+      - { first_node: "Edge_Node_22", second_node: "Edge_Node_47" }
       - { first_node: "Edge_Node_23", second_node: "Fog_Node_4" }
       - { first_node: "Edge_Node_23", second_node: "Edge_Node_32" }
       - { first_node: "Edge_Node_23", second_node: "Fog_Node_10" }
       - { first_node: "Edge_Node_24", second_node: "Fog_Node_8" }
       - { first_node: "Edge_Node_24", second_node: "Edge_Node_34" }
       - { first_node: "Edge_Node_24", second_node: "Fog_Node_2" }
-      - { first_node: "Edge_Node_37", second_node: "Edge_Node_24" }
+      - { first_node: "Edge_Node_24", second_node: "Edge_Node_37" }
       - { first_node: "Edge_Node_24", second_node: "Edge_Node_50" }
       - { first_node: "Edge_Node_25", second_node: "Fog_Node_8" }
       - { first_node: "Edge_Node_25", second_node: "Fog_Node_9" }
@@ -228,10 +228,10 @@ topology_template:
       - { first_node: "Edge_Node_26", second_node: "Fog_Node_3" }
       - { first_node: "Edge_Node_26", second_node: "Edge_Node_30" }
       - { first_node: "Edge_Node_27", second_node: "Fog_Node_4" }
-      - { first_node: "Edge_Node_47", second_node: "Edge_Node_27" }
+      - { first_node: "Edge_Node_27", second_node: "Edge_Node_47" }
       - { first_node: "Edge_Node_27", second_node: "Fog_Node_10" }
       - { first_node: "Edge_Node_28", second_node: "Fog_Node_8" }
-      - { first_node: "Edge_Node_40", second_node: "Edge_Node_28" }
+      - { first_node: "Edge_Node_28", second_node: "Edge_Node_40" }
       - { first_node: "Edge_Node_28", second_node: "Fog_Node_2" }
       - { first_node: "Edge_Node_29", second_node: "Fog_Node_1" }
       - { first_node: "Edge_Node_29", second_node: "Edge_Node_43" }
@@ -241,9 +241,9 @@ topology_template:
       - { first_node: "Edge_Node_30", second_node: "Edge_Node_44" }
       - { first_node: "Edge_Node_31", second_node: "Fog_Node_1" }
       - { first_node: "Edge_Node_31", second_node: "Edge_Node_38" }
-      - { first_node: "Edge_Node_43", second_node: "Edge_Node_31" }
+      - { first_node: "Edge_Node_31", second_node: "Edge_Node_43" }
       - { first_node: "Edge_Node_31", second_node: "Fog_Node_6" }
-      - { first_node: "Edge_Node_32", second_node: "Edge_Node_31" }
+      - { first_node: "Edge_Node_31", second_node: "Edge_Node_32" }
       - { first_node: "Edge_Node_31", second_node: "Edge_Node_45" }
       - { first_node: "Edge_Node_32", second_node: "Fog_Node_7" }
       - { first_node: "Edge_Node_32", second_node: "Fog_Node_6" }
@@ -252,17 +252,16 @@ topology_template:
       - { first_node: "Edge_Node_33", second_node: "Fog_Node_4" }
       - { first_node: "Edge_Node_33", second_node: "Edge_Node_42" }
       - { first_node: "Edge_Node_34", second_node: "Fog_Node_8" }
-      - { first_node: "Edge_Node_35", second_node: "Edge_Node_34" }
+      - { first_node: "Edge_Node_34", second_node: "Edge_Node_35" }
       - { first_node: "Edge_Node_34", second_node: "Fog_Node_9" }
       - { first_node: "Edge_Node_34", second_node: "Edge_Node_38" }
       - { first_node: "Edge_Node_35", second_node: "Fog_Node_8" }
       - { first_node: "Edge_Node_35", second_node: "Edge_Node_41" }
       - { first_node: "Edge_Node_35", second_node: "Fog_Node_1" }
       - { first_node: "Edge_Node_36", second_node: "Fog_Node_7" }
-      - { first_node: "Edge_Node_37", second_node: "Edge_Node_36" }
+      - { first_node: "Edge_Node_36", second_node: "Edge_Node_37" }
       - { first_node: "Edge_Node_37", second_node: "Fog_Node_9" }
       - { first_node: "Edge_Node_37", second_node: "Fog_Node_7" }
-      - { first_node: "Edge_Node_38", second_node: "Fog_Node_3" }
       - { first_node: "Edge_Node_38", second_node: "Fog_Node_1" }
       - { first_node: "Edge_Node_39", second_node: "Fog_Node_8" }
       - { first_node: "Edge_Node_39", second_node: "Fog_Node_9" }
@@ -295,17 +294,11 @@ topology_template:
       - { first_node: "Fog_Node_1", second_node: "Fog_Node_8" }
       - { first_node: "Fog_Node_2", second_node: "Cloud_Node_1" }
       - { first_node: "Fog_Node_3", second_node: "Cloud_Node_1" }
-      - { first_node: "Fog_Node_3", second_node: "Fog_Node_5" }
       - { first_node: "Fog_Node_3", second_node: "Fog_Node_4" }
-      - { first_node: "Fog_Node_4", second_node: "Cloud_Node_1" }
-      - { first_node: "Fog_Node_8", second_node: "Fog_Node_4" }
+      - { first_node: "Fog_Node_4", second_node: "Fog_Node_8" }
       - { first_node: "Fog_Node_4", second_node: "Fog_Node_10" }
-      - { first_node: "Fog_Node_5", second_node: "Cloud_Node_1" }
-      - { first_node: "Fog_Node_8", second_node: "Fog_Node_5" }
-      - { first_node: "Fog_Node_6", second_node: "Cloud_Node_1" }
+      - { first_node: "Fog_Node_5", second_node: "Fog_Node_8" }
       - { first_node: "Fog_Node_6", second_node: "Fog_Node_9" }
-      - { first_node: "Fog_Node_7", second_node: "Cloud_Node_1" }
-      - { first_node: "Fog_Node_8", second_node: "Cloud_Node_1" }
       - { first_node: "Fog_Node_9", second_node: "Cloud_Node_1" }
       - { first_node: "Fog_Node_10", second_node: "Cloud_Node_1" }
 
