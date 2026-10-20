@@ -1,152 +1,255 @@
 tosca_definitions_version: tosca_simple_yaml_1_3
 
 metadata:
-  template_name: MYRTUS Node Types
+  template_name: MYRTUS Cloud-Fog-Edge Node Types
   template_author: MYRTUS Project Contributors
-  template_version: 1.0.0
+  template_version: 2.0.0
 
 description: >
-  MYRTUS custom node types for containerized software components
-  and computing infrastructure in edge/IoT scenarios.
-  
-  These types have been developed as part of the MYRTUS project
-  and are contributed to the TOSCA community for standardization.
+  MYRTUS node types for modeling compute resources, edge devices, network
+  links, hardware accelerators, and containerized software components across
+  the cloud-fog-edge continuum.
 
 node_types:
-  eu.myrtus.MyrtusSWComponent:
-    description: >
-      Represents a MYRTUS software component deployed as a containerized application.
-      This node type is designed for edge computing scenarios where software modules
-      are packaged and deployed as Docker containers in distributed IoT environments.
-    derived_from: tosca.nodes.SoftwareComponent
-    metadata:
-      targetNamespace: "eu.myrtus.nodetypes"
-      abstract: "false"
-      final: "false"
-    properties:
-      docker_image:
-        type: string
-        description: URI pointing to the Docker image to be deployed (e.g., registry.example.com/myrtus/service:1.0)
-        required: true
-      container_port:
-        type: integer
-        description: Primary port exposed by the container for service communication
-        required: false
-        default: 8080
-      environment_variables:
-        type: map
-        description: Environment variables to be set in the container
-        required: false
-        entry_schema:
-          type: string
-      resource_limits:
-        type: map
-        description: Resource limits for the container (cpu, memory)
-        required: false
-        entry_schema:
-          type: string
-      auto_restart:
-        type: boolean
-        description: Whether the container should automatically restart on failure
-        required: false
-        default: true
-      health_check_endpoint:
-        type: string
-        description: HTTP endpoint path for health checks (e.g., /health)
-        required: false
-    attributes:
-      container_id:
-        type: string
-        description: Runtime identifier of the deployed container
-      service_url:
-        type: string
-        description: Full URL where the service is accessible
-    requirements:
-      - host:
-          capability: tosca.capabilities.Container
-          relationship: tosca.relationships.HostedOn
-          occurrences: [ 1, 1 ]
-      - connects:
-          capability: tosca.capabilities.Endpoint
-          relationship: tosca.relationships.ConnectsTo
-          occurrences: [ 0, UNBOUNDED ]
-    capabilities:
-      service_endpoint:
-        type: tosca.capabilities.Endpoint
-        description: Endpoint capability provided by this software component
-        properties:
-          protocol:
-            type: string
-            default: http
-          port:
-            type: integer
-        occurrences: [ 0, UNBOUNDED ]
-    interfaces:
-      Standard:
-        type: tosca.interfaces.node.lifecycle.Standard
-        operations:
-          create:
-            description: Pull the Docker image
-          configure:
-            description: Configure container environment and networking
-          start:
-            description: Start the container
-          stop:
-            description: Stop the container
-          delete:
-            description: Remove the container and clean up resources
-        
   eu.myrtus.MyrtusCompute:
     description: >
-      Represents a computing node in MYRTUS edge/IoT infrastructure.
-      This can be a workstation, edge server, or IoT gateway capable of hosting
-      containerized MYRTUS software components.
+      A compute node at any continuum layer, with explicit tier and
+      sustainability properties.
     derived_from: tosca.nodes.Compute
-    metadata:
-      targetNamespace: "eu.myrtus.nodetypes"
-      abstract: "false"
-      final: "false"
     properties:
-      location:
-        type: string
-        description: Physical or logical location of the compute node (e.g., "Building A - Floor 2")
-        required: false
       edge_zone:
         type: string
-        description: Edge computing zone or region identifier
+        description: Continuum tier occupied by this compute node.
+        required: true
+        constraints:
+          - valid_values: [ edge, fog, cloud ]
+      location:
+        type: string
+        description: Physical or logical location identifier.
         required: false
       docker_runtime:
         type: string
-        description: Docker runtime version installed on this node
+        description: Container runtime available on this node.
         required: false
-        default: "latest"
       monitoring_enabled:
         type: boolean
-        description: Whether monitoring agents are deployed on this node
+        description: Whether a monitoring agent is enabled on this node.
         required: false
-        default: true
-    attributes:
-      node_id:
+      tdp_watts:
+        type: float
+        description: Vendor-rated peak power draw under full load, in watts.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      renewable_energy_ratio:
+        type: float
+        description: Fraction of the node's energy supply from renewables.
+        required: false
+        constraints:
+          - in_range: [ 0.0, 1.0 ]
+      cooling_pue:
+        type: float
+        description: >
+          Power Usage Effectiveness: total facility power divided by IT
+          equipment power.
+        required: false
+        constraints:
+          - greater_or_equal: 1.0
+
+  eu.myrtus.MyrtusEdgeDevice:
+    description: >
+      A physical endpoint such as a sensor, camera, or VR headset that
+      produces or consumes data but is not a compute hosting target.
+    derived_from: tosca.nodes.Root
+    properties:
+      protocol:
         type: string
-        description: Unique identifier for this compute node
-      available_resources:
+        description: Communication protocol used by the device.
+        required: false
+        constraints:
+          - valid_values: [ MQTT, CoAP, HTTP, LoRaWAN, custom ]
+      data_rate_mbps:
+        type: float
+        description: Peak data rate in megabits per second.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      mobility:
+        type: string
+        description: Whether the device is stationary or mobile.
+        required: false
+        constraints:
+          - valid_values: [ static, mobile ]
+      power_source:
+        type: string
+        description: Primary source of the device's power.
+        required: false
+        constraints:
+          - valid_values: [ battery, solar, grid, harvested ]
+      max_power_w:
+        type: float
+        description: Peak device power consumption in watts.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      idle_power_w:
+        type: float
+        description: Device power consumption while idle, in watts.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      duty_cycle:
+        type: float
+        description: Fraction of time the device is active.
+        required: false
+        constraints:
+          - in_range: [ 0.0, 1.0 ]
+      sleep_latency_ms:
+        type: integer
+        description: Time for the device to wake from deep sleep, in milliseconds.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+
+  eu.myrtus.MyrtusNetwork:
+    description: >
+      A network link between continuum tiers, exposing its capacity, latency,
+      energy use, and carbon intensity.
+    derived_from: tosca.nodes.network.Network
+    properties:
+      bandwidth_mbps:
+        type: float
+        description: Link capacity in megabits per second.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      latency_ms:
+        type: float
+        description: One-way propagation latency in milliseconds.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      tier_src:
+        type: string
+        description: Source tier connected by this link.
+        required: false
+        constraints:
+          - valid_values: [ device, edge, fog, cloud ]
+      tier_dst:
+        type: string
+        description: Destination tier connected by this link.
+        required: false
+        constraints:
+          - valid_values: [ device, edge, fog, cloud ]
+      link_type:
+        type: string
+        description: Physical or logical link technology.
+        required: false
+        constraints:
+          - valid_values: [ fiber, 5G, WiFi6, LoRaWAN, ethernet ]
+      energy_per_gb_kwh:
+        type: float
+        description: Energy required to transfer one gigabyte over this link.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      carbon_intensity_gco2_kwh:
+        type: float
+        description: Link infrastructure carbon intensity in gCO2 per kWh.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+
+  eu.myrtus.MyrtusAccelerator:
+    description: >
+      A dedicated hardware accelerator hosted by a MYRTUS compute node.
+    derived_from: tosca.nodes.Abstract.Compute
+    properties:
+      accelerator_type:
+        type: string
+        description: Accelerator architecture or processor type.
+        required: false
+        constraints:
+          - valid_values: [ GPU, FPGA, CGRA, NPU, RISC-V ]
+      compute_units:
+        type: integer
+        description: Number of accelerator compute units.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      memory_gb:
+        type: float
+        description: Accelerator memory capacity in gigabytes.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      tdp_watts:
+        type: float
+        description: Peak power draw under full load, in watts.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      gflops_per_watt:
+        type: float
+        description: Floating-point throughput per watt.
+        required: false
+        constraints:
+          - greater_or_equal: 0
+      idle_power_ratio:
+        type: float
+        description: Idle power as a fraction of peak power.
+        required: false
+        constraints:
+          - in_range: [ 0.0, 1.0 ]
+      reconfigurable:
+        type: boolean
+        description: Whether the accelerator can be reconfigured at runtime.
+        required: false
+    requirements:
+      - host:
+          capability: tosca.capabilities.Compute
+          node: eu.myrtus.MyrtusCompute
+          relationship: tosca.relationships.HostedOn
+          occurrences: [ 1, 1 ]
+
+  eu.myrtus.MyrtusSWComponent:
+    description: >
+      A containerized microservice deployable across cloud, fog, and edge
+      compute nodes.
+    derived_from: tosca.nodes.SoftwareComponent
+    properties:
+      docker_image:
+        type: string
+        description: Required OCI container image reference.
+        required: true
+      resource_limits:
         type: map
-        description: Currently available resources (cpu, memory, storage)
-      deployment_timestamp:
-        type: timestamp
-        description: When this node was provisioned
-    capabilities:
-      host:
-        type: tosca.capabilities.Container
-        description: Ability to host containerized applications
-        valid_source_types: [ tosca.nodes.SoftwareComponent ]
-      compute:
-        type: tosca.capabilities.Compute
-        description: Computational capabilities of this node
-      endpoint:
-        type: tosca.capabilities.Endpoint.Admin
-        description: Administrative endpoint for node management
-        properties:
-          secure:
-            type: boolean
-            default: true
+        description: CPU and memory bounds for the component.
+        required: false
+        entry_schema:
+          type: string
+      health_check_endpoint:
+        type: string
+        description: HTTP path used to check component health.
+        required: false
+      auto_restart:
+        type: boolean
+        description: Whether to restart the component after a failure.
+        required: false
+      energy_profile:
+        type: string
+        description: Energy footprint class and adaptation behavior.
+        required: false
+        constraints:
+          - valid_values: [ high, medium, low, adaptive ]
+    requirements:
+      - host:
+          capability: tosca.capabilities.Compute
+          node: eu.myrtus.MyrtusCompute
+          relationship: tosca.relationships.HostedOn
+          occurrences: [ 1, 1 ]
+      - accelerator:
+          capability: tosca.capabilities.Compute
+          node: eu.myrtus.MyrtusAccelerator
+          relationship: tosca.relationships.DependsOn
+          occurrences: [ 0, UNBOUNDED ]
