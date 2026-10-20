@@ -1,0 +1,27 @@
+{
+  "tosca_model_name": "GeneratedToscaModel",
+  "service_template_name": "GeneratedServiceTemplate",
+  "topology_template_name": "GeneratedTopologyTemplate",
+  "inputs": [
+    {
+      "name": "image",
+      "type": "string",
+      "required": true,
+      "default": ""
+    },
+    {
+      "name": "replicas",
+      "type": "integer",
+      "required": false,
+      "default": "1"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": ""
+    }
+  ]
+}

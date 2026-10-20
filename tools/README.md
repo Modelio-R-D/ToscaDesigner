@@ -8,6 +8,10 @@ Location: `tools/modelio`
 
 These scripts are intended to be run inside Modelio's Jython environment and operate on the currently selected model elements.
 
+- `README.md`: Usage guide for Modelio automation scripts in this folder.
+- `create_tosca_service_topology_templates.py`: Create ToscaModel, ServiceTemplate, TopologyTemplate, and optional inputs/outputs.
+- `create_tosca_templates_from_json.py`: Same generation flow driven from a JSON specification file.
+- `tosca_template_spec.sample.json`: Sample JSON input for the JSON-driven generator.
 - `delete_association_by_name.py`: Delete an association by name within the selected package.
 - `duplicate_fog_nodes.py`: Duplicate a Fog node with properties and tagged values.
 - `generate_random_edges.py`: Create randomized associations between edge, fog, and cloud nodes.

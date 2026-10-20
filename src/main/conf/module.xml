@@ -990,8 +990,8 @@
                 <Image path=""/>
             </Stereotype>
             <Stereotype name="ToscaModel" metaclass="Standard.Package" owner-stereotype="" is-hidden="false" label="%stereotype.ToscaModel.label" uid="20565008-115d-4fad-800f-134ab276f611" is-abstract="false">
-                <Icon path=""/>
-                <Image path=""/>
+                <Icon path="res/icon/gui/tosca_model24.png"/>
+                <Image path="res/icon/gui/tosca_model48.png"/>
             </Stereotype>
             <Stereotype name="Trigger" metaclass="Standard.Class" owner-stereotype="" is-hidden="false" label="%stereotype.Trigger.label" uid="d385b57a-f3ae-45f5-90b4-bfc96c3ea0c3" is-abstract="false">
                 <Icon path="res/icon/gui/Trigger24.ICON.png"/>

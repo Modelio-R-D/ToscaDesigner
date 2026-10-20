@@ -12,6 +12,7 @@ import org.modelio.metamodel.uml.statik.Class;
 
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeTemplate;
 import fr.softeam.toscadesigner.api.tosca.standard.class_.TNodeType;
+import fr.softeam.toscadesigner.api.tosca.standard.class_.TTopologyTemplate;
 import fr.softeam.toscadesigner.impl.ToscaDesignerModule;
 
 /**
@@ -137,8 +138,7 @@ public final class ImportCollector {
      */
     private static final class TopologyTemplateChecker {
         boolean isTypeOf(ModelElement element) {
-            // TopologyTemplate detection logic - would need specific stereotype check
-            return false;
+            return element instanceof Class && TTopologyTemplate.canInstantiate((Class) element);
         }
     }
 }
