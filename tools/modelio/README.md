@@ -48,6 +48,30 @@ Example JSON:
 }
 ```
 
+## MYRTUS node types library (RAMC)
+
+Script: `build_myrtus_node_types.py`
+
+Builds the five MYRTUS node types from [`tosca-types/myrtus/node-types.yaml`](../../tosca-types/myrtus/node-types.yaml)
+(`eu.myrtus.MyrtusCompute`, `MyrtusEdgeDevice`, `MyrtusNetwork`, `MyrtusAccelerator`, `MyrtusSWComponent`)
+as TOSCA Designer elements, with their properties and requirements, plus a `MyrtusNodeTypes` model
+component artifact (version 2.0.00).
+
+How to use:
+1. Create a dedicated UML project with TOSCA Designer 0.6.00 or later (ToscaLibrary is deployed by the module).
+2. Run the script from Modelio's script runner, or through ScriptServer.
+3. Save the project, then package the `MyrtusNodeTypes` artifact as a model component (`.ramc`).
+4. Deploy the `.ramc` in the projects that need the MYRTUS types.
+
+Notes:
+- Property constraints (`valid_values`, `in_range`, `greater_or_equal`) are written into the property
+  descriptions, because TOSCA Designer does not export property constraints yet.
+- `MyrtusNetwork` exports `derived_from: tosca.nodes.network.Network`; ToscaLibrary 0.0.05 has no such node
+  type, so in the model it links to `tosca.nodes.Root`.
+- Set `DRY_RUN = True` to check the build without changing the model.
+- Package with TOSCA Designer 0.6.00 or later: earlier versions drop the links between TOSCA elements
+  (derivedFrom, capability, nodeType, relationshipType) from model components.
+
 ## Notes
 
 - These scripts are transaction-safe: they rollback on exceptions.
