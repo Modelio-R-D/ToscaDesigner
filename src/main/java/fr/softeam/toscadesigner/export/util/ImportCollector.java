@@ -36,10 +36,14 @@ public final class ImportCollector {
 
         if (new NodeTypeChecker().isTypeOf(context)) {
             TNodeType tNodeType = TNodeType.safeInstantiate((Class) context);
-            String derivedFromValue = tNodeType.getDerivedFrom().getName();
+            // Use the qualified 'derivedFrom' text (what derived_from exports), not the linked element:
+            // the link may be missing (e.g. a type deployed from a RAMC), and its short name cannot tell
+            // normative tosca.* parents (no import needed) from custom ones.
+            String derivedFromValue = PropertyResolver.resolveProperty(context, "derivedFrom");
             String targetNamespace = tNodeType.getTargetNamespace();
-            if (derivedFromValue != null && !derivedFromValue.startsWith("tosca")) {
-                imports.add(new Import(derivedFromValue + ".tosca", targetNamespace, "MYRTUS-"));
+            if (derivedFromValue != null && !derivedFromValue.trim().isEmpty() && !derivedFromValue.startsWith("tosca.")) {
+                String localName = derivedFromValue.substring(derivedFromValue.lastIndexOf('.') + 1);
+                imports.add(new Import(localName + ".tosca", targetNamespace, "MYRTUS-"));
             }
         } else if (new TopologyTemplateChecker().isTypeOf(context)) {
             List<TNodeTemplate> nodeTemplates = context.getCompositionChildren().stream().filter(object -> {

@@ -1,6 +1,6 @@
 {{name}}:
 {{#if (getProperty this "description")}}
-  description: {{getProperty this "description"}}
+  description: {{{formatYamlValue (getProperty this "description")}}}
 {{/if}}
 {{#if (getProperty this "event")}}
   event: {{getProperty this "event"}}

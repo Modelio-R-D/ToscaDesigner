@@ -29,7 +29,8 @@ final public class YamlFormatter {
         if (looksLikeBoolean(trimmed) || looksLikeNumber(trimmed) || "null".equalsIgnoreCase(trimmed)) {
             return trimmed;
         }
-        String escaped = trimmed.replace("\"", "\\\"");
+        String escaped = trimmed.replace("\\", "\\\\").replace("\"", "\\\"").replace("\r", "")
+                .replace("\n", "\\n");
         return "\"" + escaped + "\"";
     }
 

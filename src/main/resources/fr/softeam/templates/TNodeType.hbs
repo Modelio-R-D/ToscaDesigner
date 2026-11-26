@@ -2,7 +2,7 @@
 node_types:
   {{owner.name}}.{{name}}:
 {{#if (getProperty this "description")}}
-    description: {{getProperty this "description"}}
+    description: {{{formatYamlValue (getProperty this "description")}}}
 {{/if}}
 {{#if (getProperty this "derivedFrom")}}
     derived_from: {{getProperty this "derivedFrom"}}
@@ -15,21 +15,21 @@ node_types:
     properties:
     {{#each ../ownedAttribute}}{{#extension}}{{#eq name "PropertyDefinitionType"}}
       {{../name}}:
-      	type: {{../type.name}}
+        type: {{../type.name}}
         {{#if (getProperty ../this "description")}}
-        description: {{getProperty ../this "description"}}
+        description: {{{formatYamlValue (getProperty ../this "description")}}}
         {{/if}}
-      	{{#eq ../multiplicityMin "0"}}
+        {{#eq ../multiplicityMin "0"}}
         required: false
         {{/eq}}
         {{#if ../value}}
-        default: {{../value}}
+        default: {{{formatYamlValue ../value}}}
         {{/if}}
     {{/eq}}{{/extension}}{{/each}}
 {{/unless}}
 {{#unless (noStereotypeApplications this "TRequirementDefinitionType")}}
     requirements:
-	{{#each ownedElement}}{{#extension}}{{#eq name "TRequirementDefinitionType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirementDefinition"}}
+    {{#each ownedElement}}{{#extension}}{{#eq name "TRequirementDefinitionType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TRequirementDefinition"}}
       - {{../name}}:
           capability: tosca.capabilities.{{getProperty ../this "capability"}}
           relationship: tosca.relationships.{{getProperty ../this "relationshipType"}}

@@ -1,7 +1,7 @@
 {{name}}:
   type: tosca.policies.{{getProperty this "type"}}
 {{#if (getProperty this "description")}}
-  description: {{getProperty this "description"}}
+  description: {{{formatYamlValue (getProperty this "description")}}}
 {{/if}}
 {{#unless (noStereotypeApplications this "Metadata")}}
   metadata:
