@@ -13,6 +13,7 @@ import org.modelio.metamodel.uml.infrastructure.ModelTree;
 import org.modelio.vcore.smkernel.mapi.MObject;
 
 import fr.softeam.toscadesigner.export.util.ExportErrorHandler;
+import fr.softeam.toscadesigner.export.util.NodeTypeResolver;
 import fr.softeam.toscadesigner.export.checker.NodeTypeChecker;
 import fr.softeam.toscadesigner.export.checker.TopologyTemplateChecker;
 
@@ -113,6 +114,15 @@ public class CsarFileGenerator extends AbstractToscaFileGenerator {
                 zos.write(toscaContent.getBytes());
                 zos.closeEntry();
             }
+        }
+
+        // Node types used by this model but defined elsewhere (e.g. in the MyrtusNodeTypes model
+        // component): package them too, so that every import of the CSAR resolves.
+        for (org.modelio.metamodel.uml.statik.Class external : NodeTypeResolver.externalDependencies(modelPackage)) {
+            ZipEntry entry = new ZipEntry("_definitions/" + external.getName() + ".tosca");
+            zos.putNextEntry(entry);
+            zos.write(renderTemplate(handlebars, external).getBytes());
+            zos.closeEntry();
         }
     }
 

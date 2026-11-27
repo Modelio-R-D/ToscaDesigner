@@ -67,7 +67,19 @@ public abstract class AbstractToscaFileGenerator {
 
     @objid("0a64efd3-9d89-46b9-91e8-40aaa00626a4")
     protected String saveToFile(String[] fileExtensions, String fileType) {
-        FileDialog fileDialog = new FileDialog(Display.getCurrent().getActiveShell(), SWT.SAVE);
+        // The active shell is null when Modelio is not the foreground application (focus moved away,
+        // automation): fall back to Modelio's first visible window, as FileDialog rejects a null parent.
+        Display display = Display.getCurrent() != null ? Display.getCurrent() : Display.getDefault();
+        org.eclipse.swt.widgets.Shell parent = display.getActiveShell();
+        if (parent == null) {
+            for (org.eclipse.swt.widgets.Shell shell : display.getShells()) {
+                if (shell.isVisible()) {
+                    parent = shell;
+                    break;
+                }
+            }
+        }
+        FileDialog fileDialog = parent != null ? new FileDialog(parent, SWT.SAVE) : new FileDialog(new org.eclipse.swt.widgets.Shell(display), SWT.SAVE);
         fileDialog.setFilterExtensions(fileExtensions);
 
         String filePath = fileDialog.open();
