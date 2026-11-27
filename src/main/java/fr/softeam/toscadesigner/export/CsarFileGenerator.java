@@ -60,7 +60,7 @@ public class CsarFileGenerator extends AbstractToscaFileGenerator {
                     zos.closeEntry();
 
                     // Add TOSCA-Metadata content
-                    addToscaMetadata(zos);
+                    addToscaMetadata(zos, toscaModel);
 
                     // Add content to other directories
                     addDefinitions(zos, toscaModel);
@@ -85,13 +85,44 @@ public class CsarFileGenerator extends AbstractToscaFileGenerator {
     }
 
     @objid ("c3e89048-1631-400c-8072-b5a40aa8d57c")
-    private void addToscaMetadata(ZipOutputStream zos) throws IOException {
+    private void addToscaMetadata(ZipOutputStream zos, MObject toscaModel) throws IOException {
         ZipEntry entry = new ZipEntry("TOSCA-Metadata/TOSCA.meta");
         zos.putNextEntry(entry);
-        String metadataContent = "TOSCA-Meta-File-Version: 1.0\n" + "CSAR-Version: 1.1\n"
-                + "Created-By: Modelio MYRTUS TOSCA Designer\n" + "Entry-Definitions: _definitions/\n";
+        String metadataContent;
+        if (getToscaVersion() == ToscaVersion.V2_0) {
+            // TOSCA 2.0 (17.2): block_0 starts with CSAR-Version 2.0, TOSCA-Meta-File-Version is gone, and
+            // Entry-Definitions names a definitions file, not a directory.
+            metadataContent = "CSAR-Version: 2.0\n" + "Created-By: Modelio MYRTUS TOSCA Designer\n";
+            String entryDefinitions = findEntryDefinitions(toscaModel);
+            if (entryDefinitions != null) {
+                metadataContent += "Entry-Definitions: " + entryDefinitions + "\n";
+            }
+        } else {
+            metadataContent = "TOSCA-Meta-File-Version: 1.0\n" + "CSAR-Version: 1.1\n"
+                    + "Created-By: Modelio MYRTUS TOSCA Designer\n" + "Entry-Definitions: _definitions/\n";
+        }
         zos.write(metadataContent.getBytes());
         zos.closeEntry();
+    }
+
+    /**
+     * Path of the file a TOSCA 2.0 orchestrator should start from: the first topology template of the model,
+     * else its first node type, else {@code null}. Must match the names written by {@link #addDefinitions}.
+     */
+    private String findEntryDefinitions(MObject toscaModel) {
+        if (!(toscaModel instanceof ModelTree)) {
+            return null;
+        }
+        String firstNodeType = null;
+        for (MObject element : ((ModelTree) toscaModel).getCompositionChildren()) {
+            if (new TopologyTemplateChecker().isTypeOf(element)) {
+                return "_definitions/" + element.getName() + ".tosca";
+            }
+            if (firstNodeType == null && new NodeTypeChecker().isTypeOf(element)) {
+                firstNodeType = "_definitions/" + element.getName() + ".tosca";
+            }
+        }
+        return firstNodeType;
     }
 
     @objid ("7897a1e1-90ae-4d93-8b7b-da0fcc8e7b70")

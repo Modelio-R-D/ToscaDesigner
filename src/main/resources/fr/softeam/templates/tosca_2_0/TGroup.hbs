@@ -1,0 +1,8 @@
+{{name}}:
+  type: tosca.groups.Root
+{{#unless (noStereotypeApplications this "TNodeTemplate")}}
+  members:
+{{#each ownedElement as |member|}}{{#each member.extension as |memberExtension|}}{{#eq memberExtension.name "TNodeTemplate"}}
+    - {{member.name}}
+{{/eq}}{{/each}}{{/each}}
+{{/unless}}

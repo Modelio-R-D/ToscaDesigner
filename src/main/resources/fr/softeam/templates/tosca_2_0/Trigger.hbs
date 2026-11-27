@@ -1,0 +1,14 @@
+{{name}}:
+{{#if (getProperty this "description")}}
+  description: {{{formatYamlValue (getProperty this "description")}}}
+{{/if}}
+  event: {{getProperty this "event"}}
+{{#if (getProperty this "condition")}}
+  condition: {{{getProperty this "condition"}}}
+{{/if}}
+{{#if (getProperty this "action")}}
+  action:
+    - {{{getProperty this "action"}}}
+{{else}}
+  action: []
+{{/if}}

@@ -1070,6 +1070,22 @@
             <Description>%propertytypeTargetElementType.description</Description>
         </PropertyType>
     </PropertyTypes>
+    <Parameters>
+        <Parameter id="ToscaVersion" group="%parameter.group.Export" uid="2901bc87-3366-4f5a-b97e-59e7af6a1ea7" type="Enum" default-value="1.3" label="%parameter.ToscaVersion.label">
+            <Enumeration>
+                <Literal value="1.3">
+                    <Description>%parameter.ToscaVersion.1_3.description</Description>
+                </Literal>
+                <Literal value="2.0">
+                    <Description>%parameter.ToscaVersion.2_0.description</Description>
+                </Literal>
+            </Enumeration>
+            <Description>%parameter.ToscaVersion.description</Description>
+        </Parameter>
+        <Parameter id="Tosca2SimpleProfile" group="%parameter.group.Export" uid="d9fab89f-9d97-49f1-9aa9-2cd8b20405c0" type="String" default-value="org.oasis-open.tosca.simple:2.0" label="%parameter.Tosca2SimpleProfile.label">
+            <Description>%parameter.Tosca2SimpleProfile.description</Description>
+        </Parameter>
+    </Parameters>
     <Gui>
         <Commands>
             <Command id="Tosca_Model_Diagram" label="%command.Tosca_Model_Diagram.label" tooltip="%command.Tosca_Model_Diagram.tooltip" image="" modify-model="true">

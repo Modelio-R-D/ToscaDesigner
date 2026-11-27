@@ -25,6 +25,12 @@ public abstract class AbstractToscaFileGenerator {
     @objid("7df196c3-8c6b-4da7-9831-3d2f51c3097f")
     private ILogService logger;
 
+    /** TOSCA version the standard templates render; the Lakeside DSE export ignores it. */
+    private ToscaVersion toscaVersion = ToscaVersion.DEFAULT;
+
+    /** False when a subclass configures its own Handlebars instead of using {@link HandlebarsHelperRegistry}. */
+    private boolean usesStandardRegistry;
+
     /**
      * Initialize the logger and Handlebars instance.
      * Subclasses should call this in their constructor.
@@ -33,9 +39,30 @@ public abstract class AbstractToscaFileGenerator {
         this.logger = logger;
         HandlebarsHelperRegistry helperRegistry = createHelperRegistry(logger);
         if (helperRegistry != null) {
+            this.usesStandardRegistry = true;
+            this.toscaVersion = helperRegistry.getToscaVersion();
             this.handlebars = helperRegistry.createConfiguredHandlebars();
         }
         // If helperRegistry is null, subclass has already configured handlebars directly
+    }
+
+    /** TOSCA version this generator writes (from the module parameters unless set explicitly). */
+    public ToscaVersion getToscaVersion() {
+        return this.toscaVersion;
+    }
+
+    /**
+     * Force the TOSCA version, ignoring the module parameter, and rebuild the Handlebars instance. Meant for
+     * scripts and tests. Has no effect on generators that configure their own Handlebars (Lakeside DSE).
+     */
+    public void setToscaVersion(ToscaVersion version) {
+        if (!this.usesStandardRegistry) {
+            logInfo(getClass().getSimpleName() + " does not use the standard TOSCA templates; version ignored");
+            return;
+        }
+        HandlebarsHelperRegistry helperRegistry = new HandlebarsHelperRegistry(this.logger, version);
+        this.toscaVersion = helperRegistry.getToscaVersion();
+        this.handlebars = helperRegistry.createConfiguredHandlebars();
     }
 
     /**
