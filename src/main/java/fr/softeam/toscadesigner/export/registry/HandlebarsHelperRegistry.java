@@ -85,6 +85,11 @@ public final class HandlebarsHelperRegistry {
     private void registerYamlHelpers(Handlebars handlebars) {
         handlebars.registerHelper("formatYamlValue",
                 (Object value, Options options) -> YamlFormatter.formatScalar(value));
+        // {{{occurrences lower upper "defaultUpper"}}} -> [ lower, upper ] with TOSCA defaults
+        handlebars.registerHelper("occurrences",
+                (Object lower, Options options) -> YamlFormatter.formatOccurrences(lower,
+                        options.params.length > 0 ? options.param(0) : null,
+                        options.params.length > 1 ? String.valueOf((Object) options.param(1)) : "UNBOUNDED"));
     }
 
     private boolean asBoolean(Object candidate, boolean defaultValue) {

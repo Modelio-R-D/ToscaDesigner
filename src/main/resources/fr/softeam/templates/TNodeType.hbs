@@ -33,14 +33,14 @@ node_types:
       - {{../name}}:
           capability: tosca.capabilities.{{getProperty ../this "capability"}}
           relationship: tosca.relationships.{{getProperty ../this "relationshipType"}}
-          occurrences: [ {{getProperty ../this "lowerBound"}}, {{getProperty ../this "upperBound"}} ]
+          occurrences: {{{occurrences (getProperty ../this "lowerBound") (getProperty ../this "upperBound") "1"}}}
     {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
 {{/unless}}
 {{#unless (noStereotypeApplications this "TCapabilityDefinitionsType")}}
     capabilities:
     {{#each ownedElement}}{{#extension}}{{#eq name "TCapabilityDefinitionsType"}}{{#each ../ownedElement}}{{#extension}}{{#eq name "TCapabilityDefinition"}}
       {{../name}}:
-        occurrences: [ {{getProperty ../this "lowerBound"}}, {{getProperty ../this "upperBound"}} ]
+        occurrences: {{{occurrences (getProperty ../this "lowerBound") (getProperty ../this "upperBound") "UNBOUNDED"}}}
         type: tosca.capabilities.{{getProperty ../this "capabilityType"}}
     {{/eq}}{{/extension}}{{/each}}{{/eq}}{{/extension}}{{/each}}
 {{/unless}}

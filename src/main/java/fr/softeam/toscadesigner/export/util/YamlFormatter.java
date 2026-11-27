@@ -34,6 +34,25 @@ final public class YamlFormatter {
         return "\"" + escaped + "\"";
     }
 
+    /**
+     * Format a TOSCA occurrences range as "[ lower, upper ]".
+     * An empty lower bound becomes 1 (TOSCA default), an empty upper bound becomes {@code defaultUpper},
+     * and a negative upper bound (Modelio's "unbounded") becomes UNBOUNDED.
+     */
+    public static String formatOccurrences(Object lower, Object upper, String defaultUpper) {
+        String lo = lower == null ? "" : lower.toString().trim();
+        String hi = upper == null ? "" : upper.toString().trim();
+        if (lo.isEmpty()) {
+            lo = "1";
+        }
+        if (hi.isEmpty()) {
+            hi = defaultUpper;
+        } else if (hi.startsWith("-") || "*".equals(hi) || "unbounded".equalsIgnoreCase(hi)) {
+            hi = "UNBOUNDED";
+        }
+        return "[ " + lo + ", " + hi + " ]";
+    }
+
     private static boolean looksLikeBoolean(String value) {
         return "true".equalsIgnoreCase(value) || "false".equalsIgnoreCase(value);
     }
