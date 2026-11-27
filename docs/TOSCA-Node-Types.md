@@ -148,6 +148,23 @@ The definitions make tier placement, cross-tier network cost, device energy
 constraints, and accelerator characteristics explicit for downstream
 deployment and design-space exploration tools.
 
+## Using the types in TOSCA Designer
+
+The five types are available for TOSCA Designer as a model component,
+`MyrtusNodeTypes_2.0.00.ramc`, attached to the TOSCA Designer releases from
+v0.6.0. Deploy it in your project (Configuration > Model components), then
+select one of the types as the Node Type of your node templates. It requires
+TOSCA Designer 0.6.0 or later on Modelio 5.4.1.
+
+![The MYRTUS node types in Modelio TOSCA Designer: the eu.myrtus package in the model browser, the five node types on a diagram, and the TOSCA properties of MyrtusEdgeDevice](images/myrtus-node-types-tosca-designer.png)
+
+*The `eu.myrtus` package in Modelio, with the five node types and their
+properties. Below, the TOSCA properties of `MyrtusEdgeDevice`: description and
+parent type.*
+
+To rebuild the model component from the YAML definitions, use
+[`tools/modelio/build_myrtus_node_types.py`](../tools/modelio/build_myrtus_node_types.py).
+
 ## Source and license
 
 The complete TOSCA definitions are maintained in
